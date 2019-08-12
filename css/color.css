@@ -130,6 +130,11 @@ button,
 }
 
 
+.border-white .after{
+    background: white!important;
+}
+
+
 /* ....................................
 5. bg black
 .......................................*/
@@ -271,6 +276,9 @@ button,
     background: #007bff;
 }
 
+.main-menu li .submenu li a{
+    color: #ffffff;
+}
 
 /*green bg opacity classes*/
 
