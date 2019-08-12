@@ -505,6 +505,9 @@ label {
 .logo img {
     max-width: 185px;
 }
+.word-b{
+    word-break: break-all;
+}
 
 .menu-links,
 .icon-links {
