@@ -129,6 +129,10 @@ button,
     background: transparent!important;
 }
 
+.slider-about .owl-item img{
+    height: 519px;
+}
+
 .color-white{
     color: white!important;
 }
