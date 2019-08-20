@@ -9748,6 +9748,9 @@ header {
 .br25 {
   border-radius: 25px; }
 
+.uk-card-media-top img {
+  width: 100%; }
+
 * {
   font-family: "Open Sans", sans-serif !important;
   -webkit-box-sizing: border-box;
@@ -9820,9 +9823,16 @@ body {
     -o-object-fit: cover;
        object-fit: cover;
     -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4); }
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+    -o-object-position: top;
+       object-position: top; }
   .news-content p.smallish {
     font-size: 1.02rem; }
+
+.uk-button-primary {
+  background: #149dcc; }
+  .uk-button-primary:hover {
+    background: #0e6d8e; }
 
 .news {
   padding-top: 100px;
@@ -9843,3 +9853,5 @@ body {
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     left: 50%; }
+  .history .uk-card p {
+    font-size: 15px; }
