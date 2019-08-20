@@ -9678,7 +9678,8 @@ mark {
 
 header {
   min-height: 65vh;
-  background: url(../img/header-bg.png);
+  background: url(../img/header-bg.png) no-repeat;
+  background-size: cover;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9721,7 +9722,7 @@ header {
   background: #f8f8f8; }
 
 .bg-theme {
-  background: #1d2236; }
+  background: #1d2236 !important; }
 
 .color-theme {
   color: #1d2236; }
@@ -9785,7 +9786,7 @@ body {
           justify-content: center;
   width: 100%;
   height: 100vh;
-  background: #191919;
+  background: #1d2236;
   z-index: 1000; }
   .introloader .loader-container {
     display: -webkit-box;
@@ -9793,20 +9794,52 @@ body {
     display: -ms-flexbox;
     display: flex; }
     .introloader .loader-container .spinner {
-      height: 60px;
+      height: 150px;
       -webkit-transform-origin: right;
           -ms-transform-origin: right;
-              transform-origin: right;
-      -webkit-animation: increase-width .8s linear;
-              animation: increase-width .8s linear; }
+              transform-origin: right; }
       .introloader .loader-container .spinner img {
         height: 100%;
         -o-object-fit: cover;
            object-fit: cover; }
-    .introloader .loader-container .spinner-inner {
-      height: 60px;
-      margin-left: 15px; }
-      .introloader .loader-container .spinner-inner img {
-        height: 100%;
-        -webkit-animation: infinite-spinning .8s infinite linear;
-                animation: infinite-spinning .8s infinite linear; }
+
+.latest-news {
+  min-height: 50vh;
+  background: url(../img/banner.png) no-repeat;
+  background-size: cover;
+  padding-top: 50px; }
+
+.news-content {
+  position: relative;
+  padding-top: 30px; }
+  .news-content img {
+    position: absolute;
+    top: 0;
+    width: 85%;
+    height: 120%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4); }
+  .news-content p.smallish {
+    font-size: 1.02rem; }
+
+.news {
+  padding-top: 100px;
+  background: #232845; }
+
+.link-reset:link, .link-reset:hover, .link-reset:active {
+  text-decoration: none; }
+
+.history .uk-card {
+  position: relative;
+  background: #1d2236;
+  border-radius: 10px; }
+  .history .uk-card img {
+    width: 50px;
+    position: absolute;
+    top: 0;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    left: 50%; }
