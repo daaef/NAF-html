@@ -76,7 +76,7 @@ body a:hover {
 }
 .navigation a.pia {
 	display: block;
-	background: url("../img/pia.png") center center no-repeat;
+	background: url("../img/logo.png") center center no-repeat;
 	background-size: cover;
 	white-space: nowrap;
 	text-indent: 300%;
@@ -233,8 +233,8 @@ a.btn-close {
 	position: fixed;
 	z-index: 999998;
 }
-#nav ul li,
-#nav a {
+#nav > ul > li,
+#nav ul >li > div {
 	position: relative;
 	background: #000 center center no-repeat;
 	background-size: cover;
@@ -242,8 +242,7 @@ a.btn-close {
 	font-family: 'Roboto Condensed';
 	font-weight: 400;
 }
-#nav ul li a {
-	position: absolute;
+#nav ul > li > div {
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -251,13 +250,28 @@ a.btn-close {
 	background-color: rgba(0,0,0,.9);
 	text-decoration: none!important;
 	transition: all .3s;
+    display: flex;
+    padding-top: 200px!important;
 }
-#nav ul li a:hover {
+
+#nav ul > li > div > div{
+    display: block;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+}
+#nav ul > li > div:hover {
 	background-color: rgba(0,0,0,.4);
 }
-#nav div a span {
+
+#nav div >  ul > li > div span.title{
+    margin-bottom: 70px;
+}
+
+#nav div >  ul > li > div span {
 	display: inline-block;
 	line-height: 1.6em;
+    width: 100%;
 	background: rgba(0,0,0,.75);
 }
 
@@ -781,7 +795,7 @@ section#home .social .item p {
 	position: relative;
 	display: flex;
 	align-items: center;
-	background: center center no-repeat;
+	background: left top no-repeat;
 	background-size: cover;
 	height: 100vh;
 }
@@ -1419,38 +1433,35 @@ section#home .social .item p {
 		left: 0;
 		width: 100%;
 		height: 0;
-		font-size: 0;
 		overflow: hidden;
 		transition: all 0s ease .5s;
 	}
-	#nav ul {
+	#nav > ul {
 		display: inline-block;
 		margin: 0;
 		padding: 0;
 		width: 100%;
 		height: 0;
-		font-size: 0;
 		overflow: hidden;
 		transition: all .5s;
 		border-left: 0px solid white;
 	}
-	#nav ul li {
+	#nav > ul > li {
 		display: inline-block;
-		width: calc((100%)/ 6);
+		width: calc((100%)/ 5);
 		height: 0;
-		font-size: 0;
 		vertical-align: top;
 		overflow: hidden;
 		transition: all .5s;
 	}
-	#nav ul li a {
+	#nav > ul > li > div {
 		padding: 40px;
 	}
-	#nav ul li a span {
+	#nav > ul > li > a span {
 		display: none;
 		font-size: 16px;
 	}
-	#nav ul li a span.title {
+	#nav > ul > li > div span.title {
 		display: block;
 		position: absolute;
 		left: -65px;
@@ -1805,42 +1816,56 @@ section#home .social .item p {
 		left: 0;
 		width: 0;
 		height: 100vh;
-		font-size: 0;
 		overflow: hidden;
 		transition: all 0s ease .5s;
 	}
-	#nav ul {
+	#nav > ul {
 		display: inline-block;
 		margin: 0;
 		padding: 0;
 		width: 0;
 		height: 100vh;
-		font-size: 0;
 		overflow: hidden;
 		transition: all .5s;
 	}
-	#nav ul li {
+	#nav > ul > li {
 		display: inline-block;
 		width: 0;
 		height: 100vh;
-		font-size: 0;
 		vertical-align: top;
 		overflow: hidden;
-		transition: all .5s;
 	}
-	#nav ul li a {
+
+    #nav > ul > li:hover >div{
+        font-size: 15px;
+    }
+
+	#nav > ul > li > div {
 		padding: 40px;
 	}
-	#nav ul li a span {
-		font-size: 16px;
+	#nav > ul > li > div ul, #nav > ul > li > div ul li  {
+		width: 100%;
 	}
-	#nav ul li a span.title {
-		position: absolute;
-		left: -85px;
-		bottom: 140px;
-		font-size: 64px;
+	#nav > ul > li > div  a {
+		opacity: 0;
+        width: 100%;
+        font-size: 1rem;
+        transition: all .5s;
+        line-height: 2rem;
+        color: #ffffff;
+	}
+	#nav > ul > li > div ul {
+        list-style: none;
+        transition: all .5s;
+        margin-bottom: ;
+	}
+	#nav > ul > li:hover > div a {
+		font-size: 1rem;
+        opacity: 1;
+	}
+	#nav > ul > li > div > div > span.title {
+		font-size: 28px;
 		white-space: nowrap;
-		transform: rotate(270deg);
 	}
 	#nav > div {
 		position: absolute;
@@ -1876,19 +1901,19 @@ section#home .social .item p {
 		width: 100%;
 		transition: all 0s ease .5s;
 	}
-	#nav.active ul {
+	#nav.active > ul {
 		width: 100%;
 		transition: all .5s ease .5s;
 	}
-	#nav.active > ul li {
-		width: calc((100%) / 6);
+	#nav.active > ul > li {
+		width: calc((100%) / 5);
 		border-width: 1px;
 		transition: all .2s;
 	}
-	#nav.active > ul:hover li {
-		width: calc((75%) / 5);
+	#nav.active > ul:hover > li {
+		width: calc((75%) / 4);
 	}
-	#nav.active > ul:hover li:hover {
+	#nav.active > ul:hover > li:hover {
 		width: 25%;
 	}
 	#nav.active > div {
@@ -1896,7 +1921,7 @@ section#home .social .item p {
 		border-width: 1px;
 		transition: all .5s ease .5s;
 	}
-	#nav > div a {
+	#nav > div > div {
 		transition: all .2s;
 	}
 	#nav.active > div:hover a {
@@ -2310,4 +2335,8 @@ section#home .social .item p {
 .logo-holder{
     display: flex;
     align-items: center;
+}
+
+.tintIt{
+    background: rgba(29, 34, 54, 0.74);;
 }

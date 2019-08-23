@@ -66,12 +66,15 @@ $( function(){
 		//$('nav').addClass('cover');
 		$(window).scroll(function(){
 			if ( !$('#nav').hasClass('active') )
-				if ($(window).scrollTop() > 0) {
+				if ($(window).scrollTop() > window.innerHeight) {
 					clearInterval(navInterval);
 					$('#header').removeClass('cover').removeClass('delay');
+					$('.navigation').addClass('tintIt')
 				}
-				else
+				else{
 					$('#header').addClass('cover');
+					$('.navigation').removeClass('tintIt')
+				}
 		});
 		$(window).scroll();
 	}
