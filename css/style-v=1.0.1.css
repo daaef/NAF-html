@@ -261,7 +261,7 @@ a.btn-close {
     width: 100%;
 }
 #nav ul > li > div:hover {
-	background-color: rgba(0,0,0,.4);
+	background-color: rgba(0,0,0,.6);
 }
 
 #nav div >  ul > li > div span.title{
@@ -829,7 +829,7 @@ section#home .social .item p {
 }
 
 #footer .policy p a {
-	color: #282B27;
+	color: #ffffff;
 	font-weight: 400;
 }
 #footer .policy p a:before {
@@ -1820,13 +1820,14 @@ section#home .social .item p {
 		transition: all 0s ease .5s;
 	}
 	#nav > ul {
-		display: inline-block;
+		display: flex;
 		margin: 0;
 		padding: 0;
 		width: 0;
 		height: 100vh;
 		overflow: hidden;
 		transition: all .5s;
+		flex-wrap: wrap;
 	}
 	#nav > ul > li {
 		display: inline-block;
@@ -1834,6 +1835,7 @@ section#home .social .item p {
 		height: 100vh;
 		vertical-align: top;
 		overflow: hidden;
+		background-position: center center;
 	}
 
     #nav > ul > li:hover >div{
@@ -1850,14 +1852,31 @@ section#home .social .item p {
 		opacity: 0;
         width: 100%;
         font-size: 1rem;
-        transition: all .5s;
-        line-height: 2rem;
+        line-height: 2.4rem;
         color: #ffffff;
+		display: flex;
+		align-items: center;
+		transition: all .5s;
 	}
+
+	#nav > ul > li > div  a img {
+		height: 12px;
+		margin-left: -12px;
+		margin-right: 0px;
+		opacity: 0;
+		transition: all .4s ease-in-out;
+	}
+
+	#nav > ul > li > div  a:hover img {
+		margin-left: 0;
+		opacity: 1;
+		margin-right: 10px;
+	}
+
 	#nav > ul > li > div ul {
         list-style: none;
         transition: all .5s;
-        margin-bottom: ;
+		padding: 0!important;
 	}
 	#nav > ul > li:hover > div a {
 		font-size: 1rem;
@@ -1866,6 +1885,8 @@ section#home .social .item p {
 	#nav > ul > li > div > div > span.title {
 		font-size: 28px;
 		white-space: nowrap;
+		margin-bottom: 13%;
+		display: block;
 	}
 	#nav > div {
 		position: absolute;
@@ -1906,15 +1927,15 @@ section#home .social .item p {
 		transition: all .5s ease .5s;
 	}
 	#nav.active > ul > li {
-		width: calc((100%) / 5);
+		flex-basis: calc((100%) / 5);
 		border-width: 1px;
 		transition: all .2s;
 	}
 	#nav.active > ul:hover > li {
-		width: calc((75%) / 4);
+		flex-basis: calc((75%) / 4);
 	}
 	#nav.active > ul:hover > li:hover {
-		width: 25%;
+		flex-basis: 25%;
 	}
 	#nav.active > div {
 		width: 30%;
@@ -1931,10 +1952,15 @@ section#home .social .item p {
 		height: 55vh;
 	}
 
+	footer{
+		background: rgb(29, 34, 54);
+		color: #ffffff;
+	}
+
 	body > section.page > header ,
 	body > section > section,
 	body > footer {
-		margin-left: 170px;
+		padding-left: 170px;
 	}
 
 	section#home .numbers {
