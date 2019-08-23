@@ -1435,6 +1435,7 @@ section#home .social .item p {
 		height: 0;
 		overflow: hidden;
 		transition: all 0s ease .5s;
+		text-transform: uppercase;
 	}
 	#nav > ul {
 		display: inline-block;
@@ -1818,6 +1819,7 @@ section#home .social .item p {
 		height: 100vh;
 		overflow: hidden;
 		transition: all 0s ease .5s;
+		text-transform: uppercase;
 	}
 	#nav > ul {
 		display: flex;
@@ -1851,9 +1853,10 @@ section#home .social .item p {
 	#nav > ul > li > div  a {
 		opacity: 0;
         width: 100%;
-        font-size: 1rem;
+        font-size: .88rem;
         line-height: 2.4rem;
         color: #ffffff;
+		font-weight: 400!important;
 		display: flex;
 		align-items: center;
 		transition: all .5s;
@@ -1879,7 +1882,8 @@ section#home .social .item p {
 		padding: 0!important;
 	}
 	#nav > ul > li:hover > div a {
-		font-size: 1rem;
+		font-size: .88rem;
+		font-weight: 400;
         opacity: 1;
 	}
 	#nav > ul > li > div > div > span.title {
@@ -2353,6 +2357,7 @@ section#home .social .item p {
 
 .logo-title{
     color: #ffffff;
+	text-shadow: 0px 0px 15px black;
     font-weight: 600;
     margin-left: 10px;
     font-size: 20px;
