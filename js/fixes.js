@@ -298,23 +298,4 @@ var style = [
     ]
   }
 ];
-
-var image = "/wp-content/themes/pia/images/marker.png";
-function initMap() {
-
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 51.60592889068551, lng: -0.1907756979755959},
-    zoom: 16,
-    styles: style,
-    disableDefaultUI: true
-  });
-
-  var marker = new google.maps.Marker({
-    map: map,
-    draggable: false,
-    animation: google.maps.Animation.DROP,
-    position: { lat: 51.6050285, lng: -0.1886132 },
-    icon: image, 
-  });
-}
     

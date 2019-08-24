@@ -66,233 +66,454 @@
     <script type='text/javascript' src='js/jquery-ver=1.12.4.js'></script>
     <script type='text/javascript' src='js/jquery-migrate.min-ver=1.4.1.js'></script>
     <link rel='shortlink' href='index.html'/>
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/icons.data.svg.css">
 </head>
 
 <body class="home page-template-default page page-id-2">
 
-<div class="navigation">
-    <div class="logo-holder">
-        <a href="index.html" class="pia">Nigerian Air Force</a>
-        <span class="logo-title">Nigerian Air Force</span>
-    </div>
+<div class="site-header" data-bind="css : {'is-disabled': headerIsDisabled}">
+    <header class="site-header">
 
-    <div class="text-toggle">
-        <ul>
-            <li class="nav-route mr-2"><a href="index.html#">Join Now</a></li>
-            <li class="nav-route mr-2">|</li>
-            <li class="nav-route"><a class="mr-10" href="index.html#">Contact</a></li>
-            <li class="bton"><a href="index.html#" class="btn-menu"></a></li>
-            <li class="bton"><a href="index.html#" class="btn-close"></a></li>
+        <h1 class="header-site-logo icon-logo-airforce" data-bind="gaiaGoto: Branches.HOME"
+            href="https://www.airforce.com/" style="background-image: none;">
+            <span class="logo-title">Nigerian Air Force</span>
+        </h1>
+
+        <ul class="main-top-nav">
+            <li class="apply-now-label"><a data-bind="text: connectLabel, click: handleConnectClick"
+                                           id="top-nav-connect" class="label-text">Join Now</a></li>
+            <li class="apply-now-label"><a data-bind="text: applyNowLabel, gaiaGoto: applyNowRoute()" class="label-text"
+                                           href="https://www.airforce.com/apply-now">Contact</a></li>
+            <li class="page-label"><span class="label-text" data-bind="css: { 'is-filled': navPageName() }"><!--ko text:navPageName-->
+                <!--/ko--></span></li>
+            <li>
+                <a href="#" class="ir top-nav-button main-nav-toggle"
+                   data-bind="click: toggleNav, css: { 'is-active': navOpen() }">
+                    <span class="lines"></span>
+                    <span class="cross">
+                        <span class="cross-diagonal"></span>
+                    </span>
+                </a>
+            </li>
         </ul>
-    </div>
+
+    </header>
+    <span class="site-header-small-view-bg" style="transform: matrix(1, 0, 0, 1, 0, 0);"></span>
 </div>
+<!--<nav id="nav">
+<ul>
+    <li style="background-image:url('img/shot6.png')">
+        <div href="who-we-are/index.html">
+            <div>
+                <span class="title">Careers</span>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="./img/right-arrow.svg" alt="">
+                            <span>Hello world</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/right-arrow.svg" alt="">
+                            <span>Hello world</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/right-arrow.svg" alt="">
+                            <span>Hello world</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/right-arrow.svg" alt="">
+                            <span>Hello world</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    <li style="background-image:url('img/shot5.png')">
+        <div href="who-we-are/index.html">
+            <div>
+                <span class="title">About Us</span>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="./img/right-arrow.svg" alt="">
+                            <span>Hello world</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/right-arrow.svg" alt="">
+                            <span>Hello world</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/right-arrow.svg" alt="">
+                            <span>Hello world</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/right-arrow.svg" alt="">
+                            <span>Hello world</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    <li style="background-image:url('img/shot4.png')">
+        <div href="who-we-are/index.html">
+            <div>
+                <span class="title">News</span>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="./img/right-arrow.svg" alt="">
+                            <span>Hello world</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/right-arrow.svg" alt="">
+                            <span>Hello world</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/right-arrow.svg" alt="">
+                            <span>Hello world</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/right-arrow.svg" alt="">
+                            <span>Hello world</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    <li style="background-image:url('img/shot7.png')">
+        <div href="who-we-are/index.html">
+            <div>
+                <span class="title">Media</span>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="./img/right-arrow.svg" alt="">
+                            <span>Hello world</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/right-arrow.svg" alt="">
+                            <span>Hello world</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/right-arrow.svg" alt="">
+                            <span>Hello world</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/right-arrow.svg" alt="">
+                            <span>Hello world</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </li>
+    <li style="background-image:url('img/shot3.png')">
+        <div href="who-we-are/index.html">
+            <div>
+                <span class="title">Links</span>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="./img/right-arrow.svg" alt="">
+                            <span>Hello world</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/right-arrow.svg" alt="">
+                            <span>Hello world</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/right-arrow.svg" alt="">
+                            <span>Hello world</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./img/right-arrow.svg" alt="">
+                            <span>Hello world</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </li>
+</ul>
+&lt;!&ndash;   <div>
+       <a href="work-with-us/index.html">
+           <span class='menu-image' style="background-image:url('img/diego-martinez-397253-unsplash.jpg')"></span>
+           <span>Work with Us</span>
+       </a>
+       <a href="contact-us/index.html">
+           <span class='menu-image' style="background-image:url('img/joshua-fuller-422935-unsplash.jpg')"></span>
+           <span>Contact Us</span>
+       </a>
+   </div>&ndash;&gt;
 
-<header id="header">
-    <a href="index.html" class="pia">Nigerian Air Force</a>
-    <ul>
-        <li><a href="index.html#" class="btn-menu"></a></li>
-        <li><a href="index.html#" class="btn-close"></a></li>
-        <li><a href="tel:0203 867 7440" class="btn-contact"><i class="fas fa-phone mr-2"></i><span>0203 867 7440</span></a>
-        </li>
-    </ul>
-    <div class="social d-none d-sm-block">
-        <a href="#" target="_blank"><i
-                class="fa fa-linkedin" aria-hidden="true"></i></a>
-        <a href="https://twitter.com/PIAFGLtd" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-    </div>
-    <div class="title">
-        <p>LONDON’S PREMIER<br/>
-            <strong>FINANCIAL BROKERAGE</strong></p>
-    </div>
-    <div class="phone">
-        <p>LONDON’S PREMIER<br/>
-            <strong>FINANCIAL BROKERAGE</strong></p>
-        <br>
-        <i class="fas fa-phone mr-2"></i> 0203 867 7440
-    </div>
-</header>
+</nav>-->
+<nav class="main-navigation is-hidden text-inverted">
+    <span class="coverer main-navigation-image"
+          style="background-image: url(./img/shot6.png);clip-path: polygon(0 0, 20% 0, 20% 100%, 0 100%);"></span>
+    <span class="coverer main-navigation-image"
+          style="background-image: url(&quot;img/shot5.png&quot;); clip-path: polygon(20% 0, 40% 0, 40% 100%, 20% 100%);"></span>
+    <span class="coverer main-navigation-image"
+          style="background-image: url(&quot;img/shot4.png&quot;); clip-path: polygon(40% 0, 60% 0, 60% 100%, 40% 100%);"></span>
+    <span class="coverer main-navigation-image"
+          style="background-image: url(&quot;img/shot7.png&quot;); clip-path: polygon(60% 0, 80% 0, 80% 100%, 60% 100%);"></span>
+    <span class="coverer main-navigation-image"
+          style="background-image: url(&quot;img/shot3.png&quot;); clip-path: polygon(80% 0, 100% 0, 100% 100%, 80% 100%);"></span>
 
-<nav id="nav">
-    <ul>
-        <li style="background-image:url('img/shot6.png')">
-            <div href="who-we-are/index.html">
-                <div>
-                    <span class="title">Careers</span>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <img src="./img/right-arrow.svg" alt="">
-                                <span>Hello world</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./img/right-arrow.svg" alt="">
-                                <span>Hello world</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./img/right-arrow.svg" alt="">
-                                <span>Hello world</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./img/right-arrow.svg" alt="">
-                                <span>Hello world</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-        <li style="background-image:url('img/shot5.png')">
-            <div href="who-we-are/index.html">
-                <div>
-                    <span class="title">About Us</span>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <img src="./img/right-arrow.svg" alt="">
-                                <span>Hello world</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./img/right-arrow.svg" alt="">
-                                <span>Hello world</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./img/right-arrow.svg" alt="">
-                                <span>Hello world</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./img/right-arrow.svg" alt="">
-                                <span>Hello world</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-        <li style="background-image:url('img/shot4.png')">
-            <div href="who-we-are/index.html">
-                <div>
-                    <span class="title">News</span>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <img src="./img/right-arrow.svg" alt="">
-                                <span>Hello world</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./img/right-arrow.svg" alt="">
-                                <span>Hello world</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./img/right-arrow.svg" alt="">
-                                <span>Hello world</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./img/right-arrow.svg" alt="">
-                                <span>Hello world</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-        <li style="background-image:url('img/shot7.png')">
-            <div href="who-we-are/index.html">
-                <div>
-                    <span class="title">Media</span>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <img src="./img/right-arrow.svg" alt="">
-                                <span>Hello world</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./img/right-arrow.svg" alt="">
-                                <span>Hello world</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./img/right-arrow.svg" alt="">
-                                <span>Hello world</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./img/right-arrow.svg" alt="">
-                                <span>Hello world</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-        <li style="background-image:url('img/shot3.png')">
-            <div href="who-we-are/index.html">
-                <div>
-                    <span class="title">Links</span>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <img src="./img/right-arrow.svg" alt="">
-                                <span>Hello world</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./img/right-arrow.svg" alt="">
-                                <span>Hello world</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./img/right-arrow.svg" alt="">
-                                <span>Hello world</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="./img/right-arrow.svg" alt="">
-                                <span>Hello world</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </li>
-    </ul>
-    <!--   <div>
-           <a href="work-with-us/index.html">
-               <span class='menu-image' style="background-image:url('img/diego-martinez-397253-unsplash.jpg')"></span>
-               <span>Work with Us</span>
-           </a>
-           <a href="contact-us/index.html">
-               <span class='menu-image' style="background-image:url('img/joshua-fuller-422935-unsplash.jpg')"></span>
-               <span>Contact Us</span>
-           </a>
-       </div>-->
-
+    <div class="main-navigation-list-wrapper">
+        <span class="coverer main-navigation-small-background"
+              style="background-image: url('./img/shot6.png')"></span>
+        <dl class="main-navigation-list">
+            <dt class="main-navigation-title" data-bind="gaiaGoto: Branches.MISSION" data-close=""
+                href="https://www.airforce.com/mission" style="">Mission
+            </dt>
+            <dd style=""><a class="main-navigation-link" data-bind="gaiaGoto: Branches.AMERICAN_AIRMEN" data-close=""
+                            href="https://www.airforce.com/mission/american-airmen">
+                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
+                                                                                     clip-rule="evenodd" fill="#FFF"
+                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
+                American Airmen
+            </a></dd>
+            <dd style=""><a class="main-navigation-link" data-bind="gaiaGoto: Branches.VISION" data-close=""
+                            href="https://www.airforce.com/mission/vision">
+                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
+                                                                                     clip-rule="evenodd" fill="#FFF"
+                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
+                Vision
+            </a></dd>
+            <dd style=""><a class="main-navigation-link" data-bind="gaiaGoto: Branches.HISTORY" data-close=""
+                            href="https://www.airforce.com/mission/history">
+                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
+                                                                                     clip-rule="evenodd" fill="#FFF"
+                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
+                History
+            </a></dd>
+        </dl>
+    </div>
+    <div class="main-navigation-list-wrapper">
+        <span class="coverer main-navigation-small-background"
+              style="background-image: url('img/shot5.png')"></span>
+        <dl class="main-navigation-list">
+            <dt class="main-navigation-title" data-bind="gaiaGoto: Branches.EDUCATION" data-close=""
+                href="https://www.airforce.com/education" style="">Education
+            </dt>
+            <dd style=""><a class="main-navigation-link" data-bind="gaiaGoto: Branches.COLLEGE" data-close=""
+                            href="https://www.airforce.com/education/college">
+                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
+                                                                                     clip-rule="evenodd" fill="#FFF"
+                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
+                College
+            </a></dd>
+            <dd style=""><a class="main-navigation-link" data-bind="gaiaGoto: Branches.TECHNICAL_TRAINING" data-close=""
+                            href="https://www.airforce.com/education/technical-training">
+                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
+                                                                                     clip-rule="evenodd" fill="#FFF"
+                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
+                Technical training
+            </a></dd>
+            <dd style=""><a class="main-navigation-link" data-bind="gaiaGoto: Branches.MILITARY_TRAINING" data-close=""
+                            href="https://www.airforce.com/education/military-training">
+                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
+                                                                                     clip-rule="evenodd" fill="#FFF"
+                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
+                Military training
+            </a></dd>
+            <dd style=""><a class="main-navigation-link" data-bind="gaiaGoto: Branches.ONGOING_EDUCATION" data-close=""
+                            href="https://www.airforce.com/education/ongoing-education">
+                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
+                                                                                     clip-rule="evenodd" fill="#FFF"
+                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
+                Ongoing education
+            </a></dd>
+        </dl>
+    </div>
+    <div class="main-navigation-list-wrapper">
+        <span class="coverer main-navigation-small-background"
+              style="background-image: url('img/shot4.png')"></span>
+        <dl class="main-navigation-list">
+            <dt class="main-navigation-title" data-bind="gaiaGoto: Branches.CAREERS" data-close=""
+                href="https://www.airforce.com/careers" style="">Careers
+            </dt>
+            <dd style=""><a class="main-navigation-link" data-bind="gaiaGoto: Branches.CAREER_BROWSER" data-close=""
+                            href="https://www.airforce.com/careers/browse-careers">
+                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
+                                                                                     clip-rule="evenodd" fill="#FFF"
+                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
+                Browse careers
+            </a></dd>
+            <dd style=""><a class="main-navigation-link" href="/airmanchallenge" target="_blank">
+                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
+                                                                                     clip-rule="evenodd" fill="#FFF"
+                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
+                Play Airman Challenge
+            </a></dd>
+            <dd style=""><a class="main-navigation-link" data-bind="gaiaGoto: Branches.INDEMAND_CAREERS" data-close=""
+                            href="https://www.airforce.com/careers/indemand-careers">
+                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
+                                                                                     clip-rule="evenodd" fill="#FFF"
+                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
+                In Demand Careers
+            </a></dd>
+            <dd style=""><a class="main-navigation-link" data-bind="click : controller.gotoSpecialtyCareers"
+                            data-close="">
+                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
+                                                                                     clip-rule="evenodd" fill="#FFF"
+                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
+                Specialty careers
+            </a></dd>
+            <dd style=""><a class="main-navigation-link" data-bind="gaiaGoto: Branches.PAY_BENEFITS" data-close=""
+                            href="https://www.airforce.com/careers/pay-and-benefits">
+                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
+                                                                                     clip-rule="evenodd" fill="#FFF"
+                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
+                Pay &amp; Benefits
+            </a></dd>
+        </dl>
+    </div>
+    <div class="main-navigation-list-wrapper">
+        <span class="coverer main-navigation-small-background"
+              style="background-image: url('img/shot7.png')"></span>
+        <dl class="main-navigation-list">
+            <dt class="main-navigation-title" data-bind="gaiaGoto: Branches.LIFESTYLE" data-close=""
+                href="https://www.airforce.com/lifestyle" style="">Lifestyle
+            </dt>
+            <dd style=""><a class="main-navigation-link" data-bind="gaiaGoto: Branches.LOCATIONS" data-close=""
+                            href="https://www.airforce.com/lifestyle/locations">
+                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
+                                                                                     clip-rule="evenodd" fill="#FFF"
+                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
+                Locations
+            </a></dd>
+            <dd style=""><a class="main-navigation-link" data-bind="gaiaGoto: Branches.LIFE_ON_BASE" data-close=""
+                            href="https://www.airforce.com/lifestyle/life-on-base">
+                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
+                                                                                     clip-rule="evenodd" fill="#FFF"
+                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
+                Life on Base
+            </a></dd>
+            <dd style=""><a class="main-navigation-link" data-bind="gaiaGoto: Branches.WHAT_TO_EXPECT" data-close=""
+                            href="https://www.airforce.com/lifestyle/what-to-expect">
+                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
+                                                                                     clip-rule="evenodd" fill="#FFF"
+                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
+                What to expect
+            </a></dd>
+            <dd style=""><a class="main-navigation-link" data-bind="gaiaGoto: Branches.FOR_FAMILIES" data-close=""
+                            href="https://www.airforce.com/for-families">
+                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
+                                                                                     clip-rule="evenodd" fill="#FFF"
+                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
+                For Families
+            </a></dd>
+            <dd style=""><a class="main-navigation-link" data-bind="gaiaGoto: Branches.PARA_LAS_FAMILIAS" data-close=""
+                            href="https://www.airforce.com/para-las-familias">
+                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
+                                                                                     clip-rule="evenodd" fill="#FFF"
+                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
+                Para las Familias
+            </a></dd>
+        </dl>
+    </div>
+    <div class="main-navigation-list-wrapper">
+        <span class="coverer main-navigation-small-background"
+              style="background-image: url('img/shot3.png')"></span>
+        <dl class="main-navigation-list">
+            <dt class="main-navigation-title" data-bind="gaiaGoto: Branches.HOW_TO_JOIN" data-close=""
+                href="https://www.airforce.com/how-to-join" style="">How to Join
+            </dt>
+            <dd style=""><a class="main-navigation-link" data-bind="gaiaGoto: Branches.PREPARE_FOR_SUCCESS"
+                            data-close="" href="https://www.airforce.com/how-to-join/prepare-for-success">
+                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
+                                                                                     clip-rule="evenodd" fill="#FFF"
+                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
+                Prepare for success
+            </a></dd>
+            <dd style=""><a class="main-navigation-link" data-bind="gaiaGoto: Branches.PROCESS" data-close=""
+                            href="https://www.airforce.com/how-to-join/process">
+                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
+                                                                                     clip-rule="evenodd" fill="#FFF"
+                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
+                Process
+            </a></dd>
+            <dd style=""><a class="main-navigation-link" data-bind="gaiaGoto: Branches.CONNECT" data-close=""
+                            href="https://www.airforce.com/how-to-join/connect">
+                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
+                                                                                     clip-rule="evenodd" fill="#FFF"
+                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
+                Connect
+            </a></dd>
+            <dd style=""><a class="main-navigation-link" data-bind="gaiaGoto: Branches.FIND_AN_EVENT" data-close=""
+                            href="https://www.airforce.com/find-an-event">
+                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
+                                                                                     clip-rule="evenodd" fill="#FFF"
+                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
+                Find an Event
+            </a></dd>
+            <dd style=""><a class="main-navigation-link"
+                            data-bind="click: function() { Gaia.api.goto(applyNowRoute()) }" data-close="">
+                <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
+                                                                                     clip-rule="evenodd" fill="#FFF"
+                                                                                     d="M28.5 23.5l-1.3-1.3c-1.1-1.1-2.9-1-4.1.1L1.6 43.9c-1.2 1.2-1.2 3-.1 4.1l1.3 1.3c1.1 1.1 2.9 1 4.1-.1l21.6-21.5c1.1-1.3 1.1-3.1 0-4.2zm-12.4-2.9c1.1 1.1 2.9 1.1 3.9 0l1.3-1.3c1.1-1.1 1.1-2.8 0-3.9L6.7.8C5.6-.3 3.8-.3 2.8.8L1.5 2.1C.4 3.2.4 4.9 1.5 6l14.6 14.6z"></path></svg></span>
+                <span data-bind="text: applyNowLabel">Apply now</span>
+            </a></dd>
+        </dl>
+    </div>
 </nav>
-
 <section id="home">
 
     <header>
@@ -312,209 +533,700 @@
             </div>
         </div>
     </header>
+    <article id="choose" class="content-wrapper new-england-conversion-satellite content-background-cover no-margin"
+             data-bind="css: { 'no-margin': ko.unwrap($data.marginBottom) !== true, 'hide-header': ko.unwrap($data.hideHeader) === true }">
 
-<!--
-    <section class="wpcf7-display-none">
-        <div class="container">
-            <div class="row numbers">
-                <div class="col-12 col-lg-4">
-                    <div class="item">
-                        <strong>£1.5bn</strong>
-                        of funding and rising
-                    </div>
+        <!--ko block:{"optional":false,"definition":"background-image-cover","name":"background"} -->
+        <div class="coverer background-image-cover" data-transition=""
+             data-bind="style: { backgroundImage: 'url(' + $data.src() + ')' }"
+             style="background-image: url(&quot;img/shot3.png&quot;);"></div>
+        <!--/ko-->
 
-                </div>
-                <div class="col-12 col-lg-4">
-                    <div class="item">
-                        <strong>126 years</strong>
-                        of sector-specific banking
+        <!--ko if: ko.unwrap($data.hideHeader) !== true-->
+        <!--ko block:{"optional":false,"definition":"heading-block-02","name":"heading"} --><!--
+Heading Block 02 Partial
+
+Can have a button or a subtitle beneath the main title
+@param headNumber:string = small number on top
+@param caption:string = small title on top
+@param title:string = large title
+
+@param button?:string = button copy
+@param buttonIconLeft?:string = add an icon to the button
+@param inverted:boolean = button inverted (white)
+
+@param subTitle?:string = sub title beneath the main title
+@param bodyCopy?:string = smaller sub title beneath the main title
+
+@param strokeThrough:boolean = if true, gives the caption a stroke-through with a white mask
+@param smallMarginBottom:boolean = if true, margin bottom is less
+
+@param hideTopline:boolean = if true, disable the topline
+@param hasBottomline:boolean = if true, add a vertical bottom line
+-->
+
+        <div class="heading-block small-margin-bottom" data-transition=""
+             data-bind="css: { 'small-margin-bottom': ko.unwrap($data.smallMarginBottom) }">
+            <!-- ko if: typeof $data.headNumber != "undefined" --><!-- /ko -->
+
+            <!-- ko if: !$data.hideTopline --><!-- /ko -->
+            <h6 class="heading-06" data-bind="css: { 'text-mask-background text-stroke-through': $data.strokeThrough }">
+                <div style="position:relative;display:inline-block;">
+                    <div style="position:relative;display:inline-block;"
+                         class="text-animation is-inverted state-1 state-2 state-3">E
+                    </div>
+                    <div style="position:relative;display:inline-block;"
+                         class="text-animation is-inverted state-1 state-2 state-3">x
+                    </div>
+                    <div style="position:relative;display:inline-block;"
+                         class="text-animation is-inverted state-1 state-2 state-3">p
+                    </div>
+                    <div style="position:relative;display:inline-block;"
+                         class="text-animation is-inverted state-1 state-2 state-3">l
+                    </div>
+                    <div style="position:relative;display:inline-block;"
+                         class="text-animation is-inverted state-1 state-2 state-3">o
+                    </div>
+                    <div style="position:relative;display:inline-block;"
+                         class="text-animation is-inverted state-1 state-2 state-3">r
+                    </div>
+                    <div style="position:relative;display:inline-block;"
+                         class="text-animation is-inverted state-1 state-2 state-3">e
                     </div>
                 </div>
-                <div class="col-12 col-lg-4">
-                    <div class="item">
-                        <strong>100+</strong>
-                        approved introducer of clients to over 100 lenders
+                <div style="position:relative;display:inline-block;">
+                    <div style="position:relative;display:inline-block;"
+                         class="text-animation is-inverted state-1 state-2 state-3">Y
+                    </div>
+                    <div style="position:relative;display:inline-block;"
+                         class="text-animation is-inverted state-1 state-2 state-3">o
+                    </div>
+                    <div style="position:relative;display:inline-block;"
+                         class="text-animation is-inverted state-1 state-2 state-3">u
+                    </div>
+                    <div style="position:relative;display:inline-block;"
+                         class="text-animation is-inverted state-1 state-2 state-3">r
                     </div>
                 </div>
+                <div style="position:relative;display:inline-block;">
+                    <div style="position:relative;display:inline-block;"
+                         class="text-animation is-inverted state-1 state-2 state-3">O
+                    </div>
+                    <div style="position:relative;display:inline-block;"
+                         class="text-animation is-inverted state-1 state-2 state-3">p
+                    </div>
+                    <div style="position:relative;display:inline-block;"
+                         class="text-animation is-inverted state-1 state-2 state-3">t
+                    </div>
+                    <div style="position:relative;display:inline-block;"
+                         class="text-animation is-inverted state-1 state-2 state-3">i
+                    </div>
+                    <div style="position:relative;display:inline-block;"
+                         class="text-animation is-inverted state-1 state-2 state-3">o
+                    </div>
+                    <div style="position:relative;display:inline-block;"
+                         class="text-animation is-inverted state-1 state-2 state-3">n
+                    </div>
+                    <div style="position:relative;display:inline-block;"
+                         class="text-animation is-inverted state-1 state-2 state-3">s
+                    </div>
+                </div>
+            </h6>
+            <h2 class="heading-02 title responsive-title"
+                data-bind="css: { 'text-mask-background text-stroke-through': $data.strokeThroughMainTitle }, html: $data.title"
+                style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">Choose how you serve</h2>
+
+            <!-- ko if: $data.hasBottomline --><!-- /ko -->
+
+            <!-- ko if: $data.subTitle --><!-- /ko -->
+
+            <!-- ko if: $data.bodyCopy --><!-- /ko -->
+
+            <!-- ko if: $data.image --><!-- /ko -->
+
+            <div data-bind="foreach: new Array(($data.buttonAmount ? $data.buttonAmount() : 1)), css: {
+			'button-wrapper-subtitle': $data.subTitle || $data.bodyCopy,
+			'inline-button-wrapper extra-padding extra-button-spacing': $data.buttonAmount &amp;&amp; $data.buttonAmount() > 1
+		}" class="">
+                <!--ko block:{"optional":true,"definition":"button-outline","name":"button"} --><!--/ko-->
             </div>
+
         </div>
-        <div class="container-fluid">
-            <div class="row feature">
-                <div class="col-12 col-md-5 col-lg-6 image "
-                     style="background-image: url('img/personalmortgages.jpg');">
-                    <img src="img/personalmortgages.jpg" class="d-md-none img-fluid">
-                </div>
-                <div class="col-12 col-md-7 col-lg-6 order-md-1">
-                    <div class="description">
-                        <h1>Personal <strong>Mortgages</strong></h1>
-                        <p>We understand that personal mortgages can sometimes be challenging to arrange and need to be
-                            tailored to every person&#8217;s circumstances.</p>
-                        <p>PIA Financial Group is directly authorised by the Financial Conduct Authority which enables
-                            us to source the very best deals in the marketplace without being tied to a strict panel of
-                            lenders, thus obtaining the best possible deal for you.</p>
-                        <p><a href="https://piafg.co.uk/service/personal-mortgages/"
-                              class="btn btn-outline-primary btn-lg btn-more">More</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="row feature">
-                <div class="col-12 col-md-5 col-lg-6 image order-md-2"
-                     style="background-image: url('img/highnetworthmortgages.jpg');">
-                    <img src="img/highnetworthmortgages.jpg" class="d-md-none img-fluid">
-                </div>
-                <div class="col-12 col-md-7 col-lg-6 ">
-                    <div class="description">
-                        <h1>High <strong>Net Worth</strong> Mortgages</h1>
-                        <p class="p1">With our strong relationships with private banks and alike, we look to provide our
-                            high net worth clients with a bespoke service. Customers at this level often have complex
-                            income streams and holdings and very busy schedules. We look to ensure a smooth transition
-                            from start to finish.</p>
-                        <p><a href="service/high-net-worth-mortgages/index.html"
-                              class="btn btn-outline-primary btn-lg btn-more">More</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="row feature">
-                <div class="col-12 col-md-5 col-lg-6 image "
-                     style="background-image: url('img/kevin-grieve-577771-1.jpg');">
-                    <img src="img/kevin-grieve-577771-1.jpg" class="d-md-none img-fluid">
-                </div>
-                <div class="col-12 col-md-7 col-lg-6 order-md-1">
-                    <div class="description">
-                        <h1>Commercial Investment <strong>Property</strong></h1>
-                        <p>Are you an investor in commercial property? Then you already understand that it can be a
-                            complex market in which to operate. A commercial mortgage should be tailored to your needs,
-                            so that you know that you are getting the best possible value.</p>
-                        <p><a href="service/comercial-investment-property/index.html"
-                              class="btn btn-outline-primary btn-lg btn-more">More</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="row feature">
-                <div class="col-12 col-md-5 col-lg-6 image order-md-2"
-                     style="background-image: url('img/craig-whitehead-253953-2-1.jpg');">
-                    <img src="img/craig-whitehead-253953-2-1.jpg" class="d-md-none img-fluid">
-                </div>
-                <div class="col-12 col-md-7 col-lg-6 ">
-                    <div class="description">
-                        <h1>Bridging <strong>Finance</strong></h1>
-                        <p>Bridging finance offers a short-term borrowing solution, usually secured on land or property
-                            and regularly at short notice.</p>
-                        <p><a href="service/bridging-finance/index.html"
-                              class="btn btn-outline-primary btn-lg btn-more">More</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="row feature">
-                <div class="col-12 col-md-5 col-lg-6 image "
-                     style="background-image: url('img/property-development.jpg');">
-                    <img src="img/property-development.jpg" class="d-md-none img-fluid">
-                </div>
-                <div class="col-12 col-md-7 col-lg-6 order-md-1">
-                    <div class="description">
-                        <h1>Property <strong>Development</strong></h1>
-                        <p>The senior brokers at PIA Financial Group have come from the banking industry where their
-                            specialism was property development finance. We are able to present your development
-                            proposal with confidence in order to obtain your exact requirements.</p>
-                        <p><a href="service/property-development/index.html"
-                              class="btn btn-outline-primary btn-lg btn-more">More</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="row feature">
-                <div class="col-12 col-md-5 col-lg-6 image order-md-2"
-                     style="background-image: url('img/shariah.jpg');">
-                    <img src="img/shariah.jpg" class="d-md-none img-fluid">
-                </div>
-                <div class="col-12 col-md-7 col-lg-6 ">
-                    <div class="description">
-                        <h1><strong>Shariah-compliant</strong> Finance</h1>
-                        <p>Islamic finance has been in the mainstream market in the UK for some years. Here at PIA we
-                            have extensive knowledge to help with your finance requirements every step of the way.</p>
-                        <p><a href="service/sharia-compliant-lending/index.html"
-                              class="btn btn-outline-primary btn-lg btn-more">More</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!--/ko-->
+        <!--/ko-->
+        <!--ko block:{"optional":false,"definition":"boxed-option-items","name":"options"} -->
+        <div class="boxed-option-items" data-bind="css: { 'is-draggable': isDraggable  }">
+            <ol class="reset-list boxed-option-list js-slider-item" data-bind="foreach: data" style="">
+                <!-- ko if: $data.goto --><!-- /ko -->
 
-        <div class="container-fluid mb-5">
-            <div class="row map">
-                <div class="col-12">
-                    <div id='map' class="d-block" style='height: 650px;'></div>
-                    <div class="box">
-                        <h2>How to <strong>find us</strong></h2>
-                        <address>135 Ballards Iane, London, N3 1LJ</address>
+                <!-- ko ifnot: $data.goto -->
+                <li class="boxed-option-item is-active has-icon has-more" data-bind="click: $root.context.getEventEmitter(BlockEvent.CLICK, $data),
+			css: {
+				'is-active': $root.currentPage() == $index(),
+				'show-line': !$root.controller.options.hideLine,
+				'has-icon': ko.unwrap($data.icon) !== undefined,
+				'has-more': $data.moreCopy }">
+                    <span class="hover-lines"></span>
+                    <span class="button-block boxed-option-link">
+
+				<!--ko if: $data.icon-->
+				<img class="icon-image" data-bind="attr.src: $data.icon,
+					css: {
+						'small-icon': $data.smallIcon
+					}" src="inc/image/apply-now-conversion-satellite/active-duty-icon.png">
+                        <!--/ko-->
+                        <!--ko if: $data.subtitle !== undefined-->
+				<h6 class="heading-06 subtitle"><!--ko text:$data.subtitle-->Full time<!--/ko--></h6>
+                        <!--/ko-->
+                        <!--ko if: $data.hideNumber !== true && isNaN($data.index) === false--><!--/ko-->
+				<div class="button-content"
+                     data-bind="css: { 'has-play-button': $root.controller.options.showPlayButton }">
+					<h3 class="heading-03"><!--ko text:$data.title-->Air Force Active Duty<!--/ko--></h3>
+                    <!--ko if: $data.copy-->
+					<p class="copy-body-01">
+						<!--ko text:$data.copy-->With a full-time job in the Air Force, you receive incomparable on-the-job training and benefits like 30 days of vacation with pay each year, up to 100 percent of tuition reimbursement, housing allowance and retirement.
+                        <!--/ko-->
+					</p>
+                    <!--/ko-->
+
+                    <!-- ko if: !$root.controller.options.showPlayButton && $data.buttonCopy --><!-- /ko -->
+
+					<div class="play-button-wrapper"><!--ko block:{"optional":true,"definition":"button-icon","name":"play-button"} -->
+                        <!--/ko--></div>
+				</div>
+			</span>
+
+                    <!--ko if: $data.moreCopy-->
+                    <!--ko block:{"optional":false,"definition":"button-outline"} --><!--
+Button outline
+
+Can be a 'button' or an 'a' tag
+@param href:string = url this should link to
+@param alignment:string = 'left/right/center'
+@param text:string = button text
+@param button:boolean = if true, element is a 'button' instead of an 'a' tag
+@param extraClassName:string = Extra class name to give the wrapper element for styling
+@param hasDownState:boolean = if true, gets an down-state class which has a click listener to it
+@param inverted:boolean = if true, shows inverted button (white)
+@param smallPadding:boolean = if true, adds a smaller side padding to the button copy
+@param iconLeft:string = Adds an element on the left side of the button with this class
+-->
+
+                    <!-- ko ifnot: $data.button -->
+                    <div class="button-alignment" data-bind="css: ($data.alignment ? $data.alignment : '')">
+                        <a href="" class="button-outline" data-bind="
+		attr: { href: ($data.href ? $data.href() : ''), target: ($data.target ? $data.target() : '') },
+		actionHref: $data.actions,
+		click : getEventEmitter(BlockEvent.CLICK, null, ($data.target ? true : false)),
+		css: ($data.extraClassName ? $data.extraClassName() : '') +
+			($data.hasDownState &amp;&amp; $data.hasDownState() ? ' has-down-state' : '') +
+			($data.inverted &amp;&amp; $data.inverted() ? ' inverted' : '') +
+			($data.fullWidth &amp;&amp; $data.fullWidth() ? ' full-width' : '')
+		" target="">
+		<span class="button-outline-copy"
+              data-bind="css: { 'small-padding': $data.smallPadding, 'small-copy': $data.smallCopy }">
+			<!-- ko if: $data.isLoading --><!-- /ko -->
+			<span data-bind="css: {'not-visible': $data.isLoading}" class="">
+				<!-- ko if: $data.iconLeft --><!-- /ko -->
+				<span class="button-text-wrapper"><!--ko text:$data.text-->Learn more<!--/ko--></span>
+			</span>
+		</span>
+                            <span class="button-outline-bottom"></span>
+                        </a>
+                    </div>
+                    <!-- /ko -->
+
+                    <!-- ko if: $data.button --><!-- /ko -->
+                    <!--/ko-->
+                    <!-- /ko -->
+
+                </li>
+                <!-- /ko -->
+
+                <!-- ko if: $data.goto --><!-- /ko -->
+
+                <!-- ko ifnot: $data.goto -->
+                <li class="boxed-option-item has-icon has-more" data-bind="click: $root.context.getEventEmitter(BlockEvent.CLICK, $data),
+			css: {
+				'is-active': $root.currentPage() == $index(),
+				'show-line': !$root.controller.options.hideLine,
+				'has-icon': ko.unwrap($data.icon) !== undefined,
+				'has-more': $data.moreCopy }">
+                    <span class="hover-lines"></span>
+                    <span class="button-block boxed-option-link">
+
+				<!--ko if: $data.icon-->
+				<img class="icon-image" data-bind="attr.src: $data.icon,
+					css: {
+						'small-icon': $data.smallIcon
+					}" src="inc/image/apply-now-conversion-satellite/air-national-guard-icon.png">
+                        <!--/ko-->
+                        <!--ko if: $data.subtitle !== undefined-->
+				<h6 class="heading-06 subtitle"><!--ko text:$data.subtitle-->Part time<!--/ko--></h6>
+                        <!--/ko-->
+                        <!--ko if: $data.hideNumber !== true && isNaN($data.index) === false--><!--/ko-->
+				<div class="button-content"
+                     data-bind="css: { 'has-play-button': $root.controller.options.showPlayButton }">
+					<h3 class="heading-03"><!--ko text:$data.title-->Air National Guard<!--/ko--></h3>
+                    <!--ko if: $data.copy-->
+					<p class="copy-body-01">
+						<!--ko text:$data.copy-->As part of both the state and federal governments, the Air National Guard gives you an opportunity to serve your country and your community. You’ll be able to thrive in your home life and civilian career while still serving your country and earning meaningful benefits.
+                        <!--/ko-->
+					</p>
+                    <!--/ko-->
+
+                    <!-- ko if: !$root.controller.options.showPlayButton && $data.buttonCopy --><!-- /ko -->
+
+					<div class="play-button-wrapper"><!--ko block:{"optional":true,"definition":"button-icon","name":"play-button"} -->
+                        <!--/ko--></div>
+				</div>
+			</span>
+
+                    <!--ko if: $data.moreCopy-->
+                    <!--ko block:{"optional":false,"definition":"button-outline"} --><!--
+Button outline
+
+Can be a 'button' or an 'a' tag
+@param href:string = url this should link to
+@param alignment:string = 'left/right/center'
+@param text:string = button text
+@param button:boolean = if true, element is a 'button' instead of an 'a' tag
+@param extraClassName:string = Extra class name to give the wrapper element for styling
+@param hasDownState:boolean = if true, gets an down-state class which has a click listener to it
+@param inverted:boolean = if true, shows inverted button (white)
+@param smallPadding:boolean = if true, adds a smaller side padding to the button copy
+@param iconLeft:string = Adds an element on the left side of the button with this class
+-->
+
+                    <!-- ko ifnot: $data.button -->
+                    <div class="button-alignment" data-bind="css: ($data.alignment ? $data.alignment : '')">
+                        <a href="" class="button-outline" data-bind="
+		attr: { href: ($data.href ? $data.href() : ''), target: ($data.target ? $data.target() : '') },
+		actionHref: $data.actions,
+		click : getEventEmitter(BlockEvent.CLICK, null, ($data.target ? true : false)),
+		css: ($data.extraClassName ? $data.extraClassName() : '') +
+			($data.hasDownState &amp;&amp; $data.hasDownState() ? ' has-down-state' : '') +
+			($data.inverted &amp;&amp; $data.inverted() ? ' inverted' : '') +
+			($data.fullWidth &amp;&amp; $data.fullWidth() ? ' full-width' : '')
+		" target="">
+		<span class="button-outline-copy"
+              data-bind="css: { 'small-padding': $data.smallPadding, 'small-copy': $data.smallCopy }">
+			<!-- ko if: $data.isLoading --><!-- /ko -->
+			<span data-bind="css: {'not-visible': $data.isLoading}" class="">
+				<!-- ko if: $data.iconLeft --><!-- /ko -->
+				<span class="button-text-wrapper"><!--ko text:$data.text-->Learn more<!--/ko--></span>
+			</span>
+		</span>
+                            <span class="button-outline-bottom"></span>
+                        </a>
+                    </div>
+                    <!-- /ko -->
+
+                    <!-- ko if: $data.button --><!-- /ko -->
+                    <!--/ko-->
+                    <!-- /ko -->
+
+                </li>
+                <!-- /ko -->
+
+                <!-- ko if: $data.goto --><!-- /ko -->
+
+                <!-- ko ifnot: $data.goto -->
+                <li class="boxed-option-item has-icon has-more" data-bind="click: $root.context.getEventEmitter(BlockEvent.CLICK, $data),
+			css: {
+				'is-active': $root.currentPage() == $index(),
+				'show-line': !$root.controller.options.hideLine,
+				'has-icon': ko.unwrap($data.icon) !== undefined,
+				'has-more': $data.moreCopy }">
+                    <span class="hover-lines"></span>
+                    <span class="button-block boxed-option-link">
+
+				<!--ko if: $data.icon-->
+				<img class="icon-image" data-bind="attr.src: $data.icon,
+					css: {
+						'small-icon': $data.smallIcon
+					}" src="inc/image/apply-now-conversion-satellite/air-force-reserve-icon.png">
+                        <!--/ko-->
+                        <!--ko if: $data.subtitle !== undefined-->
+				<h6 class="heading-06 subtitle"><!--ko text:$data.subtitle-->Part time<!--/ko--></h6>
+                        <!--/ko-->
+                        <!--ko if: $data.hideNumber !== true && isNaN($data.index) === false--><!--/ko-->
+				<div class="button-content"
+                     data-bind="css: { 'has-play-button': $root.controller.options.showPlayButton }">
+					<h3 class="heading-03"><!--ko text:$data.title-->Air Force Reserve<!--/ko--></h3>
+                    <!--ko if: $data.copy-->
+					<p class="copy-body-01">
+						<!--ko text:$data.copy-->The Air Force Reserve offers you the opportunity to play a crucial role in our nation’s defense while living at home and serving locally. You are able to pursue your civilian career or education while enjoying the benefits of military service.
+                        <!--/ko-->
+					</p>
+                    <!--/ko-->
+
+                    <!-- ko if: !$root.controller.options.showPlayButton && $data.buttonCopy --><!-- /ko -->
+
+					<div class="play-button-wrapper"><!--ko block:{"optional":true,"definition":"button-icon","name":"play-button"} -->
+                        <!--/ko--></div>
+				</div>
+			</span>
+
+                    <!--ko if: $data.moreCopy-->
+                    <!--ko block:{"optional":false,"definition":"button-outline"} --><!--
+Button outline
+
+Can be a 'button' or an 'a' tag
+@param href:string = url this should link to
+@param alignment:string = 'left/right/center'
+@param text:string = button text
+@param button:boolean = if true, element is a 'button' instead of an 'a' tag
+@param extraClassName:string = Extra class name to give the wrapper element for styling
+@param hasDownState:boolean = if true, gets an down-state class which has a click listener to it
+@param inverted:boolean = if true, shows inverted button (white)
+@param smallPadding:boolean = if true, adds a smaller side padding to the button copy
+@param iconLeft:string = Adds an element on the left side of the button with this class
+-->
+
+                    <!-- ko ifnot: $data.button -->
+                    <div class="button-alignment" data-bind="css: ($data.alignment ? $data.alignment : '')">
+                        <a href="" class="button-outline" data-bind="
+		attr: { href: ($data.href ? $data.href() : ''), target: ($data.target ? $data.target() : '') },
+		actionHref: $data.actions,
+		click : getEventEmitter(BlockEvent.CLICK, null, ($data.target ? true : false)),
+		css: ($data.extraClassName ? $data.extraClassName() : '') +
+			($data.hasDownState &amp;&amp; $data.hasDownState() ? ' has-down-state' : '') +
+			($data.inverted &amp;&amp; $data.inverted() ? ' inverted' : '') +
+			($data.fullWidth &amp;&amp; $data.fullWidth() ? ' full-width' : '')
+		" target="">
+		<span class="button-outline-copy"
+              data-bind="css: { 'small-padding': $data.smallPadding, 'small-copy': $data.smallCopy }">
+			<!-- ko if: $data.isLoading --><!-- /ko -->
+			<span data-bind="css: {'not-visible': $data.isLoading}" class="">
+				<!-- ko if: $data.iconLeft --><!-- /ko -->
+				<span class="button-text-wrapper"><!--ko text:$data.text-->Learn more<!--/ko--></span>
+			</span>
+		</span>
+                            <span class="button-outline-bottom"></span>
+                        </a>
+                    </div>
+                    <!-- /ko -->
+
+                    <!-- ko if: $data.button --><!-- /ko -->
+                    <!--/ko-->
+                    <!-- /ko -->
+
+                </li>
+                <!-- /ko -->
+
+                <!-- ko if: $data.goto --><!-- /ko -->
+
+                <!-- ko ifnot: $data.goto -->
+                <li class="boxed-option-item has-icon has-more" data-bind="click: $root.context.getEventEmitter(BlockEvent.CLICK, $data),
+			css: {
+				'is-active': $root.currentPage() == $index(),
+				'show-line': !$root.controller.options.hideLine,
+				'has-icon': ko.unwrap($data.icon) !== undefined,
+				'has-more': $data.moreCopy }">
+                    <span class="hover-lines"></span>
+                    <span class="button-block boxed-option-link">
+
+				<!--ko if: $data.icon-->
+				<img class="icon-image small-icon" data-bind="attr.src: $data.icon,
+					css: {
+						'small-icon': $data.smallIcon
+					}" src="inc/image/apply-now-conversion-satellite/air-force-cs-icon.png">
+                        <!--/ko-->
+                        <!--ko if: $data.subtitle !== undefined-->
+				<h6 class="heading-06 subtitle"><!--ko text:$data.subtitle-->Full time<!--/ko--></h6>
+                        <!--/ko-->
+                        <!--ko if: $data.hideNumber !== true && isNaN($data.index) === false--><!--/ko-->
+				<div class="button-content"
+                     data-bind="css: { 'has-play-button': $root.controller.options.showPlayButton }">
+					<h3 class="heading-03"><!--ko text:$data.title-->Air Force Civilian Service<!--/ko--></h3>
+                    <!--ko if: $data.copy-->
+					<p class="copy-body-01">
+						<!--ko text:$data.copy-->The Air Force Civilian Service offers you the opportunity to support and sustain the Air Force mission out of uniform, working shoulder to shoulder with active duty Airmen to defend and protect our nation.
+                        <!--/ko-->
+					</p>
+                    <!--/ko-->
+
+                    <!-- ko if: !$root.controller.options.showPlayButton && $data.buttonCopy --><!-- /ko -->
+
+					<div class="play-button-wrapper"><!--ko block:{"optional":true,"definition":"button-icon","name":"play-button"} -->
+                        <!--/ko--></div>
+				</div>
+			</span>
+
+                    <!--ko if: $data.moreCopy-->
+                    <!--ko block:{"optional":false,"definition":"button-outline"} --><!--
+Button outline
+
+Can be a 'button' or an 'a' tag
+@param href:string = url this should link to
+@param alignment:string = 'left/right/center'
+@param text:string = button text
+@param button:boolean = if true, element is a 'button' instead of an 'a' tag
+@param extraClassName:string = Extra class name to give the wrapper element for styling
+@param hasDownState:boolean = if true, gets an down-state class which has a click listener to it
+@param inverted:boolean = if true, shows inverted button (white)
+@param smallPadding:boolean = if true, adds a smaller side padding to the button copy
+@param iconLeft:string = Adds an element on the left side of the button with this class
+-->
+
+                    <!-- ko ifnot: $data.button -->
+                    <div class="button-alignment" data-bind="css: ($data.alignment ? $data.alignment : '')">
+                        <a href="" class="button-outline" data-bind="
+		attr: { href: ($data.href ? $data.href() : ''), target: ($data.target ? $data.target() : '') },
+		actionHref: $data.actions,
+		click : getEventEmitter(BlockEvent.CLICK, null, ($data.target ? true : false)),
+		css: ($data.extraClassName ? $data.extraClassName() : '') +
+			($data.hasDownState &amp;&amp; $data.hasDownState() ? ' has-down-state' : '') +
+			($data.inverted &amp;&amp; $data.inverted() ? ' inverted' : '') +
+			($data.fullWidth &amp;&amp; $data.fullWidth() ? ' full-width' : '')
+		" target="">
+		<span class="button-outline-copy"
+              data-bind="css: { 'small-padding': $data.smallPadding, 'small-copy': $data.smallCopy }">
+			<!-- ko if: $data.isLoading --><!-- /ko -->
+			<span data-bind="css: {'not-visible': $data.isLoading}" class="">
+				<!-- ko if: $data.iconLeft --><!-- /ko -->
+				<span class="button-text-wrapper"><!--ko text:$data.text-->Learn more<!--/ko--></span>
+			</span>
+		</span>
+                            <span class="button-outline-bottom"></span>
+                        </a>
+                    </div>
+                    <!-- /ko -->
+
+                    <!-- ko if: $data.button --><!-- /ko -->
+                    <!--/ko-->
+                    <!-- /ko -->
+
+                </li>
+                <!-- /ko -->
+            </ol>
+
+            <nav class="carousel-paginate-nav">
+                <ul class="ib-list carousel-paginate-list" data-bind="foreach: data">
+                    <li class="carousel-paginate-list-item is-active"
+                        data-bind="css: { 'is-active': $root.currentPage() == $index() }"></li>
+
+                    <li class="carousel-paginate-list-item"
+                        data-bind="css: { 'is-active': $root.currentPage() == $index() }"></li>
+
+                    <li class="carousel-paginate-list-item"
+                        data-bind="css: { 'is-active': $root.currentPage() == $index() }"></li>
+
+                    <li class="carousel-paginate-list-item"
+                        data-bind="css: { 'is-active': $root.currentPage() == $index() }"></li>
+                </ul>
+            </nav>
+        </div>
+        <!--/ko-->
+
+        <button class="button-large" data-bind="click: getEventEmitter(BlockEvent.CLICK)">
+            <!--ko text:$data.ctaCopy--><!--/ko-->
+        </button>
+    </article>
+
+    <!--
+        <section class="wpcf7-display-none">
+            <div class="container">
+                <div class="row numbers">
+                    <div class="col-12 col-lg-4">
+                        <div class="item">
+                            <strong>£1.5bn</strong>
+                            of funding and rising
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="item">
+                            <strong>126 years</strong>
+                            of sector-specific banking
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <div class="item">
+                            <strong>100+</strong>
+                            approved introducer of clients to over 100 lenders
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="container-fluid">
+                <div class="row feature">
+                    <div class="col-12 col-md-5 col-lg-6 image "
+                         style="background-image: url('img/personalmortgages.jpg');">
+                        <img src="img/personalmortgages.jpg" class="d-md-none img-fluid">
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-6 order-md-1">
+                        <div class="description">
+                            <h1>Personal <strong>Mortgages</strong></h1>
+                            <p>We understand that personal mortgages can sometimes be challenging to arrange and need to be
+                                tailored to every person&#8217;s circumstances.</p>
+                            <p>PIA Financial Group is directly authorised by the Financial Conduct Authority which enables
+                                us to source the very best deals in the marketplace without being tied to a strict panel of
+                                lenders, thus obtaining the best possible deal for you.</p>
+                            <p><a href="https://piafg.co.uk/service/personal-mortgages/"
+                                  class="btn btn-outline-primary btn-lg btn-more">More</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row feature">
+                    <div class="col-12 col-md-5 col-lg-6 image order-md-2"
+                         style="background-image: url('img/highnetworthmortgages.jpg');">
+                        <img src="img/highnetworthmortgages.jpg" class="d-md-none img-fluid">
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-6 ">
+                        <div class="description">
+                            <h1>High <strong>Net Worth</strong> Mortgages</h1>
+                            <p class="p1">With our strong relationships with private banks and alike, we look to provide our
+                                high net worth clients with a bespoke service. Customers at this level often have complex
+                                income streams and holdings and very busy schedules. We look to ensure a smooth transition
+                                from start to finish.</p>
+                            <p><a href="service/high-net-worth-mortgages/index.html"
+                                  class="btn btn-outline-primary btn-lg btn-more">More</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row feature">
+                    <div class="col-12 col-md-5 col-lg-6 image "
+                         style="background-image: url('img/kevin-grieve-577771-1.jpg');">
+                        <img src="img/kevin-grieve-577771-1.jpg" class="d-md-none img-fluid">
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-6 order-md-1">
+                        <div class="description">
+                            <h1>Commercial Investment <strong>Property</strong></h1>
+                            <p>Are you an investor in commercial property? Then you already understand that it can be a
+                                complex market in which to operate. A commercial mortgage should be tailored to your needs,
+                                so that you know that you are getting the best possible value.</p>
+                            <p><a href="service/comercial-investment-property/index.html"
+                                  class="btn btn-outline-primary btn-lg btn-more">More</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row feature">
+                    <div class="col-12 col-md-5 col-lg-6 image order-md-2"
+                         style="background-image: url('img/craig-whitehead-253953-2-1.jpg');">
+                        <img src="img/craig-whitehead-253953-2-1.jpg" class="d-md-none img-fluid">
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-6 ">
+                        <div class="description">
+                            <h1>Bridging <strong>Finance</strong></h1>
+                            <p>Bridging finance offers a short-term borrowing solution, usually secured on land or property
+                                and regularly at short notice.</p>
+                            <p><a href="service/bridging-finance/index.html"
+                                  class="btn btn-outline-primary btn-lg btn-more">More</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row feature">
+                    <div class="col-12 col-md-5 col-lg-6 image "
+                         style="background-image: url('img/property-development.jpg');">
+                        <img src="img/property-development.jpg" class="d-md-none img-fluid">
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-6 order-md-1">
+                        <div class="description">
+                            <h1>Property <strong>Development</strong></h1>
+                            <p>The senior brokers at PIA Financial Group have come from the banking industry where their
+                                specialism was property development finance. We are able to present your development
+                                proposal with confidence in order to obtain your exact requirements.</p>
+                            <p><a href="service/property-development/index.html"
+                                  class="btn btn-outline-primary btn-lg btn-more">More</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row feature">
+                    <div class="col-12 col-md-5 col-lg-6 image order-md-2"
+                         style="background-image: url('img/shariah.jpg');">
+                        <img src="img/shariah.jpg" class="d-md-none img-fluid">
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-6 ">
+                        <div class="description">
+                            <h1><strong>Shariah-compliant</strong> Finance</h1>
+                            <p>Islamic finance has been in the mainstream market in the UK for some years. Here at PIA we
+                                have extensive knowledge to help with your finance requirements every step of the way.</p>
+                            <p><a href="service/sharia-compliant-lending/index.html"
+                                  class="btn btn-outline-primary btn-lg btn-more">More</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <div class="container">
-            <div class="row social">
-                <div class="col-12">
-                    <div class="border-top"></div>
+            <div class="container-fluid mb-5">
+                <div class="row map">
+                    <div class="col-12">
+                        <div id='map' class="d-block" style='height: 650px;'></div>
+                        <div class="box">
+                            <h2>How to <strong>find us</strong></h2>
+                            <address>135 Ballards Iane, London, N3 1LJ</address>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 col-md-6 order-md-2 text-md-right">
-                    <h2>Keep <strong>Up-to-date</strong></h2>
-                </div>
-                <div class="col-12 col-md-6 order-md-1">
-                    <ul>
-                        <li><a href="https://www.linkedin.com/company/pia-financial-group-ltd/about/" target="_blank"><i
-                                class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                        <li><a href="https://twitter.com/PIAFGLtd" target="_blank"><i class="fa fa-twitter"
-                                                                                      aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
-                <div class="col-12  order-md-3 pt-5">
-                    <div class="row no-gutters">
-                        <div class="col-12 col-md-4 item twitter">
-                            <div>
-                                <h3><i class="fab fa-twitter"></i></h3>
-                                <hr>
-                                <p class="message">We are delighted to have helped a customer raise funds on his home to
-                                    extend up and out to make more room for his family. The lender offered a
-                                    competitively-priced 5 year fixed offset product, meaning the customer could bank
-                                    surplus income in return for a reduced monthly payment.</p>
-                                <p><a href="https://twitter.com/PIAFGLtd/status/1116346230743928833" target="_blank"
-                                      class="btn btn-outline-white btn-more">More</a></p>
+            </div>
+
+            <div class="container">
+                <div class="row social">
+                    <div class="col-12">
+                        <div class="border-top"></div>
+                    </div>
+                    <div class="col-12 col-md-6 order-md-2 text-md-right">
+                        <h2>Keep <strong>Up-to-date</strong></h2>
+                    </div>
+                    <div class="col-12 col-md-6 order-md-1">
+                        <ul>
+                            <li><a href="https://www.linkedin.com/company/pia-financial-group-ltd/about/" target="_blank"><i
+                                    class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="https://twitter.com/PIAFGLtd" target="_blank"><i class="fa fa-twitter"
+                                                                                          aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12  order-md-3 pt-5">
+                        <div class="row no-gutters">
+                            <div class="col-12 col-md-4 item twitter">
+                                <div>
+                                    <h3><i class="fab fa-twitter"></i></h3>
+                                    <hr>
+                                    <p class="message">We are delighted to have helped a customer raise funds on his home to
+                                        extend up and out to make more room for his family. The lender offered a
+                                        competitively-priced 5 year fixed offset product, meaning the customer could bank
+                                        surplus income in return for a reduced monthly payment.</p>
+                                    <p><a href="https://twitter.com/PIAFGLtd/status/1116346230743928833" target="_blank"
+                                          class="btn btn-outline-white btn-more">More</a></p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 item linkedin">
+                                <div>
+                                    <h3><i class="fab fa-linkedin-in"></i></h3>
+                                    <hr>
+                                    <p class="message">We are pleased to have recently completed a limited company
+                                        buy-to-let purchase for two of our portfolio investment customers. <br/>
+                                        After taking advice on the best way to structure their investment portfolio, our
+                                        clients purchased their former family home at full market value, [...]</p>
+                                    <p><a href="https://www.linkedin.com/feed/update/urn:li:activity:6522137915173281792"
+                                          target="_blank" class="btn btn-outline-white btn-more">More</a></p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 item twitter">
+                                <div>
+                                    <div class="image"
+                                         style="background-image:url('wp-content/uploads/2019/04/D3oLm1rX4AAZc8Y.jpg')"></div>
+                                    <h3><i class="fab fa-twitter"></i></h3>
+                                    <hr>
+                                    <p class="message">A fun night was had by all at the Moneyfacts Awards 2019. Many thanks
+                                        to all the attendees, especially our guests George Constant, Anna Kontophyrgou,
+                                        Lakis Kasapis, Gary Moore and Laura Siguine. Congratulations to all of the
+                                        winners!</p>
+                                    <p><a href="https://twitter.com/PIAFGLtd/status/1115216725077889025" target="_blank"
+                                          class="btn btn-outline-white btn-more">More</a></p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-4 item linkedin">
-                            <div>
-                                <h3><i class="fab fa-linkedin-in"></i></h3>
-                                <hr>
-                                <p class="message">We are pleased to have recently completed a limited company
-                                    buy-to-let purchase for two of our portfolio investment customers. <br/>
-                                    After taking advice on the best way to structure their investment portfolio, our
-                                    clients purchased their former family home at full market value, [...]</p>
-                                <p><a href="https://www.linkedin.com/feed/update/urn:li:activity:6522137915173281792"
-                                      target="_blank" class="btn btn-outline-white btn-more">More</a></p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4 item twitter">
-                            <div>
-                                <div class="image"
-                                     style="background-image:url('wp-content/uploads/2019/04/D3oLm1rX4AAZc8Y.jpg')"></div>
-                                <h3><i class="fab fa-twitter"></i></h3>
-                                <hr>
-                                <p class="message">A fun night was had by all at the Moneyfacts Awards 2019. Many thanks
-                                    to all the attendees, especially our guests George Constant, Anna Kontophyrgou,
-                                    Lakis Kasapis, Gary Moore and Laura Siguine. Congratulations to all of the
-                                    winners!</p>
-                                <p><a href="https://twitter.com/PIAFGLtd/status/1115216725077889025" target="_blank"
-                                      class="btn btn-outline-white btn-more">More</a></p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-    </section>-->
+        </section>-->
 </section>
 
-
+<!--
 <footer id="footer">
 
     <div class="container-fluid p-0">
@@ -577,11 +1289,11 @@
                                         <label>How can we help?</label><br/>
                                         <span class="wpcf7-form-control-wrap question">
                                             <input type="text"
-                                                                                              name="question" value=""
-                                                                                              size="40"
-                                                                                              class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
-                                                                                              aria-required="true"
-                                                                                              aria-invalid="false"/></span><br/>
+                                                   name="question" value=""
+                                                   size="40"
+                                                   class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
+                                                   aria-required="true"
+                                                   aria-invalid="false"/></span><br/>
                                         <span class="wpcf7-form-control-wrap your-accept"><span
                                                 class="wpcf7-form-control wpcf7-acceptance"><span
                                                 class="wpcf7-list-item"><label><input type="checkbox" name="your-accept"
@@ -634,8 +1346,231 @@
         </div>
     </div>
 
-</footer>
 
+</footer>-->
+<footer class="site-footer">
+
+    <ul class="reset-list footer-nav footer-main-nav">
+        <li><a href="https://www.airforce.com/" data-bind="gaiaGoto: Branches.HOME">Home</a></li>
+        <li><a href="https://www.airforce.com/mission" data-bind="gaiaGoto: Branches.MISSION">Mission</a></li>
+        <li><a href="https://www.airforce.com/education" data-bind="gaiaGoto: Branches.EDUCATION">Education</a></li>
+        <li><a href="https://www.airforce.com/careers" data-bind="gaiaGoto: Branches.CAREERS">Careers</a></li>
+        <li><a href="https://www.airforce.com/lifestyle" data-bind="gaiaGoto: Branches.LIFESTYLE">Lifestyle</a></li>
+        <li><a href="https://www.airforce.com/how-to-join" data-bind="gaiaGoto: Branches.HOW_TO_JOIN">How to join</a></li>
+    </ul>
+
+    <div class="footer-2-column">
+        <ul class="reset-list footer-nav footer-sub-nav footer-nav-left-column">
+            <li><a href="https://www.airforce.com/account/login" data-bind="gaiaPopup: Branches.POPUP_LOGIN">Create a profile / Log in</a></li>
+            <li><a href="https://www.airforce.com/chat-live" data-bind="gaiaGoto: Branches.CHAT_LIVE">Chat Live</a></li>
+            <li><a href="https://usairforce.secure.force.com/afwin/usaf_login" data-bind="click: $root.controller.goToAfWin.bind($root.controller)"><!--ko text:afWinFooterCopy-->Personal Career Assessment<!--/ko--></a></li>
+            <li><a href="/airmanchallenge" target="_blank">Airman Challenge</a></li>
+            <li><a href="https://www.airforce.com/find-a-recruiter" data-bind="gaiaGoto: Branches.FIND_A_RECRUITER">Find a Recruiter</a></li>
+            <li><a href="https://www.airforce.com/find-an-event" data-bind="gaiaGoto: Branches.FIND_AN_EVENT">Find an Event</a></li>
+            <li><a href="https://www.airforce.com/apply-now" data-bind="gaiaGoto: Branches.APPLY_NOW">Apply Now</a></li>
+        </ul>
+
+        <ul class="reset-list footer-nav footer-sub-nav footer-af-desktop">
+            <li><a href="http://www.academyadmissions.com" target="_blank">AF Academy</a></li>
+            <li><a href="http://www.afrotc.com" target="_blank">AF ROTC</a></li>
+
+            <li><a href="https://afreserve.com/">AF Reserve</a></li>
+            <li><a href="https://www.goang.com/">Air National Guard</a></li>
+            <li><a href="https://www.af.mil/">AF.mil</a></li>
+            <li><a href="https://www.afciviliancareers.com/">AF Civilian Careers</a></li>
+        </ul>
+    </div>
+
+    <ul class="reset-list footer-nav footer-sub-nav full">
+        <li><a href="https://www.airforce.com/watch-videos" data-bind="gaiaGoto: Branches.WATCH_VIDEOS">Watch videos</a></li>
+        <li><a href="https://www.airforce.com/frequently-asked-questions" data-bind="gaiaGoto: Branches.FAQ">FAQs</a></li>
+        <li><a href="https://www.airforce.com/for-families" data-bind="gaiaGoto: Branches.FOR_FAMILIES">For Families</a></li>
+        <li><a href="https://www.airforce.com/para-las-familias" data-bind="gaiaGoto: Branches.PARA_LAS_FAMILIAS">Para las Familias</a></li>
+    </ul>
+
+    <ul class="reset-list footer-nav footer-sub-nav footer-af-mobile">
+        <li><a href="http://www.academyadmissions.com" target="_blank">AF Academy</a></li>
+        <li><a href="http://www.afrotc.com" target="_blank">AF ROTC</a></li>
+
+        <li><a href="https://afreserve.com/">AF Reserve</a></li>
+        <li><a href="https://www.goang.com/">Air National Guard</a></li>
+        <li><a href="https://www.af.mil/">AF.mil</a></li>
+        <li><a href="https://www.afciviliancareers.com/">AF Civilian Careers</a></li>
+    </ul>
+
+    <ul class="reset-list ib-list footer-inline-nav">
+        <li><a href="https://www.airforce.com/privacy-policy" data-bind="gaiaGoto: Branches.PRIVACY_POLICY">Privacy Policy</a></li>
+        <li><a href="https://www.airforce.com/about-our-ads" data-bind="gaiaGoto: Branches.ABOUT_OUR_ADS">About Our Ads</a></li>
+        <li><a href="https://www.airforce.com/sitemap" data-bind="gaiaGoto: Branches.SITEMAP">Sitemap</a></li>
+        <!--<li><a href="http://collaboratory.airforce.com" target="_blank">Collaboratory</a></li>-->
+    </ul>
+
+    <!--ko block:{"optional":false,"definition":"share"} --><div class="share-wrapper footer-social-nav text-inverted share-view-all" data-bind="
+		css: extraClassName() +
+			 (controller.options.showAll ? ' share-view-all' : ' share-view-default') +
+			 (controller.options.expandLeft ? ' is-aligned-right' : '') ">
+    <!-- ko if: controller.options.showAll -->
+    <ul class="share" data-bind="foreach: socialNetworks">
+        <li>
+            <a href="https://www.facebook.com/USAirForceRecruiting" data-bind="attr: { href: $data.url }" target="_blank">
+                <!-- ko template: {
+                    name: '_button-icon',
+                    data: { icon: 'icon-' + $data.method, inverted: $root.controller.options.inverted || false }
+                } --><!--
+Rounded button with icon
+
+@param extraClassName:string = Extra class name to give the wrapper element for styling
+@param icon:string = className of the icon that has to be loaded
+@param inverted:boolean = Button can be inverted (white)
+@param large:boolean = Button can be large
+
+Supported icons (prefixed with icon-):
+minus, plus, cross, arrow-right, arrows-down, vertical-lines, aim, timer, vs, share, facebook, twitter, youtube, tumblr, flickr
+-->
+                <span class="button-icon undefined is-inverted" data-bind="
+		css: $data.extraClassName + ($data.inverted ? ' is-inverted' : '') + ($data.large ? ' is-large' : '')
+	">
+	<!-- ko template: { name: '_circle-svg', data: { elementClassName: 'button-icon-outline' } } --><svg class="circle-svg button-icon-outline" width="100px" height="100px" viewBox="0 0 100 100" data-bind="attr: {
+		class: 'circle-svg ' + (typeof $data !== 'undefined' ? $data.elementClassName : '')
+	}">
+	<circle class="circle" cx="50" cy="50" r="48.8" fill="none" stroke="#fff" stroke-width="1.2" vector-effect="non-scaling-stroke"></circle>
+</svg><!-- /ko -->
+	<span class="icon icon-facebook" data-bind="css: $data.icon" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#FFF" d="M13.5 22v-9H16l.5-4h-3.2V7.6c0-1.1.5-1.9 2-1.9h1.2V2.1c-.3 0-.7-.1-2.1-.1-2.9 0-4.9 1.8-4.9 5v2h-2v4h2v9h4z"></path></svg></span>
+</span>
+                <!-- /ko -->
+            </a>
+        </li>
+
+        <li>
+            <a href="https://twitter.com/USAFRecruiting" data-bind="attr: { href: $data.url }" target="_blank">
+                <!-- ko template: {
+                    name: '_button-icon',
+                    data: { icon: 'icon-' + $data.method, inverted: $root.controller.options.inverted || false }
+                } --><!--
+Rounded button with icon
+
+@param extraClassName:string = Extra class name to give the wrapper element for styling
+@param icon:string = className of the icon that has to be loaded
+@param inverted:boolean = Button can be inverted (white)
+@param large:boolean = Button can be large
+
+Supported icons (prefixed with icon-):
+minus, plus, cross, arrow-right, arrows-down, vertical-lines, aim, timer, vs, share, facebook, twitter, youtube, tumblr, flickr
+-->
+                <span class="button-icon undefined is-inverted" data-bind="
+		css: $data.extraClassName + ($data.inverted ? ' is-inverted' : '') + ($data.large ? ' is-large' : '')
+	">
+	<!-- ko template: { name: '_circle-svg', data: { elementClassName: 'button-icon-outline' } } --><svg class="circle-svg button-icon-outline" width="100px" height="100px" viewBox="0 0 100 100" data-bind="attr: {
+		class: 'circle-svg ' + (typeof $data !== 'undefined' ? $data.elementClassName : '')
+	}">
+	<circle class="circle" cx="50" cy="50" r="48.8" fill="none" stroke="#fff" stroke-width="1.2" vector-effect="non-scaling-stroke"></circle>
+</svg><!-- /ko -->
+	<span class="icon icon-twitter" data-bind="css: $data.icon" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#FFF" d="M22.5 5.5c-.8.3-1.6.6-2.5.7.9-.5 1.6-1.4 1.9-2.4-.8.5-1.8.8-2.7 1-.8-.8-1.9-1.3-3.2-1.3-2.4 0-4.3 1.9-4.3 4.3 0 .3 0 .7.1 1C8.3 8.6 5.1 6.9 3 4.3c-.4.6-.6 1.4-.6 2.1 0 1.5.8 2.8 1.9 3.6-.7 0-1.4-.2-2-.5v.1c0 2.1 1.5 3.8 3.5 4.2-.4.1-.7.2-1.1.2-.3 0-.5 0-.8-.1.5 1.7 2.1 2.9 4 3-1.5 1.2-3.3 1.8-5.4 1.8-.3 0-.7 0-1-.1 1.9 1.2 4.2 1.9 6.6 1.9 7.9 0 12.3-6.5 12.3-12.2v-.6c.8-.6 1.5-1.3 2.1-2.2z"></path></svg></span>
+</span>
+                <!-- /ko -->
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.instagram.com/usaf_recruiting/" data-bind="attr: { href: $data.url }" target="_blank">
+                <!-- ko template: {
+                    name: '_button-icon',
+                    data: { icon: 'icon-' + $data.method, inverted: $root.controller.options.inverted || false }
+                } --><!--
+Rounded button with icon
+
+@param extraClassName:string = Extra class name to give the wrapper element for styling
+@param icon:string = className of the icon that has to be loaded
+@param inverted:boolean = Button can be inverted (white)
+@param large:boolean = Button can be large
+
+Supported icons (prefixed with icon-):
+minus, plus, cross, arrow-right, arrows-down, vertical-lines, aim, timer, vs, share, facebook, twitter, youtube, tumblr, flickr
+-->
+                <span class="button-icon undefined is-inverted" data-bind="
+		css: $data.extraClassName + ($data.inverted ? ' is-inverted' : '') + ($data.large ? ' is-large' : '')
+	">
+	<!-- ko template: { name: '_circle-svg', data: { elementClassName: 'button-icon-outline' } } --><svg class="circle-svg button-icon-outline" width="100px" height="100px" viewBox="0 0 100 100" data-bind="attr: {
+		class: 'circle-svg ' + (typeof $data !== 'undefined' ? $data.elementClassName : '')
+	}">
+	<circle class="circle" cx="50" cy="50" r="48.8" fill="none" stroke="#fff" stroke-width="1.2" vector-effect="non-scaling-stroke"></circle>
+</svg><!-- /ko -->
+	<span class="icon icon-instagram" data-bind="css: $data.icon" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M12.003 2.162c2.163.06 4.366-.147 6.497.302 1.754.346 3.001 1.948 3.171 3.687.289 2.987.13 5.999.154 8.997-.033 1.939.007 4.264-1.67 5.593-1.787 1.327-4.132.997-6.22 1.087-2.639-.041-5.295.127-7.92-.189-1.695-.202-3.213-1.457-3.548-3.16-.459-2.27-.237-4.613-.3-6.915.067-2.096-.161-4.244.368-6.294.44-1.818 2.248-2.902 4.03-2.995 1.808-.144 3.626-.102 5.438-.113zm0-2.162c-2.506.08-5.09-.218-7.524.519C2.234 1.17.612 3.229.257 5.506-.146 8.303.06 11.146.01 13.963c.034 2.566-.13 5.44 1.582 7.562 1.53 1.961 4.17 2.46 6.524 2.437 3.208.019 6.425.118 9.628-.106 2.3-.192 4.605-1.494 5.495-3.702 1.025-2.436.673-5.145.762-7.719-.065-2.483.174-5.013-.369-7.456-.494-2.263-2.343-4.112-4.605-4.607C16.731-.154 14.339.059 12.003 0zm0 5.836c-3.063-.07-5.884 2.477-6.129 5.53-.383 3.045 1.87 6.112 4.887 6.665 2.945.672 6.17-1.183 7.079-4.06 1.029-2.842-.417-6.274-3.166-7.528-.83-.4-1.75-.608-2.671-.607zm0 10.158c-2.365.077-4.388-2.282-3.953-4.607.286-2.342 2.911-3.982 5.142-3.21 2.27.63 3.504 3.462 2.416 5.553-.642 1.363-2.096 2.282-3.605 2.264zm6.404-11.84c-1.233-.068-1.938 1.633-1.018 2.457.824.919 2.525.215 2.457-1.018.017-.774-.664-1.456-1.439-1.44z" fill="#fff"></path></svg></span>
+</span>
+                <!-- /ko -->
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.youtube.com/USAirForceRecruiting" data-bind="attr: { href: $data.url }" target="_blank">
+                <!-- ko template: {
+                    name: '_button-icon',
+                    data: { icon: 'icon-' + $data.method, inverted: $root.controller.options.inverted || false }
+                } --><!--
+Rounded button with icon
+
+@param extraClassName:string = Extra class name to give the wrapper element for styling
+@param icon:string = className of the icon that has to be loaded
+@param inverted:boolean = Button can be inverted (white)
+@param large:boolean = Button can be large
+
+Supported icons (prefixed with icon-):
+minus, plus, cross, arrow-right, arrows-down, vertical-lines, aim, timer, vs, share, facebook, twitter, youtube, tumblr, flickr
+-->
+                <span class="button-icon undefined is-inverted" data-bind="
+		css: $data.extraClassName + ($data.inverted ? ' is-inverted' : '') + ($data.large ? ' is-large' : '')
+	">
+	<!-- ko template: { name: '_circle-svg', data: { elementClassName: 'button-icon-outline' } } --><svg class="circle-svg button-icon-outline" width="100px" height="100px" viewBox="0 0 100 100" data-bind="attr: {
+		class: 'circle-svg ' + (typeof $data !== 'undefined' ? $data.elementClassName : '')
+	}">
+	<circle class="circle" cx="50" cy="50" r="48.8" fill="none" stroke="#fff" stroke-width="1.2" vector-effect="non-scaling-stroke"></circle>
+</svg><!-- /ko -->
+	<span class="icon icon-youtube" data-bind="css: $data.icon" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#FFF" d="M23.8 7s-.2-1.6-1-2.3c-.9-.9-1.9-.9-2.4-1-3.4-.2-8.4-.2-8.4-.2s-5 0-8.4.2c-.5.1-1.5.1-2.4 1C.5 5.4.2 7 .2 7S0 8.8 0 10.6v1.7c0 1.9.2 4.7.2 4.7s.2 1.6 1 2.3c.9.9 2.1.9 2.6 1 1.9.2 8.2.2 8.2.2s5 0 8.4-.2c.5-.1 1.5-.1 2.4-1 .7-.7 1-2.3 1-2.3s.2-1.8.2-3.7v-2.7c0-1.8-.2-3.6-.2-3.6zm-8.2 5.6L10 15.4c-.1 0-.2.1-.3.1s-.3 0-.4-.1c-.2-.1-.3-.4-.3-.6V9.2c0-.2.1-.5.3-.6.1-.1.2-.1.4-.1.1 0 .2 0 .3.1l5.6 2.8c.2.1.4.4.4.6 0 .3-.1.5-.4.6z"></path></svg></span>
+</span>
+                <!-- /ko -->
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.flickr.com/photos/usairforce/" data-bind="attr: { href: $data.url }" target="_blank">
+                <!-- ko template: {
+                    name: '_button-icon',
+                    data: { icon: 'icon-' + $data.method, inverted: $root.controller.options.inverted || false }
+                } --><!--
+Rounded button with icon
+
+@param extraClassName:string = Extra class name to give the wrapper element for styling
+@param icon:string = className of the icon that has to be loaded
+@param inverted:boolean = Button can be inverted (white)
+@param large:boolean = Button can be large
+
+Supported icons (prefixed with icon-):
+minus, plus, cross, arrow-right, arrows-down, vertical-lines, aim, timer, vs, share, facebook, twitter, youtube, tumblr, flickr
+-->
+                <span class="button-icon undefined is-inverted" data-bind="
+		css: $data.extraClassName + ($data.inverted ? ' is-inverted' : '') + ($data.large ? ' is-large' : '')
+	">
+	<!-- ko template: { name: '_circle-svg', data: { elementClassName: 'button-icon-outline' } } --><svg class="circle-svg button-icon-outline" width="100px" height="100px" viewBox="0 0 100 100" data-bind="attr: {
+		class: 'circle-svg ' + (typeof $data !== 'undefined' ? $data.elementClassName : '')
+	}">
+	<circle class="circle" cx="50" cy="50" r="48.8" fill="none" stroke="#fff" stroke-width="1.2" vector-effect="non-scaling-stroke"></circle>
+</svg><!-- /ko -->
+	<span class="icon icon-flickr" data-bind="css: $data.icon" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" fill="#FFF" d="M17 8.5c-1.9 0-3.5 1.6-3.5 3.5s1.6 3.5 3.5 3.5 3.5-1.6 3.5-3.5-1.6-3.5-3.5-3.5zm-10 0c-1.9 0-3.5 1.6-3.5 3.5s1.6 3.5 3.5 3.5 3.5-1.6 3.5-3.5S8.9 8.5 7 8.5z"></path></svg></span>
+</span>
+                <!-- /ko -->
+            </a>
+        </li>
+    </ul>
+    <!-- /ko -->
+
+    <!-- ko ifnot: controller.options.showAll || !controller.options.shareData --><!-- /ko -->
+</div><!--/ko-->
+
+    <h6 class="footer-site-logo icon-logo-airforce" data-bind="gaiaGoto: Branches.HOME" href="https://www.airforce.com/"></h6>
+
+    <a href="/career-index" style="display : none;">Career index</a>
+
+</footer>
 
 <!--
 <div id="cookie-policy">
@@ -645,22 +1580,6 @@
 </div>
 -->
 
-
-<div class="modal fade" id="bioModal" tabindex="-1" role="dialog" aria-labelledby="bioModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                    aria-hidden="true">X</span></button>
-            <div class="modal-header">
-                <h5 class="modal-title" id="bioModalLabel"></h5>
-            </div>
-            <div class="modal-body"></div>
-            <div class="modal-footer d-none">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 <script type='text/javascript' src='js/scripts-ver=5.0.5.js'></script>
 <script type='text/javascript' src='js/wp-embed.min-ver=4.9.10.js'></script>

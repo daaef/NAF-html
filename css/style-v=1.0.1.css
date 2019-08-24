@@ -74,15 +74,89 @@ body a:hover {
 	/*overflow: hidden;*/
 	transition: all .5s ease .5s;
 }
-.navigation a.pia {
+a.pia {
 	display: block;
-	background: url("../img/logo.png") center center no-repeat;
+	background: url("../img/pia.png") center center no-repeat;
 	background-size: cover;
 	white-space: nowrap;
 	text-indent: 300%;
 	overflow: hidden;
 	transition: all .5s ease .5s;
 }
+
+
+a.btn-menu {
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	background: transparent center center no-repeat;
+	background-image: url("../img/icons8-bars.svg");
+	background-size: 50%;
+	white-space: nowrap;
+	text-indent: 100%;
+	overflow: hidden;
+	transform: scale(1);
+	transition: all .2s;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 20;
+}
+
+a.btn-close {
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	background: transparent center center no-repeat;
+	background-image: url("../img/icons8-close.svg");
+	border-radius: 50px;
+	background-size: 50%;
+	white-space: nowrap;
+	text-indent: 100%;
+	overflow: hidden;
+	transform: scale(1);
+	transition: all .2s;
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 5
+}
+
+.show-nav a.btn-close{
+	transform: scale(1) rotate(-90deg);
+	opacity: 1;
+	z-index: 100;
+}
+
+.show-nav a.btn-menu{
+	transform: scale(0) rotate(-90deg);
+	opacity: 0;
+	z-index: 12;
+}
+
+.navigation .text-toggle ul > .bton:hover a{
+	transform: rotate(-25deg);
+}
+
+.show-nav .text-toggle ul > .bton:hover a{
+	transform: rotate(25deg);
+}
+
+.navigation .text-toggle ul .bton{
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	height: 70px!important;
+}
+
+
+.navigation .text-toggle ul{
+	position: relative;
+}
+
+
 #header ul {
 	margin: 0;
 	padding: 0;
@@ -105,77 +179,6 @@ body a:hover {
 	transform: scale(1) rotate(-90deg);
 	transition: all .2s;
 }
-
-a.btn-menu {
-	display: inline-block;
-	width: 50px;
-	height: 50px;
-	background: transparent center center no-repeat;
-	background-image: url("../img/icons8-bars.svg");
-	background-size: 50%;
-	border: 2px solid white;
-	border-radius: 50px;
-	white-space: nowrap;
-	text-indent: 100%;
-	overflow: hidden;
-	transform: scale(1);
-	transition: all .2s;
-	right: 0;
-	top: 0;
-	bottom: 0;
-}
-
-a.btn-close {
-	display: inline-block;
-	width: 50px;
-	height: 50px;
-	background: transparent center center no-repeat;
-	background-image: url("../img/icons8-close.svg");
-	background-size: 50%;
-	border: 2px solid white;
-	border-radius: 50px;
-	white-space: nowrap;
-	text-indent: 100%;
-	overflow: hidden;
-	transform: scale(1);
-	transition: all .2s;
-	position: absolute;
-	right: 0;
-	top: 0;
-	bottom: 0;
-}
-
-.show-nav a.btn-close{
-	transform: scale(1) rotate(-90deg);
-	opacity: 1;
-}
-
-.show-nav a.btn-menu{
-	transform: scale(0) rotate(-90deg);
-	opacity: 1;
-}
-
-.navigation .text-toggle ul > .bton:hover a{
-	transform: rotate(-25deg);
-}
-
-.show-nav .text-toggle ul > .bton:hover a{
-	transform: rotate(25deg);
-}
-
-.navigation .text-toggle ul .bton{
-	position: absolute;
-	top: 50%;
-	right: 0;
-	transform: translateY(-50%);
-	height: 50px!important;
-}
-
-
-.navigation .text-toggle ul{
-	position: relative;
-}
-
 #header ul li a.btn-contact {
 	text-indent: unset;
 	transform: none;
@@ -1304,6 +1307,49 @@ section#home .social .item p {
 }
 
 @media ( max-width: 991px ) {
+
+	.navigation{
+		position: fixed;
+		display: flex;
+		height: 70px;
+		width: 100%;
+		z-index: 999999;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 25px;
+	}
+
+    a.pia {
+		width: 40px;
+		height: 40px;
+	}
+
+	.logo-title, .nav-route a{
+		font-size: 12px!important;
+		vertical-align: middle;
+	}
+
+
+	a.btn-menu, a.btn-close{
+		height: 50px;
+		width: 50px;
+		background-size: 50%;
+		top: 50%;
+		transform: translateY(-50%);
+		position: absolute;
+	}
+
+	.last-child{
+		display: none;
+	}
+
+	.line-mob{
+		display: none;
+	}
+	.mr-mob{
+		margin-right: 45px!important;
+	}
+
 	#header	{
 		width: 100%;
 		height: 100px;
@@ -1682,7 +1728,7 @@ section#home .social .item p {
 		padding: 0 25px;
 	}
 
-	.navigation a.pia {
+	 a.pia {
 		width: 70px;
 		height: 70px;
 	}
@@ -2309,7 +2355,7 @@ section#home .social .item p {
 }
 
 .overlay{
-    background: rgba(29, 34, 54, 0.41);
+    background: linear-gradient(to bottom, rgba(29, 34, 54, 0.71), rgba(29, 34, 54, 0.21));
     height: 100%;
     width: 100%;
     position: absolute;
@@ -2370,4 +2416,79 @@ section#home .social .item p {
 
 .tintIt{
     background: rgba(29, 34, 54, 0.74);;
+}
+
+.header-site-logo .logo-title{
+    position: absolute;
+    right: 0;
+    transform: translate(100%, 50%);
+    white-space: nowrap;
+    top: 50%;
+    transition: all .5s;
+}
+
+.apply-now-label:hover a{
+    color: #ffffff;
+    filter: brightness(60%);
+}
+
+#choose .background-image-cover{
+    filter: brightness(20%);
+}
+
+header.site-header{
+    transition: all .5s;
+}
+
+header.is-small + .site-header-small-view-bg{
+    margin-top: 0!important;
+    background: rgb(29, 34, 54)!important;
+}
+
+a.pia{
+	transition-delay: 0s!important;
+	filter: brightness(90%);
+}
+
+.is-small .pia{
+	position: absolute;
+	height: 40px!important;
+	width: 40px!important;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.logo-title{
+	transition: all .5s;
+}
+
+.is-small .header-site-logo{
+	opacity: 1!important;
+}
+
+.is-small .label-text{
+    color: #ffffff!important;
+}
+
+.is-small .cross-diagonal:before,.is-small .cross-diagonal:after,.is-small .cross:before{
+    background: #ffffff!important;
+}
+
+div.site-header header.site-header.is-small:not(.is-nav-open) .top-nav-button .lines, div.site-header header.site-header.is-small:not(.is-nav-open) .top-nav-button .lines:after, div.site-header header.site-header.is-small:not(.is-nav-open) .top-nav-button .lines:before{
+	background: #ffffff!important;
+}
+
+.icon-logo-airforce{
+	background-image: url(../img/pia.png)!important;
+	filter: brightness(90%);
+	background-size: contain!important;
+}
+
+.site-footer {
+	background: rgb(29, 34, 54)!important;
+	transition: all .5s!important;
+}
+
+.main-top-nav{
+	transition: all .5s!important;
 }
