@@ -2462,8 +2462,9 @@ a.pia{
 	transition: all .5s;
 }
 
-.is-small .header-site-logo{
-	opacity: 1!important;
+
+div.site-header .header-site-logo{
+	transform: translateY(-50%)!important;
 }
 
 .is-small .label-text{
@@ -2474,7 +2475,7 @@ a.pia{
     background: #ffffff!important;
 }
 
-div.site-header header.site-header.is-small:not(.is-nav-open) .top-nav-button .lines, div.site-header header.site-header.is-small:not(.is-nav-open) .top-nav-button .lines:after, div.site-header header.site-header.is-small:not(.is-nav-open) .top-nav-button .lines:before{
+div.site-header header.site-header.is-small:not(.is-nav-open) .top-nav-button .lines, div.site-header header.site-header.is-small:not(.is-nav-open) .top-nav-button .lines:after, div.site-header header.site-header.is-small:not(.is-nav-open) .top-nav-button .lines:before, div.site-header header.site-header.is-small:not(.is-nav-open) .main-top-nav .page-label:before{
 	background: #ffffff!important;
 }
 
@@ -2491,4 +2492,66 @@ div.site-header header.site-header.is-small:not(.is-nav-open) .top-nav-button .l
 
 .main-top-nav{
 	transition: all .5s!important;
+}
+
+@media (max-width: 767px){
+	.site-footer{
+		display: flex!important;
+		flex-wrap: wrap;
+	}
+	.site-footer > *{
+		width: 100%!important;
+	}
+	.site-footer .icon-logo-airforce{
+		order: -1;
+		margin-bottom: 20px;
+	}
+	/*div.site-header .main-top-nav {
+		top: 2rem!important;
+		right: 1.9rem;
+	}*/
+	div.site-header .header-site-logo{
+		width: 43px!important;
+		top: 40px!important;
+		left: 11px;
+		transition-duration: 0s, 0s;
+		transform: translateY(-50%)!important;
+	}
+	.main-top-nav{
+		top: 40px!important;
+		transform: translateY(-50%)!important;
+	}
+}
+
+.main-top-nav a, .main-top-nav .page-label .label-text{
+	font-weight: 600!important;
+}
+
+
+.is-small .icon-logo-airforce{
+	top: 40px!important;
+	opacity: 1!important;
+}
+
+.content-wrapper {
+	position: relative;
+	padding: 4rem 2rem 0!important;
+	text-align: center;
+	margin-bottom: 0!important;
+	padding-bottom: 4rem!important;
+}
+
+.coverer.background-image-cover{
+	filter: brightness(40%);
+}
+
+
+
+.heading-block {
+	margin: 0 auto 4rem!important;
+}
+
+.text-light{
+	color: #7a7a7a!important;
+	font-size: 16px!important;
 }
