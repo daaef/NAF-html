@@ -16061,7 +16061,7 @@ html.is-mobile .filter-select .options li.active, html:not(.is-mobile) .filter-s
 }
 
 .site-wrapper {
-    max-width: 65rem;
+    max-width: 56rem;
     margin-left: auto;
     margin-right: auto
 }
