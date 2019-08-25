@@ -2445,6 +2445,10 @@ header.is-small + .site-header-small-view-bg{
     background: rgb(29, 34, 54)!important;
 }
 
+.site-header-small-view-bg{
+	transition: all .3s;
+}
+
 a.pia{
 	transition-delay: 0s!important;
 	filter: brightness(90%);
