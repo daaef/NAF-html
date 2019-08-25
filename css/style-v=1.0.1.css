@@ -20,7 +20,8 @@ body a {
 	text-decoration: none!important;
 }
 body a:hover {
-	color: #000000;
+	color: #ffffff;
+    filter: brightness(90%);
 }
 
 .btn {
@@ -2566,4 +2567,12 @@ div.site-header header.site-header.is-small:not(.is-nav-open) .top-nav-button .l
 
 .a-page-intro{
     background: #0d1017;
+}
+
+.mt-70px{
+    margin-top: 70px!important;
+}
+
+.full-image-ratio{
+    filter: brightness(50%);
 }

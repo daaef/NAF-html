@@ -2715,7 +2715,7 @@ html.is-mobile .button-icon.is-large.active .circle, html:not(.is-mobile) .butto
 
 .button-icon-outline .circle {
     stroke: currentColor;
-    stroke-dasharray: 42.2 10;
+    stroke-dasharray: 55.2 20;
     stroke-dashoffset: 8;
     stroke-width: 1.2;
     transition: all .8s cubic-bezier(.19, 1, .22, 1)
@@ -16061,7 +16061,7 @@ html.is-mobile .filter-select .options li.active, html:not(.is-mobile) .filter-s
 }
 
 .site-wrapper {
-    max-width: 56rem;
+    max-width: 65rem;
     margin-left: auto;
     margin-right: auto
 }
