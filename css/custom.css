@@ -1670,11 +1670,11 @@ html.is-mobile .main-navigation-link.active .hover-arrow, html:not(.is-mobile) .
 }
 
 .main-navigation-title:before {
-    height: 1px;
-    width: 40px;
+    height: 2px;
+    width: 50px;
     content: '';
     position: absolute;
-    top: -.85rem;
+    top: 2.15rem;
     left: .06em;
     background: #fff
 }
