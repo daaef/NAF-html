@@ -1609,7 +1609,8 @@ html.is-mobile .main-navigation:not(.is-animating-out) .main-navigation-list.act
     font-size: .75rem;
     text-transform: uppercase;
     letter-spacing: .08em;
-    padding-left: .08em
+    padding-left: .08em;
+    margin-bottom: 0;
 }
 
 .main-navigation-link {
