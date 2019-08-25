@@ -1828,7 +1828,7 @@ html.is-mobile .main-navigation-link.active .hover-arrow, html:not(.is-mobile) .
     display: inline-block;
     vertical-align: top;
     font: normal 18px/1.44445 StratumBlack, Arial, sans-serif;
-    font-size: .9rem;
+    font-size: 1.2rem;
     color: #fff;
     margin-bottom: 1.44445em
 }
