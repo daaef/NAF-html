@@ -567,7 +567,29 @@
                 </li>
                 <li class="grid-item grid-one-half single-margin-bottom">
 
+                    <!--ko block:{"optional":false,"definition":"heading-block-04","name":"intro-more-info"} --><!--
+Heading Block 04 Partial
+
+Can have a variable heading class (heading-03 - default, heading-04)
+@param caption:string = small caption on top (also used as number)
+@param title:string = large title
+@param lineBefore:boolean = if true, adds a line before the heading
+-->
                     <div class="half-margin-bottom">
+                        <div class="heading-block-more-info" data-bind="css: $data.extraClassName">
+                            <h6 data-bind="html: $data.title, css: $data.headingClass || 'heading-03'"
+                                class="heading-04 s-large">
+                                ABOUT THE NAF
+                            </h6>
+                        </div><!--/ko-->
+                        <!--ko block:{"optional":false,"definition":"copy-body-01"} -->
+                        <p
+                                class="copy-body-01 null text-light"
+                                data-bind="css: ($data.extraClassName ? $data.extraClassName() : null) + ($data.light ? ' text-light' : ''), html: $data.copy">
+                            To ensure the integrity of the airspace by gaining and maintaining control of the air while retaining a credible capacity to fulfill...
+                        </p>
+                    </div>
+                    <div>
 
                         <div class="heading-block-more-info" data-bind="css: $data.extraClassName">
                             <h6 data-bind="html: $data.title, css: $data.headingClass || 'heading-03'"
@@ -582,28 +604,6 @@
                             To reposition the NAF into a highly professional and disciplined force through capacity
                             building
                             initiatives for effective, efficient...</p>
-                    </div>
-                    <!--ko block:{"optional":false,"definition":"heading-block-04","name":"intro-more-info"} --><!--
-Heading Block 04 Partial
-
-Can have a variable heading class (heading-03 - default, heading-04)
-@param caption:string = small caption on top (also used as number)
-@param title:string = large title
-@param lineBefore:boolean = if true, adds a line before the heading
--->
-                    <div>
-                        <div class="heading-block-more-info" data-bind="css: $data.extraClassName">
-                            <h6 data-bind="html: $data.title, css: $data.headingClass || 'heading-03'"
-                                class="heading-04 s-large">
-                                FOREIGN MISSION
-                            </h6>
-                        </div><!--/ko-->
-                        <!--ko block:{"optional":false,"definition":"copy-body-01"} -->
-                        <p
-                                class="copy-body-01 null text-light"
-                                data-bind="css: ($data.extraClassName ? $data.extraClassName() : null) + ($data.light ? ' text-light' : ''), html: $data.copy">
-                            Get information about the Nigerian Air Force international missions, collaborations and lots
-                            more...</p>
                     </div>
                 </li>
                 <li class="grid-item grid-one-half single-margin-bottom">
