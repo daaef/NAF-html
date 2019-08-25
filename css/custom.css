@@ -1606,7 +1606,7 @@ html.is-mobile .main-navigation:not(.is-animating-out) .main-navigation-list.act
 .main-navigation-list dd {
     margin-left: 0;
     font: normal 15px/1rem StratumBlack, Arial, sans-serif;
-    font-size: .75rem;
+    font-size: .62rem;
     text-transform: uppercase;
     letter-spacing: .08em;
     padding-left: .08em;
@@ -1614,6 +1614,8 @@ html.is-mobile .main-navigation:not(.is-animating-out) .main-navigation-list.act
 }
 
 .main-navigation-link {
+    font-weight:900;
+
     position: relative;
     display: block;
     text-decoration: none;
@@ -1659,7 +1661,8 @@ html.is-mobile .main-navigation-link.active .hover-arrow, html:not(.is-mobile) .
 .main-navigation-title {
     position: relative;
     font: normal 30px/1 StratumBold, Arial, sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .01em;
     margin: 0 13.88889% 1.66667em;
