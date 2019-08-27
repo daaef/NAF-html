@@ -2446,7 +2446,9 @@ header.is-small + .site-header-small-view-bg{
     margin-top: 0!important;
     background: rgb(29, 34, 54)!important;
 }
-
+.a-page-intro{
+	background: rgb(29, 34, 54)!important;
+}
 .site-header-small-view-bg{
 	transition: all .3s;
 }

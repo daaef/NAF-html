@@ -74,14 +74,14 @@
 
         <ul class="main-top-nav">
             <li class="apply-now-label"><a
-                                           id="top-nav-connect" class="label-text">Join Now</a></li>
+                    id="top-nav-connect" class="label-text">Join Now</a></li>
             <li class="apply-now-label"><a class="label-text"
                                            href="#">Contact</a></li>
-            <li class="page-label"><span class="label-text is-filled" ><!--ko text:navPageName-->Home
+            <li class="page-label"><span class="label-text is-filled"><!--ko text:navPageName-->Home
                 <!--/ko--></span></li>
             <li>
                 <a href="#" class="ir top-nav-button main-nav-toggle"
-                   >
+                >
                     <span class="lines"></span>
                     <span class="cross">
                         <span class="cross-diagonal"></span>
@@ -264,7 +264,7 @@
             </a></dd>
 
             <dd style=""><a class="main-navigation-link"
-                            >
+            >
                 <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
                                                                                      clip-rule="evenodd" fill="#FFF"
@@ -299,7 +299,7 @@
 
         </div>
     </header>
-    <article id="welcome" class="content-wrapper a-page-intro">
+    <article data-aos="zoom-in" data-aos-duration="1500"  id="welcome" class="content-wrapper a-page-intro">
 
         <div class="heading-block" data-transition="heading-block-02">
             <!-- ko if: typeof $data.headNumber != "undefined" --><!-- /ko -->
@@ -309,10 +309,17 @@
                 <hr class="heading-block-topline-v">
             </div>
             <!-- /ko -->
-            <h6 class="text-anime heading-06">
-                <span>W</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span> <span>t</span><span>o</span> <span>t</span><span>h</span><span>e</span> <span>o</span><span>f</span><span>f</span><span>i</span><span>c</span><span>i</span><span>a</span><span>l</span> <span>w</span><span>e</span><span>b</span><span>s</span><span>i</span><span>t</span><span>e</span> <span>o</span><span>f</span> <span>t</span><span>h</span><span>e</span>
-                </h6>
-            <h2 data-aos="fade-up" data-aos-duration="1000" id="text" class="heading-02 title responsive-title">
+            <h6 data-aos="zoom-in"
+                 data-aos-duration="3000" class="text-anime heading-06">
+                <span>W</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span>
+                <span>t</span><span>o</span> <span>t</span><span>h</span><span>e</span>
+                <span>o</span><span>f</span><span>f</span><span>i</span><span>c</span><span>i</span><span>a</span><span>l</span>
+                <span>w</span><span>e</span><span>b</span><span>s</span><span>i</span><span>t</span><span>e</span>
+                <span>o</span><span>f</span> <span>t</span><span>h</span><span>e</span>
+            </h6>
+            <h2 data-aos="fade-up"
+                data-aos-duration="3000"
+                id="text" class="heading-02 title responsive-title">
                 Nigerian Air Force</h2>
             <div class="button-wrapper-subtitle">
                 <!--ko block:{"optional":true,"definition":"button-outline","name":"button"} --><!--/ko-->
@@ -322,8 +329,8 @@
 
         <div class="site-wrapper text-left">
 
-            <ul class="reset-list grid-wrapper grid-padding-single" >
-                <li data-aos="fade-right" class="grid-item grid-one-half single-margin-bottom">
+            <ul class="reset-list grid-wrapper grid-padding-single">
+                <li class="grid-item grid-one-half single-margin-bottom">
                     <div class="heading-block-more-info">
                         <h6 class="heading-04 s-large">HISTORY OF THE NAF</h6>
                     </div><!--/ko-->
@@ -344,7 +351,7 @@
                     <!--/ko-->
 
                 </li>
-                <li data-aos="fade-left" class="grid-item grid-one-half single-margin-bottom">
+                <li class="grid-item grid-one-half single-margin-bottom">
                     <div class="half-margin-bottom">
                         <div class="heading-block-more-info">
                             <h6 class="heading-04 s-large">
@@ -362,7 +369,7 @@
 
                         <div class="heading-block-more-info">
                             <h6
-                                class="heading-04 s-large">
+                                    class="heading-04 s-large">
                                 VISION & MISSION
                             </h6>
                         </div><!--/ko-->
@@ -374,7 +381,7 @@
                             initiatives for effective, efficient...</p>
                     </div>
                 </li>
-                <li data-aos="fade-up-right" class="grid-item grid-one-half single-margin-bottom">
+                <li class="grid-item grid-one-half single-margin-bottom">
 
                     <div class="heading-block-more-info">
                         <h6 class="heading-04 s-large">
@@ -387,7 +394,7 @@
                     various Article...</p><!--/ko-->
 
                 </li>
-                <li data-aos="fade-up-left" class="grid-item grid-one-half single-margin-bottom">
+                <li class="grid-item grid-one-half single-margin-bottom">
 
 
                     <div class="heading-block-more-info">
@@ -397,7 +404,7 @@
                     </div><!--/ko-->
                     <!--ko block:{"optional":false,"definition":"copy-body-01"} --><p
                         class="copy-body-01 null text-light"
-                        >
+                >
 
                     Get information about the Nigerian Air Force international missions, collaborations and lots more...
                 </p><!--/ko-->
@@ -410,7 +417,8 @@
     </article>
     <article data-aos="zoom-in" data-aos-delay="300" class="content-wrapper content-small-head s-small-padding">
         <div class="heading-block mt-70px">
-            <h2 class="heading-02 title responsive-title" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">Latest News</h2>
+            <h2 class="heading-02 title responsive-title" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                Latest News</h2>
         </div>
         <!--/ko-->
 
@@ -428,7 +436,8 @@
                                 <!--ko text:$data.careers()[0].caption-->22/Aug/2019<!--/ko--></h4>
                             <h3 class="copy-intro-01 text-no-margin"
                                 style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                <!--ko text:$data.careers()[0].title-->JUST IN: NAF AIRLIFTS REFUGEES FROM CAMEROON TO NIGERIA ...
+                                <!--ko text:$data.careers()[0].title-->JUST IN: NAF AIRLIFTS REFUGEES FROM CAMEROON TO
+                                NIGERIA ...
                                 <!--/ko--></h3>
                         </div>
                     </a>
@@ -494,7 +503,7 @@
         <ul class="reset-list footer-nav footer-sub-nav">
             <li><a href="#">Event Updates</a></li>
             <li><a href="#"
-                   >NAF Publications</a></li>
+            >NAF Publications</a></li>
             <li><a href="#" target="_blank">Photo Gallery</a></li>
             <li><a href="#">NAF Spotlights</a></li>
             <li><a href="#">Downloads</a></li>
@@ -521,50 +530,36 @@
         <li><a href="#">Terms of Use</a></li>
     </ul>
 
-   <!-- <ul class="reset-list footer-nav footer-sub-nav footer-af-mobile">
-        <li><a href="#" target="_blank">AF Academy</a></li>
-        <li><a href="#" target="_blank">AF ROTC</a></li>
+    <!-- <ul class="reset-list footer-nav footer-sub-nav footer-af-mobile">
+         <li><a href="#" target="_blank">AF Academy</a></li>
+         <li><a href="#" target="_blank">AF ROTC</a></li>
 
-        <li><a href="#">AF Reserve</a></li>
-        <li><a href="#">Air National Guard</a></li>
-        <li><a href="#">AF.mil</a></li>
-        <li><a href="#">AF Civilian Careers</a></li>
-    </ul>-->
-<!--
-    <ul class="reset-list ib-list footer-inline-nav">
-        <li><a href="#">Privacy
-            Policy</a></li>
-        <li><a href="#">About Our
-            Ads</a></li>
-        <li><a href="#">Sitemap</a></li>
-        &lt;!&ndash;<li><a href="http://collaboratory.airforce.com" target="_blank">Collaboratory</a></li>&ndash;&gt;
-    </ul>-->
+         <li><a href="#">AF Reserve</a></li>
+         <li><a href="#">Air National Guard</a></li>
+         <li><a href="#">AF.mil</a></li>
+         <li><a href="#">AF Civilian Careers</a></li>
+     </ul>-->
+    <!--
+        <ul class="reset-list ib-list footer-inline-nav">
+            <li><a href="#">Privacy
+                Policy</a></li>
+            <li><a href="#">About Our
+                Ads</a></li>
+            <li><a href="#">Sitemap</a></li>
+            &lt;!&ndash;<li><a href="http://collaboratory.airforce.com" target="_blank">Collaboratory</a></li>&ndash;&gt;
+        </ul>-->
 
     <!--ko block:{"optional":false,"definition":"share"} -->
-    <div class="share-wrapper footer-social-nav text-inverted share-view-all" >
+    <div class="share-wrapper footer-social-nav text-inverted share-view-all">
         <!-- ko if: controller.options.showAll -->
-        <ul class="share" >
+        <ul class="share">
             <li>
-                <a href="#"
+                <a href="https://web.facebook.com/hqnigerianairforce/?_rdc=1&_rdr"
                    target="_blank">
-                    <!-- ko template: {
-                        name: '_button-icon',
-                        data: { icon: 'icon-' + $data.method, inverted: $root.controller.options.inverted || false }
-                    } --><!--
-Rounded button with icon
-
-@param extraClassName:string = Extra class name to give the wrapper element for styling
-@param icon:string = className of the icon that has to be loaded
-@param inverted:boolean = Button can be inverted (white)
-@param large:boolean = Button can be large
-
-Supported icons (prefixed with icon-):
-minus, plus, cross, arrow-right, arrows-down, vertical-lines, aim, timer, vs, share, facebook, twitter, youtube, tumblr, flickr
--->
                     <span class="button-icon undefined is-inverted">
 	<!-- ko template: { name: '_circle-svg', data: { elementClassName: 'button-icon-outline' } } --><svg
                             class="circle-svg button-icon-outline" width="100px" height="100px" viewBox="0 0 100 100"
-                            >
+                    >
 	<circle class="circle" cx="50" cy="50" r="48.8" fill="none" stroke="#fff" stroke-width="1.2"
             vector-effect="non-scaling-stroke"></circle>
 </svg><!-- /ko -->
@@ -577,25 +572,11 @@ minus, plus, cross, arrow-right, arrows-down, vertical-lines, aim, timer, vs, sh
             </li>
 
             <li>
-                <a href="#" target="_blank">
-                    <!-- ko template: {
-                        name: '_button-icon',
-                        data: { icon: 'icon-' + $data.method, inverted: $root.controller.options.inverted || false }
-                    } --><!--
-Rounded button with icon
-
-@param extraClassName:string = Extra class name to give the wrapper element for styling
-@param icon:string = className of the icon that has to be loaded
-@param inverted:boolean = Button can be inverted (white)
-@param large:boolean = Button can be large
-
-Supported icons (prefixed with icon-):
-minus, plus, cross, arrow-right, arrows-down, vertical-lines, aim, timer, vs, share, facebook, twitter, youtube, tumblr, flickr
--->
-                    <span class="button-icon undefined is-inverted" >
+                <a href="https://twitter.com/nigairforce" target="_blank">
+                   <span class="button-icon undefined is-inverted">
 	<!-- ko template: { name: '_circle-svg', data: { elementClassName: 'button-icon-outline' } } --><svg
-                            class="circle-svg button-icon-outline" width="100px" height="100px" viewBox="0 0 100 100"
-                           >
+                           class="circle-svg button-icon-outline" width="100px" height="100px" viewBox="0 0 100 100"
+                   >
 	<circle class="circle" cx="50" cy="50" r="48.8" fill="none" stroke="#fff" stroke-width="1.2"
             vector-effect="non-scaling-stroke"></circle>
 </svg><!-- /ko -->
@@ -627,7 +608,7 @@ minus, plus, cross, arrow-right, arrows-down, vertical-lines, aim, timer, vs, sh
                     <span class="button-icon undefined is-inverted">
 	<!-- ko template: { name: '_circle-svg', data: { elementClassName: 'button-icon-outline' } } --><svg
                             class="circle-svg button-icon-outline" width="100px" height="100px" viewBox="0 0 100 100"
-                           >
+                    >
 	<circle class="circle" cx="50" cy="50" r="48.8" fill="none" stroke="#fff" stroke-width="1.2"
             vector-effect="non-scaling-stroke"></circle>
 </svg><!-- /ko -->
@@ -656,10 +637,10 @@ Rounded button with icon
 Supported icons (prefixed with icon-):
 minus, plus, cross, arrow-right, arrows-down, vertical-lines, aim, timer, vs, share, facebook, twitter, youtube, tumblr, flickr
 -->
-                    <span class="button-icon undefined is-inverted" >
+                    <span class="button-icon undefined is-inverted">
 	<!-- ko template: { name: '_circle-svg', data: { elementClassName: 'button-icon-outline' } } --><svg
                             class="circle-svg button-icon-outline" width="100px" height="100px" viewBox="0 0 100 100"
-                           >
+                    >
 	<circle class="circle" cx="50" cy="50" r="48.8" fill="none" stroke="#fff" stroke-width="1.2"
             vector-effect="non-scaling-stroke"></circle>
 </svg><!-- /ko -->
@@ -724,7 +705,6 @@ minus, plus, cross, arrow-right, arrows-down, vertical-lines, aim, timer, vs, sh
 -->
 
 
-
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
@@ -747,6 +727,47 @@ minus, plus, cross, arrow-right, arrows-down, vertical-lines, aim, timer, vs, sh
         easing: 'ease-out-back',
         duration: 1000
     });
+</script>
+<script>
+
+    // Usage.
+    document.addEventListener( 'DOMContentLoaded', () => {
+        function applyAnimation(els, elementParent) {
+            let textAnime = anime({
+                targets: els,
+                opacity: [
+                    {value: .1, easing: 'easeOutSine', duration: 500},
+                    {value: 1, easing: 'easeInOutQuad', duration: 1200}
+                ],
+                delay: anime.stagger(100, {start: 200}) // increase delay by 100ms for each elements.
+            });
+
+            const tester = document.querySelector(elementParent);
+
+            const handler = () => {
+                return raf(() => {
+                    if (gambitGalleryIsInView(tester)) {
+                        textAnime.play;
+                    } else {
+                        console.log('out of viewport');
+                    }
+                });
+            };
+
+            handler();
+            window.addEventListener('scroll', handler)
+        }
+        applyAnimation('#welcome .text-anime > span', '#welcome');
+    } );
+
+    // requestAnimationFrame
+    const raf =
+        window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        function( callback ) {
+            window.setTimeout( callback, 1000 / 60 )
+        };
 </script>
 </body>
 </html>
