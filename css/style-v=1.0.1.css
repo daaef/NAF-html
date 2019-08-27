@@ -2342,6 +2342,7 @@ section#home .social .item p {
 	font-weight: bold!important;
 	z-index: 2000;
 	opacity: 1!important;
+	margin-bottom: 0!important;
 }
 
 .head-title a.typewrite, .typewrite .wrap{
@@ -2575,4 +2576,12 @@ div.site-header header.site-header.is-small:not(.is-nav-open) .top-nav-button .l
 
 .full-image-ratio{
     filter: brightness(50%);
+}
+
+.text-anime > span{
+	opacity: 0;
+}
+
+.main-navigation.is-hidden{
+	height: 0vh!important;
 }

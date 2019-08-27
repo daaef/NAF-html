@@ -220,6 +220,7 @@ table {
     }
 }
 
+/*
 @font-face {
     font-family: StratumLight;
     src: url(../font/stratum/Stratum1WebLight.eot);
@@ -275,6 +276,7 @@ table {
     font-weight: 400;
     font-style: normal
 }
+*/
 
 h1, h2, h3, h4, h5, h6, p {
     font-weight: 400;
@@ -1511,6 +1513,7 @@ div.site-header .main-nav-toggle.is-active .cross-diagonal:after, div.site-heade
     transform: scaleX(1);
     transform-origin: left;
     transition: all .4s;
+    overflow: hidden;
 }
 
 .main-navigation.is-animating-out:after {
@@ -1518,9 +1521,42 @@ div.site-header .main-nav-toggle.is-active .cross-diagonal:after, div.site-heade
     transition-delay: .2s
 }
 
-.main-navigation.is-hidden {
+
+.main-navigation .span1,
+.main-navigation .span2,
+.main-navigation .span3,
+.main-navigation .span4,
+.main-navigation .span5{
+    transition: all .4s ease-in-out;
+}
+
+.main-navigation .span2{
+    transition-delay: 50ms!important;
+}
+
+
+.main-navigation .span3{
+    transition-delay: 100ms!important;
+}
+
+
+.main-navigation .span4{
+    transition-delay: 150ms!important;
+}
+
+
+.main-navigation .span5{
+    transition-delay: 200ms!important;
+}
+
+.main-navigation.is-hidden .span1,
+.main-navigation.is-hidden .span2,
+.main-navigation.is-hidden .span3,
+.main-navigation.is-hidden .span4,
+.main-navigation.is-hidden .span5
+{
     visibility: hidden;
-    transform: scaleX(0);
+    transform: translateY(100%);
 }
 
 .main-navigation.is-hidden:after {
@@ -1717,6 +1753,25 @@ html.is-mobile .main-navigation-link.active .hover-arrow, html:not(.is-mobile) .
         display: block;
         height: 100%;
         overflow-y: scroll
+    }
+
+    .main-navigation.is-hidden .span1,
+    .main-navigation.is-hidden .span2,
+    .main-navigation.is-hidden .span3,
+    .main-navigation.is-hidden .span4,
+    .main-navigation.is-hidden .span5
+    {
+        visibility: hidden;
+        transform: translateX(-100%);
+    }
+
+    .main-navigation .span1,
+    .main-navigation .span2,
+    .main-navigation .span3,
+    .main-navigation .span4,
+    .main-navigation .span5
+    {
+        transform: translateX(0);
     }
 
     .main-navigation:after {
@@ -11466,7 +11521,8 @@ html.is-mobile .tag-selector.result-filter-tags li.active, html:not(.is-mobile) 
     position: relative;
     height: 100vh;
     overflow: hidden;
-    background: #0e182d
+    background: #0e182d url(../img/pagetop2.png) !important;
+    background-size: cover!important;
 }
 
 .hero-image:before {

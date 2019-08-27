@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2fd5d7b-435a-40f7-b251-b0fb12ac37a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/careers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/custom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style-v=1.0.1.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style-v=1.0.1.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/scripts-ver=5.0.5.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/scripts-ver=5.0.5.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +36,6 @@
   <component name="ProjectConfigurationFiles">
     <option name="files">
       <list>
-        <option value="$PROJECT_DIR$/.idea/.gitignore" />
         <option value="$PROJECT_DIR$/.idea/vcs.xml" />
       </list>
     </option>
@@ -41,10 +43,16 @@
   <component name="ProjectId" id="1PpQju6aJSPrQkdbrZBTVVGYhue" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -74,7 +82,11 @@
       <workItem from="1566652674165" duration="165000" />
       <workItem from="1566674714559" duration="13547000" />
       <workItem from="1566692102100" duration="106000" />
-      <workItem from="1566722894189" duration="8040000" />
+      <workItem from="1566722894189" duration="8577000" />
+      <workItem from="1566744069192" duration="266000" />
+      <workItem from="1566812852339" duration="838000" />
+      <workItem from="1566903220403" duration="12530000" />
+      <workItem from="1566929227511" duration="1412000" />
     </task>
     <servers />
   </component>
