@@ -552,3 +552,12 @@ const gambitGalleryIsInView = el => {
 	return ( bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom )
 		|| ( bounds.top <= viewport.bottom && bounds.top >= viewport.top );
 };
+
+// requestAnimationFrame
+const raf =
+	window.requestAnimationFrame ||
+	window.webkitRequestAnimationFrame ||
+	window.mozRequestAnimationFrame ||
+	function( callback ) {
+		window.setTimeout( callback, 1000 / 60 )
+	};

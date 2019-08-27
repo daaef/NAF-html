@@ -1527,6 +1527,7 @@ div.site-header .main-nav-toggle.is-active .cross-diagonal:after, div.site-heade
 .main-navigation .span3,
 .main-navigation .span4,
 .main-navigation .span5{
+    transform: translateY(0);
     transition: all .4s ease-in-out;
 }
 
@@ -1556,7 +1557,7 @@ div.site-header .main-nav-toggle.is-active .cross-diagonal:after, div.site-heade
 .main-navigation.is-hidden .span5
 {
     visibility: hidden;
-    transform: translateY(100%);
+    transform: translateY(-100%);
 }
 
 .main-navigation.is-hidden:after {

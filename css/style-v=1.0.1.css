@@ -2585,5 +2585,5 @@ div.site-header header.site-header.is-small:not(.is-nav-open) .top-nav-button .l
 }
 
 .main-navigation.is-hidden{
-	height: 0vh!important;
+	z-index: 0!important;
 }
