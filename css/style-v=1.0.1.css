@@ -20,7 +20,8 @@ body a {
 	text-decoration: none!important;
 }
 body a:hover {
-	color: #000000;
+	color: #ffffff;
+    filter: brightness(90%);
 }
 
 .btn {
@@ -2341,6 +2342,7 @@ section#home .social .item p {
 	font-weight: bold!important;
 	z-index: 2000;
 	opacity: 1!important;
+	margin-bottom: 0!important;
 }
 
 .head-title a.typewrite, .typewrite .wrap{
@@ -2444,7 +2446,9 @@ header.is-small + .site-header-small-view-bg{
     margin-top: 0!important;
     background: rgb(29, 34, 54)!important;
 }
-
+.a-page-intro{
+	background: rgb(29, 34, 54)!important;
+}
 .site-header-small-view-bg{
 	transition: all .3s;
 }
@@ -2556,6 +2560,30 @@ div.site-header header.site-header.is-small:not(.is-nav-open) .top-nav-button .l
 }
 
 .text-light{
-	color: #7a7a7a!important;
+	color: #ffffff !important;
 	font-size: 16px!important;
+}
+
+.a-page-intro > *{
+        color: #ffffff;
+}
+
+.a-page-intro{
+    background: #0d1017;
+}
+
+.mt-70px{
+    margin-top: 70px!important;
+}
+
+.full-image-ratio{
+    filter: brightness(50%);
+}
+
+.text-anime > span{
+	opacity: 0;
+}
+
+.main-navigation.is-hidden{
+	z-index: 0!important;
 }
