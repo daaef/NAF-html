@@ -1641,7 +1641,7 @@ html.is-mobile .main-navigation:not(.is-animating-out) .main-navigation-list.act
 .main-navigation-list dd {
     margin-left: 0;
     font: normal 15px/1rem StratumBlack, Arial, sans-serif;
-    font-size: .62rem;
+    font-size: .75rem;
     text-transform: uppercase;
     letter-spacing: .08em;
     padding-left: .08em;
