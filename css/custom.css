@@ -220,7 +220,6 @@ table {
     }
 }
 
-/*
 @font-face {
     font-family: StratumLight;
     src: url(../font/stratum/Stratum1WebLight.eot);
@@ -276,7 +275,6 @@ table {
     font-weight: 400;
     font-style: normal
 }
-*/
 
 h1, h2, h3, h4, h5, h6, p {
     font-weight: 400;

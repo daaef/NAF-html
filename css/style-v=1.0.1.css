@@ -10,7 +10,7 @@ body {
 }
 body p,
 body li {
-	font-family: 'Open Sans';
+	/*font-family: 'Open Sans';*/
 	font-weight: 300;
 }
 body p:last-child {
