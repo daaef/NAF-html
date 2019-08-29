@@ -21407,3 +21407,7 @@ a:hover{
     background-color: #166F99;
     border-color: #166F99;
 }
+
+.logo-title{
+    text-shadow: none;
+}
