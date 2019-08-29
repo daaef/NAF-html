@@ -48,7 +48,6 @@
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/icons.data.svg.css">
     <link rel="stylesheet" href="css/aos.css">
-    <script src="js/modernizr-custom.js"></script>
 </head>
 
 <body class="home page-template-default page page-id-2">
@@ -290,15 +289,7 @@
             <div data-bind="css : 'block-container ' + (controller.options.extraClassName || '')"
                  class="block-container">
                 <div class="site-wrapper xl content-wrapper content-xsmall-head">
-                    <!--<div class="story-intro-image">
-                        <picture class="image-variants">
-                            <img src="./img/news-1.jpg" srcset="./img/news-1.jpg" alt="Basic Military Training">
-                        </picture>
-
-                    </div>-->
-
-                    <div class="story-intro-image-content site-wrapper l grid-wrapper text-left"
-                         data-bind="css: { 'image-left': !$data.textLeft || ($data.textLeft &amp;&amp; !$data.textLeft()) }">
+                    <div class="story-intro-image-content site-wrapper l grid-wrapper text-left">
                         <div class="grid-item grid-seven-sixteenth story-intro-image-caption text-inverted small-right">
                             <p class="heading-03 quote-copy"
                                data-bind="html: $data.quote, css: {'quote-copy': !$data.quoteMark}">NAF AIRLIFTS
@@ -331,6 +322,34 @@
 
                                 </div><!--/ko-->
                             </div><!--/ko-->
+                        </div>
+                        <section class="section">
+                            <img src="./img/post-gallery/5767.jpg" />
+                            <img src="./img/post-gallery/5776.jpg" />
+                            <img src="./img/post-gallery/5770.jpg" />
+                            <img src="./img/post-gallery/5769.jpg" />
+                            <img src="./img/post-gallery/5766.jpg" />
+                            <img src="./img/post-gallery/5771.jpg" />
+                            <img src="./img/post-gallery/5772.jpg" />
+                            <img src="./img/post-gallery/5773.jpg" />
+                            <img src="./img/post-gallery/5774.jpg" />
+                            <img src="./img/post-gallery/5775.jpg" />
+                            <img src="./img/post-gallery/5777.jpg" />
+                            <img src="./img/post-gallery/5778.jpg" />
+                            <img src="./img/post-gallery/5779.jpg" />
+                            <img src="./img/post-gallery/5780.jpg" />
+                            <img src="./img/post-gallery/5781.jpg" />
+                            <img src="./img/post-gallery/5782.jpg" />
+                            <img src="./img/post-gallery/5783.jpg" />
+                            <img src="./img/post-gallery/5784.jpg" />
+                            <img src="./img/post-gallery/5785.jpg" />
+                        </section>
+                        <div class="lightbox">
+                            <div class="title"></div>
+                            <div class="filter"></div>
+                            <div class="arrowr"></div>
+                            <div class="arrowl"></div>
+                            <div class="close"></div>
                         </div>
                     </div><!--/ko-->
                 </div>
@@ -527,8 +546,6 @@
 <script src="js/script.js"></script>
 <script type='text/javascript' src='js/scripts-ver=5.0.5.js'></script>
 <script src="js/fixes.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl7qvcP18DbNkAoeGscVNA1VPE8Ni4bYI&callback=initMap" async
-        defer></script>
 <script src="js/aos.js"></script>
 <script src="js/jquery.matchHeight.js"></script>
 <script>
@@ -544,84 +561,70 @@
             remove: false
         });
     });
-</script>
-<script src="js/imagesloaded.pkgd.min.js"></script>
-<script src="js/masonry.pkgd.min.js"></script>
-<script src="js/classie.js"></script>
-<script src="js/main.js"></script>
-<script>
-    (function () {
-        var support = {transitions: Modernizr.csstransitions},
-            // transition end event name
-            transEndEventNames = {
-                'WebkitTransition': 'webkitTransitionEnd',
-                'MozTransition': 'transitionend',
-                'OTransition': 'oTransitionEnd',
-                'msTransition': 'MSTransitionEnd',
-                'transition': 'transitionend'
-            },
-            transEndEventName = transEndEventNames[Modernizr.prefixed('transition')],
-            onEndTransition = function (el, callback) {
-                var onEndCallbackFn = function (ev) {
-                    if (support.transitions) {
-                        if (ev.target != this) return;
-                        this.removeEventListener(transEndEventName, onEndCallbackFn);
-                    }
-                    if (callback && typeof callback === 'function') {
-                        callback.call(this);
-                    }
-                };
-                if (support.transitions) {
-                    el.addEventListener(transEndEventName, onEndCallbackFn);
-                } else {
-                    onEndCallbackFn();
-                }
-            };
 
-        // todo
-        var collageEl = document.querySelector('.collage');
-
-        new GridFx(document.querySelector('.grid'), {
-            imgPosition: {
-                x: 1,
-                y: -0.5
-            },
-            pagemargin: 100,
-            onExpand: function () {
-                classie.add(collageEl, 'collage--open');
-            },
-            onOpenItem: function (instance, item) {
-                instance.items.forEach(function (el) {
-                    if (item != el) {
-                        var delay = Math.floor(Math.random() * 150);
-                        el.style.WebkitTransition = 'opacity .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1), -webkit-transform .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1)';
-                        el.style.transition = 'opacity .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1), transform .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1)';
-                        el.style.WebkitTransform = 'scale3d(0.1,0.1,1)';
-                        el.style.transform = 'scale3d(0.1,0.1,1)';
-                        el.style.opacity = 0;
-                    }
-                });
-            },
-            onCloseItem: function (instance, item) {
-                classie.remove(collageEl, 'collage--open');
-
-                instance.items.forEach(function (el) {
-                    if (item != el) {
-                        el.style.WebkitTransition = 'opacity .4s, -webkit-transform .4s';
-                        el.style.transition = 'opacity .4s, transform .4s';
-                        el.style.WebkitTransform = 'scale3d(1,1,1)';
-                        el.style.transform = 'scale3d(1,1,1)';
-                        el.style.opacity = 1;
-
-                        onEndTransition(el, function () {
-                            el.style.transition = 'none';
-                            el.style.WebkitTransform = 'none';
-                        });
-                    }
-                });
+        console.log($(".section img"))
+        $(".section img").click(function() {
+            $(".lightbox").fadeIn(300);
+            $(".lightbox").append("<img src='" + $(this).attr("src") + "' alt='" + $(this).attr("alt") + "' />");
+            $(".filter").css("background-image", "url(" + $(this).attr("src") + ")");
+            /*$(".title").append("<h1>" + $(this).attr("alt") + "</h1>");*/
+            $("html").css("overflow", "hidden");
+            if ($(this).is(":last-child")) {
+                $(".arrowr").css("display", "none");
+                $(".arrowl").css("display", "block");
+            } else if ($(this).is(":first-child")) {
+                $(".arrowr").css("display", "block");
+                $(".arrowl").css("display", "none");
+            } else {
+                $(".arrowr").css("display", "block");
+                $(".arrowl").css("display", "block");
             }
         });
-    })();
+
+        $(".close").click(function() {
+            $(".lightbox").fadeOut(300);
+            $("h1").remove();
+            $(".lightbox img").remove();
+            $("html").css("overflow", "auto");
+        });
+
+        $(document).keyup(function(e) {
+            if (e.keyCode == 27) {
+                $(".lightbox").fadeOut(300);
+                $(".lightbox img").remove();
+                $("html").css("overflow", "auto");
+            }
+        });
+
+        $(".arrowr").click(function() {
+            var imgSrc = $(".lightbox img").attr("src");
+            var search = $("section").find("img[src$='" + imgSrc + "']");
+            var newImage = search.next().attr("src");
+            /*$(".lightbox img").attr("src", search.next());*/
+            $(".lightbox img").attr("src", newImage);
+            $(".filter").css("background-image", "url(" + newImage + ")");
+
+            if (!search.next().is(":last-child")) {
+                $(".arrowl").css("display", "block");
+            } else {
+                $(".arrowr").css("display", "none");
+            }
+        });
+
+        $(".arrowl").click(function() {
+            var imgSrc = $(".lightbox img").attr("src");
+            var search = $("section").find("img[src$='" + imgSrc + "']");
+            var newImage = search.prev().attr("src");
+            /*$(".lightbox img").attr("src", search.next());*/
+            $('.lightbox img').attr("src", newImage);
+            $(".filter").css("background-image", "url(" + newImage + ")");
+
+            if (!search.prev().is(":first-child")) {
+                $(".arrowr").css("display", "block");
+            } else {
+                $(".arrowl").css("display", "none");
+            }
+        });
 </script>
 </body>
 
