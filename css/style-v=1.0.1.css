@@ -2595,3 +2595,25 @@ div.site-header
 .main-navigation.is-hidden {
   z-index: 0 !important;
 }
+
+.card p {
+  font-size: 1.1rem;
+  font-weight: 100;
+}
+.card h5 {
+  font-weight: 700;
+}
+
+.leadership .grid-item {
+  padding-right: 5px;
+}
+
+.description p {
+  font-size: 15px;
+}
+
+.bg-contain {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
