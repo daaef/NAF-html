@@ -18,10 +18,10 @@ body p:last-child {
 body a {
   text-decoration: none !important;
 }
-/* body a:hover {
-	color: #ffffff;
-    filter: brightness(90%);
-} */
+body a:hover {
+  /* color: #ffffff;
+  filter: brightness(90%); */
+}
 
 .btn {
   font-family: "Roboto Condensed";

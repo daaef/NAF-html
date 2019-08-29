@@ -154,7 +154,7 @@
                 History
             </a></dd>
             <dd style=""><a class="main-navigation-link"
-                            href="mission_vision.html">
+                            href="./leadership.html">
                 <span class="hover-arrow icon-arrow-right" style="background-image: none;"><svg
                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 50"><path fill-rule="evenodd"
                                                                                      clip-rule="evenodd" fill="#FFF"
@@ -301,27 +301,6 @@
         <!--ko block:{"optional":false,"definition":"hero-image","name":"hero-image","placeholder":"hero-small"} -->
         <header class="hero-image text-inverted is-small"
                 data-bind="css: { 'is-small': isSmall, 'has-option-slider': hasOptionSlider }">
-            <!--ko block:{"optional":false,"definition":"image-variants"} --><!-- ko proxyElement : true -->
-            <picture class="image-variants"
-                     data-bind="css : {'force-ratio' : $data.ratio}, style : {'paddingTop' : $data.ratio ? (100 / ratio()) + '%' : null}"
-                     style="top: -0.777778px; left: 0px; width: 1300px; height: 505.556px; opacity: 1;">
-                <!-- ko if : $data.variants && $data.variants().length --><!-- /ko -->
-
-                <!-- ko ifnot : $data.variants && $data.variants().length -->
-                <!-- ko if : $data.src -->
-                <img data-bind="attr : {src : $data.src},attr.alt: $data.alt " src="data/page/faq/header01_desk.jpg"
-                     alt="FAQ">
-                <!-- /ko -->
-                <!-- /ko -->
-            </picture>
-
-            <!-- /ko --><!--/ko-->
-            <video class="video-loop-hero" autoplay="" loop="" muted="" playsinline=""
-                   style="width: 1364px; height: 504px;">
-                <source data-bind="attr : {src : videoSrc}">
-            </video>
-
-            <!-- ko ifnot: videoHeader -->
             <div class="hero-image-title">
                 <!-- ko if: (!isSmall() && !largeTitle() && !copy() && !smallTitle()) --><!-- /ko -->
                 <!-- ko if: !isSmall() && largeTitle() --><!-- /ko -->

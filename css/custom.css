@@ -276,7 +276,15 @@ table {
     font-style: normal
 }
 
+h1, h2, h3, h4, h5, h6{
+    font-family: StratumBold, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0 0 .88em
+}
+
 h1, h2, h3, h4, h5, h6, p {
+    font-family: StratumBold, Arial, sans-serif;
     font-weight: 400;
     margin: 0 0 .88em
 }
@@ -1649,8 +1657,6 @@ html.is-mobile .main-navigation:not(.is-animating-out) .main-navigation-list.act
 }
 
 .main-navigation-link {
-    /* font-weight:900; */
-
     position: relative;
     display: block;
     text-decoration: none;
@@ -21377,6 +21383,14 @@ html.is-mobile .chat-live-contact-options .boxed-option-item.active .button-cont
     font-style: italic
 }
 
-#history-article > * {
+.footer-nav a{
+    color: #ffffff;
+}
+
+.mv-20px{
+    margin: 20px 0;
+}
+
+#history-article > *{
     color: #000;
 }
