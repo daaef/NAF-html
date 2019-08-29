@@ -21390,3 +21390,7 @@ html.is-mobile .chat-live-contact-options .boxed-option-item.active .button-cont
 .mv-20px{
     margin: 20px 0;
 }
+
+#history-article > *{
+    color: #000;
+}
