@@ -21382,3 +21382,7 @@ html.is-mobile .chat-live-contact-options .boxed-option-item.active .button-cont
     font-weight: 700;
     font-style: italic
 }
+
+.footer-nav a{
+    color: #ffffff;
+}
