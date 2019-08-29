@@ -21394,3 +21394,16 @@ html.is-mobile .chat-live-contact-options .boxed-option-item.active .button-cont
 #history-article > *{
     color: #000;
 }
+
+a:hover{
+    color: white;
+}
+.btn-outline-dark{
+    transition: all .3s ease-in-out;
+}
+
+.btn-outline-dark:hover {
+    color: #fff;
+    background-color: #166F99;
+    border-color: #166F99;
+}
