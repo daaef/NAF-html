@@ -48,6 +48,7 @@
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/icons.data.svg.css">
     <link rel="stylesheet" href="css/aos.css">
+    <script src="js/modernizr-custom.js"></script>
 </head>
 
 <body class="home page-template-default page page-id-2">
@@ -290,110 +291,54 @@
                 <h1 class="heading-02 title">News</h1>
             </div>
         </header>
-        <article data-aos="fade"
-                 data-aos-duration="2500" data-aos-delay="300" class="content-wrapper content-small-head s-small-padding">
-            <div class="heading-block mt-70px">
-                <h2 class="heading-02 title responsive-title" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                    Latest News</h2>
-            </div>
-            <!--/ko-->
-
-            <div class="site-wrapper">
-                <div class="grid-wrapper home-grid-items text-inverted single-margin-bottom" data-transition="">
-                    <div class="grid-item grid-four-seventh">
-                        <a href="#" class="button-block full-image-grid-item-small">
-                            <figure class="full-image-ratio ratio-1-1 is-active">
-                                <img src="./img/news1.jpg"
-                                     alt="" style="">
-                            </figure><!--/ko-->
-
-                            <div class="full-image-caption">
-                                <h4 class="heading-07" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    <!--ko text:$data.careers()[0].caption-->26/Aug/2019<!--/ko--></h4>
-                                <h3 class="copy-intro-01 text-no-margin"
-                                    style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    INTERNAL SECURITY OPERATIONS: NAF INDUCTS ANOTHER HELICOPTER REACTIVATED LOCALLY IN PORT HARCOURT
-                                    <!--/ko--></h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="grid-item grid-three-seventh">
-
-                        <a href="#"
-                           class="button-block full-image-grid-item-small">
-                            <!--ko block:{"optional":false,"definition":"full-image","name":"image-small"} -->
-                            <figure class="full-image-ratio ratio-3-2 is-active">
-                                <img src="./img/news-1.jpg"
-                                     alt="" style="">
-                            </figure><!--/ko-->
-                            <div class="full-image-caption">
-                                <h4 class="heading-07" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    <!--ko text:$data.careers()[1].caption-->22/Aug/2019<!--/ko--></h4>
-                                <h3 class="copy-intro-01 text-no-margin"
-                                    style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    <!--ko text:$data.careers()[0].title-->JUST IN: NAF AIRLIFTS REFUGEES FROM CAMEROON TO
-                                    NIGERIA ...</h3>
-                            </div>
-                        </a>
-                        <a href="#"
-                           class="button-block full-image-grid-item-small">
-                            <!--ko block:{"optional":false,"definition":"full-image","name":"image-small"} -->
-                            <figure class="full-image-ratio ratio-3-2 is-active">
-                                <img src="./img/news-2.jpg"
-                                     alt="" style="">
-                            </figure><!--/ko-->
-                            <div class="full-image-caption">
-                                <h4 class="heading-07" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    <!--ko text:$data.careers()[1].caption-->20/Aug/2019<!--/ko--></h4>
-                                <h3 class="copy-intro-01 text-no-margin"
-                                    style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    NAF COMMISSIONS RENOVATED ACCOMMODATION FOR SNCOS IN KADUNA...<!--/ko--></h3>
-                            </div>
-                        </a>
+        <section>
+            <div data-bind="css : 'block-container ' + (controller.options.extraClassName || '')"
+                 class="block-container">
+                <div class="site-wrapper xl content-wrapper content-xsmall-head">
+                    <div class="story-intro-image">
+                        <picture class="image-variants">
+                            <img src="./img/news-1.jpg" srcset="./img/news-1.jpg" alt="Basic Military Training">
+                        </picture>
 
                     </div>
-                    <div class="grid-item grid-one-half">
 
+                    <div class="story-intro-image-content site-wrapper l grid-wrapper text-left"
+                         data-bind="css: { 'image-left': !$data.textLeft || ($data.textLeft &amp;&amp; !$data.textLeft()) }">
+                        <div class="grid-item grid-seven-sixteenth story-intro-image-caption text-inverted small-right">
+                            <p class="heading-03 quote-copy"
+                               data-bind="html: $data.quote, css: {'quote-copy': !$data.quoteMark}">NAF AIRLIFTS
+                                REFUGEES FROM CAMEROON TO
+                                NIGERIA</p>
+                        </div>
 
-                        <a href="#"
-                           class="button-block full-image-grid-item-small" style="">
-                            <figure class="full-image-ratio ratio-3-2 is-active">
-                                <img src="./img/news-3.jpg"
-                                     alt="" style="">
-                            </figure><!--/ko-->
-                            <div class="full-image-caption">
-                                <h4 class="heading-07" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    18/Aug/2019</h4>
-                                <h3 class="copy-intro-01 text-no-margin"
-                                    style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    PRESIDENT MUHAMMADU BUHARI COMMISSIONS NAF REFERENCE HOSPITAL...</h3>
-                            </div>
-                        </a>
+                        <div class="content grid-item grid-nine-sixteenth grid-s-one-whole">
+                            <!--ko block:{"optional":false,"definition":"story-tabs"} -->
+                            <div class="story-tabs">
+                                <!--{{ block?:horizontal-option-slider:tabs }}-->
+                                <!--ko block:{"optional":true,"definition":"tabs-inline-list","name":"inline-tabs"} -->
+                                <!--/ko-->
 
-                    </div>
-                    <div class="grid-item grid-one-half">
+                                <!--ko block:{"optional":false,"definition":"container","name":"story-tabs-content"} -->
+                                <div data-bind="css : 'block-container ' + (controller.options.extraClassName || '')"
+                                     class="block-container">
+                                    <!-- ko ifnot : controller.options.switchChildren -->
+                                    <!-- ko foreach : controller.options.children -->
+                                    <!-- ko block : {
+                                        name : name,
+                                        definition : definition
+                                    } --><p class="copy-body-01 null"
+                            data-bind="css: ($data.extraClassName ? $data.extraClassName() : null) + ($data.light ? ' text-light' : ''), html: $data.copy">
+                                    Every enlisted Airman begins their Air Force career with 8.5 weeks of Basic Military
+                                    Training (BMT). Challenged both mentally and physically, you’ll get the skills and
+                                    training you need to develop into Airmen, Wingmen and Warriors.</p><!-- /ko -->
 
-                        <a href="#"
-                           class="button-block full-image-grid-item-small">
-                            <!--ko block:{"optional":false,"definition":"full-image","name":"image-small"} -->
-                            <figure class="full-image-ratio ratio-3-2 is-active">
-                                <img src="./img/news-2.jpg"
-                                     alt="" style="">
-                            </figure><!--/ko-->
-                            <div class="full-image-caption">
-                                <h4 class="heading-07" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    <!--ko text:$data.careers()[1].caption-->20/Aug/2019<!--/ko--></h4>
-                                <h3 class="copy-intro-01 text-no-margin"
-                                    style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    NAF COMMISSIONS RENOVATED ACCOMMODATION FOR SNCOS IN KADUNA...<!--/ko--></h3>
-                            </div>
-                        </a>
-
-                    </div>
-                </div><!--/ko-->
-                <!-- /ko -->
-            </div>
-        </article>
+                                </div><!--/ko-->
+                            </div><!--/ko-->
+                        </div>
+                    </div><!--/ko-->
+                </div>
+            </div><!--/ko-->
+        </section>
     </div>
 </section>
 <footer class="site-footer">
@@ -594,7 +539,7 @@
         easing: 'ease-out-back',
         duration: 1000
     });
-    $(function() {
+    $(function () {
         $('.card.no-overflow').matchHeight({
             byRow: true,
             property: 'height',
@@ -602,6 +547,84 @@
             remove: false
         });
     });
+</script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/masonry.pkgd.min.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/main.js"></script>
+<script>
+    (function () {
+        var support = {transitions: Modernizr.csstransitions},
+            // transition end event name
+            transEndEventNames = {
+                'WebkitTransition': 'webkitTransitionEnd',
+                'MozTransition': 'transitionend',
+                'OTransition': 'oTransitionEnd',
+                'msTransition': 'MSTransitionEnd',
+                'transition': 'transitionend'
+            },
+            transEndEventName = transEndEventNames[Modernizr.prefixed('transition')],
+            onEndTransition = function (el, callback) {
+                var onEndCallbackFn = function (ev) {
+                    if (support.transitions) {
+                        if (ev.target != this) return;
+                        this.removeEventListener(transEndEventName, onEndCallbackFn);
+                    }
+                    if (callback && typeof callback === 'function') {
+                        callback.call(this);
+                    }
+                };
+                if (support.transitions) {
+                    el.addEventListener(transEndEventName, onEndCallbackFn);
+                } else {
+                    onEndCallbackFn();
+                }
+            };
+
+        // todo
+        var collageEl = document.querySelector('.collage');
+
+        new GridFx(document.querySelector('.grid'), {
+            imgPosition: {
+                x: 1,
+                y: -0.5
+            },
+            pagemargin: 100,
+            onExpand: function () {
+                classie.add(collageEl, 'collage--open');
+            },
+            onOpenItem: function (instance, item) {
+                instance.items.forEach(function (el) {
+                    if (item != el) {
+                        var delay = Math.floor(Math.random() * 150);
+                        el.style.WebkitTransition = 'opacity .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1), -webkit-transform .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1)';
+                        el.style.transition = 'opacity .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1), transform .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1)';
+                        el.style.WebkitTransform = 'scale3d(0.1,0.1,1)';
+                        el.style.transform = 'scale3d(0.1,0.1,1)';
+                        el.style.opacity = 0;
+                    }
+                });
+            },
+            onCloseItem: function (instance, item) {
+                classie.remove(collageEl, 'collage--open');
+
+                instance.items.forEach(function (el) {
+                    if (item != el) {
+                        el.style.WebkitTransition = 'opacity .4s, -webkit-transform .4s';
+                        el.style.transition = 'opacity .4s, transform .4s';
+                        el.style.WebkitTransform = 'scale3d(1,1,1)';
+                        el.style.transform = 'scale3d(1,1,1)';
+                        el.style.opacity = 1;
+
+                        onEndTransition(el, function () {
+                            el.style.transition = 'none';
+                            el.style.WebkitTransform = 'none';
+                        });
+                    }
+                });
+            }
+        });
+    })();
 </script>
 </body>
 

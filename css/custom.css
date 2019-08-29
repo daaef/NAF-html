@@ -21404,8 +21404,8 @@ a:hover{
 
 .btn-outline-dark:hover {
     color: #fff;
-    background-color: #166F99;
-    border-color: #166F99;
+    background-color: rgb(0, 204, 255);
+    border-color: rgb(0, 204, 255);
 }
 
 .logo-title{
