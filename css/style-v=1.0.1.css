@@ -2004,7 +2004,7 @@ section#home .social .item p {
 	}
 
 	footer{
-		background: rgb(29, 34, 54);
+		background: rgb(0, 153, 255);
 		color: #ffffff;
 	}
 
@@ -2405,7 +2405,6 @@ section#home .social .item p {
 
 .logo-title{
     color: #ffffff;
-	text-shadow: 0px 0px 15px black;
     font-weight: 600;
     margin-left: 10px;
     font-size: 20px;
@@ -2444,10 +2443,10 @@ header.site-header{
 
 header.is-small + .site-header-small-view-bg{
     margin-top: 0!important;
-    background: rgb(29, 34, 54)!important;
+    background: rgb(0, 153, 255)!important;
 }
 .a-page-intro{
-	background: rgb(29, 34, 54)!important;
+	background: rgb(0, 153, 255)!important;
 }
 .site-header-small-view-bg{
 	transition: all .3s;
@@ -2494,7 +2493,7 @@ div.site-header header.site-header.is-small:not(.is-nav-open) .top-nav-button .l
 }
 
 .site-footer {
-	background: rgb(29, 34, 54)!important;
+	background: rgb(0, 153, 255)!important;
 	transition: all .5s!important;
 }
 
@@ -2586,4 +2585,28 @@ div.site-header header.site-header.is-small:not(.is-nav-open) .top-nav-button .l
 
 .main-navigation.is-hidden{
 	z-index: 0!important;
+}
+.btn-outline-dark:hover{
+	background: rgb(0, 153, 255);
+	border-color: rgb(0, 153, 255);
+}
+
+.card .media{
+	overflow: hidden;
+}
+
+.card p{
+	font-size: 1.1rem;
+	font-weight: 100;
+}
+.card h5{
+	font-weight: 700;
+}
+
+.grid-item{
+	padding-right: 5px;
+}
+
+.description p{
+	font-size: 15px;
 }
