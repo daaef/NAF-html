@@ -281,26 +281,21 @@
         </dl>
     </div>
 </nav>
-<section id="home" class="news">
+<section id="home" class="news-detail">
     <div data-bind="template: { name: 'faq' }" class="view view-faq" style="visibility: visible;">
         <!--ko block:{"optional":false,"definition":"hero-image","name":"hero-image","placeholder":"hero-small"} -->
-        <header class="hero-image text-inverted is-small"
-                data-bind="css: { 'is-small': isSmall, 'has-option-slider': hasOptionSlider }">
-            <div class="hero-image-title">
-                <h6 class="heading-06 subtitle">Nigerian Air Force</h6>
-                <h1 class="heading-02 title">News</h1>
-            </div>
+        <header class="hero-image text-inverted is-small" style="background-image: none, linear-gradient(to bottom, #0e182d , rgba(14,24,45,0.44))!important; ">
         </header>
         <section>
             <div data-bind="css : 'block-container ' + (controller.options.extraClassName || '')"
                  class="block-container">
                 <div class="site-wrapper xl content-wrapper content-xsmall-head">
-                    <div class="story-intro-image">
+                    <!--<div class="story-intro-image">
                         <picture class="image-variants">
                             <img src="./img/news-1.jpg" srcset="./img/news-1.jpg" alt="Basic Military Training">
                         </picture>
 
-                    </div>
+                    </div>-->
 
                     <div class="story-intro-image-content site-wrapper l grid-wrapper text-left"
                          data-bind="css: { 'image-left': !$data.textLeft || ($data.textLeft &amp;&amp; !$data.textLeft()) }">
@@ -321,16 +316,12 @@
                                 <!--ko block:{"optional":false,"definition":"container","name":"story-tabs-content"} -->
                                 <div data-bind="css : 'block-container ' + (controller.options.extraClassName || '')"
                                      class="block-container">
-                                    <!-- ko ifnot : controller.options.switchChildren -->
-                                    <!-- ko foreach : controller.options.children -->
-                                    <!-- ko block : {
-                                        name : name,
-                                        definition : definition
-                                    } --><p class="copy-body-01 null"
-                            data-bind="css: ($data.extraClassName ? $data.extraClassName() : null) + ($data.light ? ' text-light' : ''), html: $data.copy">
-                                    Every enlisted Airman begins their Air Force career with 8.5 weeks of Basic Military
-                                    Training (BMT). Challenged both mentally and physically, you’ll get the skills and
-                                    training you need to develop into Airmen, Wingmen and Warriors.</p><!-- /ko -->
+                                    <p class="copy-body-01 null">
+                                        The Nigerian Air Force (NAF) has airlifted back to the Country no fewer than 135 Nigerians who took refuge in neighbouring Cameroon. The returnees were airlifted today, 22 August 2019, by a NAF C-130H aircraft from the Maroua Salak International Airport in Cameroon’s Northern Region to Yola International Airport, in furtherance of the NAF’s constitutional role of providing Military Aid to Civil Authority.
+                                    </p>
+                                    <p class="copy-body-01">
+                                        The NAF also provided airlift for Nigeria’s Technical Working Group (TWG) for the "Repatriation of Nigerian Refugees in Cameroon” led by the Honourable Minister of Humanitarian Affairs, Disaster Management and Social Development, Hajiya Sadiya Umar Farouq, who oversaw the commencement of the return process. The NAF aircrew, alongside the TWG, received the refugees from the United Nations High Commission for Refugees and Cameroonian Government Officials.
+                                    </p>
 
                                 </div><!--/ko-->
                             </div><!--/ko-->

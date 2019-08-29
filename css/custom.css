@@ -21411,3 +21411,18 @@ a:hover{
 .logo-title{
     text-shadow: none;
 }
+
+.news-detail .copy-body-01{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.news-detail .hero-image{
+    position: relative;
+}
+.news-detail .hero-image:before{
+    background: url(../img/news-1.jpg) center no-repeat;
+    background-size: cover;
+    filter: brightness(65%);
+    z-index: 0
+}
