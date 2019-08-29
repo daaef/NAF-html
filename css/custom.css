@@ -220,7 +220,6 @@ table {
     }
 }
 
-
 @font-face {
     font-family: StratumLight;
     src: url(../font/stratum/Stratum1WebLight.eot);
@@ -276,7 +275,6 @@ table {
     font-weight: 400;
     font-style: normal
 }
-
 
 h1, h2, h3, h4, h5, h6, p {
     font-weight: 400;
@@ -1643,7 +1641,7 @@ html.is-mobile .main-navigation:not(.is-animating-out) .main-navigation-list.act
 .main-navigation-list dd {
     margin-left: 0;
     font: normal 15px/1rem StratumBlack, Arial, sans-serif;
-    font-size: .62rem;
+    font-size: .75rem;
     text-transform: uppercase;
     letter-spacing: .08em;
     padding-left: .08em;
@@ -1651,7 +1649,7 @@ html.is-mobile .main-navigation:not(.is-animating-out) .main-navigation-list.act
 }
 
 .main-navigation-link {
-    font-weight:900;
+    /* font-weight:900; */
 
     position: relative;
     display: block;
