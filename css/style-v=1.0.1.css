@@ -2610,3 +2610,9 @@ div.site-header header.site-header.is-small:not(.is-nav-open) .top-nav-button .l
 .description p{
 	font-size: 15px;
 }
+
+.bg-contain{
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
