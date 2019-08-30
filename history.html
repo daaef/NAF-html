@@ -295,18 +295,18 @@
         </div>
     </nav>
     <section id="home">
-        <div data-bind="template: { name: 'faq' }" class="view view-faq" style="visibility: visible;">
+        <div class="view view-faq" style="visibility: visible;">
             
             <header class="hero-image text-inverted is-small" data-bind="css: { 'is-small': isSmall, 'has-option-slider': hasOptionSlider }">
                 
                 
-                <picture class="image-variants" data-bind="css : {'force-ratio' : $data.ratio}, style : {'paddingTop' : $data.ratio ? (100 / ratio()) + '%' : null}" style="top: -0.777778px; left: 0px; width: 1300px; height: 505.556px; opacity: 1;">
+                <picture class="image-variants"  style="top: -0.777778px; left: 0px;  opacity: 1;">
                     
                     
 
                     
                     
-                    <img data-bind="attr : {src : $data.src},attr.alt: $data.alt " src="data/page/faq/header01_desk.jpg" alt="FAQ">
+                    <img data-bind="attr : {src : $data.src},attr.alt: $data.alt " src="./img/bgtop-history-dark.jpg" style="bottom: 194px;position: relative;"alt="HISTORY">
                     
                     
                 </picture>
@@ -329,22 +329,49 @@
             </header>
 
             <article class="content-wrapper a-page-intro" id="history-article" style="background-color: white !important; color:black !important">
+                <h6 class="heading-06 text-mask-background text-stroke-through" data-bind="css: { 'text-mask-background text-stroke-through': $data.strokeThrough }"><!--ko text:$data.caption-->HOME > ABOUT > HISTORY<!--/ko--></h6>
+                <h2 class="heading-02 title responsive-title" data-bind="css: { 'text-mask-background text-stroke-through': $data.strokeThroughMainTitle }, html: $data.title">OUR HISTORY</h2>
 
-                <p class="a-page-intro-copy copy-intro-02 line-before" style="font-weight: 200" data-transition="move-up-opacity">
+                <p class=" copy-intro-02 line-before" style="max-width: 1200px;transform: translate(-50%); left: 50%;position: relative;" data-transition="move-up-opacity">
                     The idea of establishing an air force for Nigeria was first mooted in 1961 following the nation's participation in peace-keeping operations in Congo and Tanganyika (now Tanzania). During these peace-keeping operations, foreign air forces aircraft were employed to airlift the Nigerian Army Regiment to and from the theatres of operation. The Nigerian Government at the time, no doubt, recognized the urgent need to establish an air force actively supported by modern facilities to provide full complement of forces to enhance the nation's military posture. Early in 1962, the Government agreed in principle that the Nigerian Air Force (NAF) be established.
                     
                 </p>
-                
-                <p class="a-page-intro-copy copy-intro-02 line-before" style="font-weight: 200; margin-bottom: 20px" data-transition="move-up-opacity">
-                    The Nigerian Parliament, therefore, approved the establishment of the NAF and recruitment of cadets commenced in June 1962. Consequently, the NAF was officially established by a statutory Act of Parliament in April 1964 to serve four main purposes namely:
-<ul style="padding-left: 273px; text-align:left">
-    <li> a.       To achieve a full complement of the military defence system of the Federal Republic of Nigeria both in the air and on the ground.</li>
-    <li>b.       To ensure a fast versatile mobility of the Armed Forces.</li>
-    <li>c.       To provide close support for the ground-based and sea borne forces in all phases of
 
-        operations and to ensure the territorial integrity of a united Nigeria.</li>
-    <li> d.       To give the country the deserved prestige that is invaluable in international matters.</li>
-</ul>
+                <div class="story-intro-image">
+                  <picture class="image-variants" style="top: 353px !important;">
+                   
+                        <source  srcset="data/page/college/CCAF01_mob.jpg" media="(max-width: 767px)">
+                
+                        <img  srcset="./img/history-bg.jpg"  alt="Join the air force out of high school">
+                 
+                </picture>
+                </div>
+                <div class="story-intro-image-content site-wrapper l grid-wrapper text-left" >
+                    <div class="grid-item grid-seven-sixteenth story-intro-image-caption text-inverted">
+                       
+                        <p class="copy-intro-01" data-bind="html: $data.caption">The Nigerian Parliament, therefore, approved the establishment of the NAF and recruitment of cadets commenced in June 1962. Consequently, the NAF was officially established by a statutory Act of Parliament in April 1964 to serve four main purposes namely:</p>
+                       
+                    </div>
+                
+                    <div class="content grid-item grid-three-eight grid-s-one-whole">
+               <div  class="block-container">
+                   <!-- ><p class="copy-body-01 null" >When you join the United States Air Force with your high school diploma or GED, you’re automatically enrolled in the Community College of the Air Force. So you’ll automatically begin working toward your associate’s degree in applied science in one of five career areas: aircraft and missile maintenance, electronics and telecommunications, allied health, logistics and resources or public and support services. With a unique combination of on-duty and voluntary off-duty courses, you’ll earn college credit just for reporting for duty, learning your job and getting started on your career.</p>/ko -->
+                   <ul class="copy-body-01" style=" text-align:left">
+                        <li>To achieve a full complement of the military defence system of the Federal Republic of Nigeria both in the air and on the ground.</li>
+                        <li>To ensure a fast versatile mobility of the Armed Forces.</li>
+                        <li>To provide close support for the ground-based and sea borne forces in all phases of
+                    
+                            operations and to ensure the territorial integrity of a united Nigeria.</li>
+                        <li>To give the country the deserved prestige that is invaluable in international matters.</li>
+                    </ul>
+               
+
+                </div>
+                </div>
+                    </div>
+                </div>
+                
+                
            
 
             
@@ -357,7 +384,67 @@
                     
                 </p>
                 
-
+                <article class="content-wrapper no-margin" style="padding-top:0px !important">
+                      <div class="site-wrapper grid-wrapper text-left">
+                        <div class="grid-item grid-one-half grid-s-one-whole grid-padding-side grid-s-no-padding-right">
+                      
+                    
+                    <div class="heading-block" >
+                        <span class="heading-block-number has-no-margin">More than a degree</span>
+                        <hr class="heading-block-topline-h has-line-before" >
+                        <p  class="copy-intro-02" style="font-size: 18px;">It was in 1962 that the drive for the required manpower for the planned air force started. Simultaneous with this development, Government was in dialogue with some friendly nations on the possibility of training Nigerian Air Force personnel in various specialist fields. The first batch of 10 cadets was enlisted in 1962 to undergo training with the Ethiopian Air Force. The second set of 16 cadets was enlisted in February 1963 to undergo training with the Royal Canadian Air Force while six cadets were sent to the Indian Air Force. The stage was thus set for the training of its personnel in the country. Consequently, several countries were approached but the lot fell on the German Air Force to provide technical assistance for the local training of NAF personnel and this materialized in 1963.</p>
+                    </div>
+                        </div>
+                        <div class="grid-item grid-one-half grid-s-one-whole grid-padding-side grid-s-no-padding-right grid-no-padding-left">
+                            
+                            <p class="copy-intro-02 text-pushdown-smalltitle" style="font-size: 20px;">While the NAF was still at its infancy as a fighting force, the laudable plans made by the German Air Force Assistance Group were prematurely put to test barely three years after its establishment. The inexperienced Air Force assumed the role of a well established Air Force in order to prosecute the Nigerian civil war in close collaboration with sister Services. At this stage of its existence, the NAF was only equipped with a few aircraft. As the war progressed, some fighter aircraft such as MIG 15 and 17 were acquired to help bring the war to a speedy end.
+                                    The Nigerian Civil War came to an end in 1970 and there was the need to re-organize the Nigerian Air Force and up-grade its equipment. In order to strengthen itself, the NAF between 1981 and 1990 acquired additional aircraft types of advanced technology. With the acquisition of new weapon platforms, there arose the need to train personnel to man and maintain the new aircraft types. This led to the NAF re-organising its training aspects in all NAF trade specialties. </p>
+                           
+                        </div>
+                    </div>
+                    </article>
+                    <div class="story-intro-image image-left" >
+                          <picture class="image-variants">
+                         
+                        
+                                <source  srcset="data/page/college/ROTC01_mob.jpg" media="(max-width: 767px)">
+                           
+                        
+                                <img data-bind="attr : {'srcset' : $data.src, 'alt' : $data.alt}" srcset="./img/history-bg2.jpg" alt="Join the air force out of high school">
+                           
+                        </picture>
+                        </div>
+                        <div class="story-intro-image-content site-wrapper l grid-wrapper text-left image-left" >
+                                <div class="grid-item grid-seven-sixteenth story-intro-image-caption text-inverted">
+                                  
+                                    <p class="copy-intro-01" >Following the expansion of the NAF over time and the need to enforce all international laws and conventions relating to space activities in the Nigerian airspace, the Federal Government promulgated Decree 105 (Armed Forces Amendment Decree) of 23rd August 1994 which provided additional roles for the NAF. </p>
+                                    <!-- /ko -->
+                                </div>
+                            
+                                <div class="content grid-item grid-three-eight grid-s-one-whole">
+                                  <div class="story-tabs">
+                              
+                            
+                               <div class="block-container">
+                                <!-- <p class="copy-body-01 null" >To excel in AFROTC, you’ll need dedication, discipline and drive. Three- to four-year scholarships are available on a competitive basis to students still in high school or already in college who display outstanding academic and leadership qualities. Many colleges offer an additional subsidy for tuition and books to AFROTC cadets. AFROTC members without a scholarship still receive immeasurable benefits, including leadership experience and a guaranteed job as an officer in the Air Force after graduation. It’s a challenge that can prepare you for a lifetime of success. For the most up-to-date information, visit the official Air Force ROTC website.</p>/ko -->
+                                <ul  class="copy-body-01" style=" text-align:left">
+                                        <li> Enforcing and assisting in coordinating the enforcement of international law, conventions,
+                
+                                            practices and customs ascribed and acceded to by Nigeria relating to aerial or space activities in the
+                                       
+                                            Nigerian airspace.</li>
+                                        <li>Coordinating and enforcing all national and international air laws acceded or ascribed to by
+                
+                                            Nigeria and</li>
+                                        <li>De-lineating, demarcating and coordinating all aerial surveys and security zones of the Nigerian
+                
+                                            airspace.</li>
+                                       
+                                    </ul>
+                            </div>
+                            </div>
+                                </div>
+                            </div>
                 <div class="site-wrapper s content-small-head">
 
                     <div class="heading-block" data-transition="heading-block-02" data-bind="css: { 'small-margin-bottom': ko.unwrap($data.smallMarginBottom) }">
@@ -375,35 +462,8 @@
                        
 
                     </div>
-                    <p class="a-page-intro-copy copy-intro-02 line-before" style="font-weight: 200; font-size: 18px" data-transition="move-up-opacity">
-                        It was in 1962 that the drive for the required manpower for the planned air force started. Simultaneous with this development, Government was in dialogue with some friendly nations on the possibility of training Nigerian Air Force personnel in various specialist fields.
 
-The first batch of 10 cadets was enlisted in 1962 to undergo training with the Ethiopian Air Force. The second set of 16 cadets was enlisted in February 1963 to undergo training with the Royal Canadian Air Force while six cadets were sent to the Indian Air Force. The stage was thus set for the training of its personnel in the country. Consequently, several countries were approached but the lot fell on the German Air Force to provide technical assistance for the local training of NAF personnel and this materialized in 1963. <br>
 
-<br>    While the NAF was still at its infancy as a fighting force, the laudable plans made by the German Air Force Assistance Group were prematurely put to test barely three years after its establishment. The inexperienced Air Force assumed the role of a well established Air Force in order to prosecute the Nigerian civil war in close collaboration with sister Services. At this stage of its existence, the NAF was only equipped with a few aircraft. As the war progressed, some fighter aircraft such as MIG 15 and 17 were acquired to help bring the war to a speedy end.
-
-<br>The Nigerian Civil War came to an end in 1970 and there was the need to re-organize the Nigerian Air Force and up-grade its equipment. In order to strengthen itself, the NAF between 1981 and 1990 acquired additional aircraft types of advanced technology. With the acquisition of new weapon platforms, there arose the need to train personnel to man and maintain the new aircraft types. This led to the NAF re-organising its training aspects in all NAF trade specialties.
-                        
-                    </p>
-
-                    <p class="a-page-intro-copy copy-intro-02 line-before" style="font-weight: 200" data-transition="move-up-opacity">
-                        Following the expansion of the NAF over time and the need to enforce all international laws and conventions relating to space activities in the Nigerian airspace, the Federal Government promulgated Decree 105 (Armed Forces Amendment Decree) of 23rd August 1994 which provided additional roles for the NAF. These additional roles include:
-                        
-                    </p>
-                    <ul style="padding-left: 173px; text-align:left">
-                        <li> Enforcing and assisting in coordinating the enforcement of international law, conventions,
-
-                            practices and customs ascribed and acceded to by Nigeria relating to aerial or space activities in the
-                       
-                            Nigerian airspace.</li>
-                        <li>Coordinating and enforcing all national and international air laws acceded or ascribed to by
-
-                            Nigeria and</li>
-                        <li>De-lineating, demarcating and coordinating all aerial surveys and security zones of the Nigerian
-
-                            airspace.</li>
-                       
-                    </ul>
 
                     
                     <div id="list-top" data-bind="css : 'block-options-switcher ' + (controller.options.extraClassName || '')" class="block-options-switcher">
@@ -697,7 +757,7 @@ The first batch of 10 cadets was enlisted in 1962 to undergo training with the E
                                 </div>
                                 <div class="block-options-switcher-state  topic5">
                                     
-                                    <p class="copy-body-01 null" data-bind="css: ($data.extraClassName ? $data.extraClassName() : null) + ($data.light ? ' text-light' : ''), html: $data.copy">
+                                    <p class="copy-body-01 null" >
                                         <h4 class="heading-04" style="font-weight: 400; margin: -0.075em 0px 0.88em; font-family: StratumBold, Arial, sans-serif; font-size: 1.4rem; line-height: 0.92857; text-transform: uppercase; letter-spacing: 0.01em; color: #0e182d;">&nbsp;</h4>
                                         <p class="copy-body-01 null" style="margin: -0.22em 0px 1.4444em; font-stretch: normal; line-height: 1.4444; font-family: FFDINWeb, Arial, sans-serif; font-size: 0.9rem; letter-spacing: 0.01em; color: #0e182d;" data-bind="css: ($data.extraClassName ? $data.extraClassName() : null) + ($data.light ? ' text-light' : ''), html: $data.copy">In it's about 48 years of existence; the NAF has taken part in operations in defence of Nigeria's territorial integrity. The NAF participated effectively in troops lift, logistics re-supply, medieval and in combat, Operations HARMONY I to IV conducted in the Eastern flank of the country from the Maiduguri/Chad border to the Bakassi/Cameroonian' area and Operation GABAS in 1987 aimed at flushing out some insurgents from Chad are some good examples. Furthermore, in the discharge of its role of protecting Nigeria from aerial attack, the NAF in conjunction with the Nigerian Army Air Defence Artillery provides low-level air defence for airports around the country. Although lack of serviceable radar and other equipment continue to be a problem, working with other stakeholders, the NAF through the offices of the airport commandants has maintained reasonable level of operational effectiveness. The commencement of work on the military component of the Total Radar Coverage of Nigeria (TRACON) would further enhance NAF's capability in protecting Nigeria's airspace. <br> <br>
 
@@ -711,7 +771,7 @@ The first batch of 10 cadets was enlisted in 1962 to undergo training with the E
                                 </div>
                                 <div class="block-options-switcher-state  topic6">
                                     
-                                    <p class="copy-body-01 null" data-bind="css: ($data.extraClassName ? $data.extraClassName() : null) + ($data.light ? ' text-light' : ''), html: $data.copy">
+                                    <p class="copy-body-01 null" >
                                         <h4 class="heading-04" style="font-weight: 400; margin: -0.075em 0px 0.88em; font-family: StratumBold, Arial, sans-serif; font-size: 1.4rem; line-height: 0.92857; text-transform: uppercase; letter-spacing: 0.01em; color: #0e182d;">&nbsp;</h4>
                                         <p class="copy-body-01 null" style="margin: -0.22em 0px 1.4444em; font-stretch: normal; line-height: 1.4444; font-family: FFDINWeb, Arial, sans-serif; font-size: 0.9rem; letter-spacing: 0.01em; color: #0e182d;" data-bind="css: ($data.extraClassName ? $data.extraClassName() : null) + ($data.light ? ' text-light' : ''), html: $data.copy">The NAF participated actively in various operations nationwide in aid to civil power/authorities during the period under review. These missions range from internal security assignments to the provision of airlift to government agencies. When aviation workers abandoned work for one labour protest reason or the other, NAF personnel took over immediate control of the airports in a few instances. In collaboration with other aviation stakeholders such as the Nigerian Airspace Management Agency (NAMA), it monitored the Nigerian airspace and played a supportive role in the implementation of government policies on the National Airport Security Programme. Some instances of NAF participation in aid to civil authority/power are mentioned under internal security and other engagements. <br> <br>
 
@@ -771,61 +831,7 @@ The first batch of 10 cadets was enlisted in 1962 to undergo training with the E
             
 
             
-            <article class="content-wrapper content-background-cover s-small-padding no-margin single-spacing-bottom">
-
-                
-                <div class="coverer background-image-cover" data-transition="background-cover"></div>
-                <div class="heading-block" data-transition="heading-block-02">
-                    
-                    
-
-                    
-                    
-                    <h6 class="heading-06" data-bind="css: { 'text-mask-background text-stroke-through': $data.strokeThrough }">
-                    Your future is waiting.</h6>
-                    <h2 class="heading-02 title responsive-title" data-bind="css: { 'text-mask-background text-stroke-through': $data.strokeThroughMainTitle }, html: $data.title">
-                    Apply Now</h2>
-
-                    
-                    
-
-                    
-                    
-
-                    
-                    
-
-                    
-                    
-
-                    <div class="">
-                        
-                        
-
-                        
-                        <div class="button-alignment" >
-                            <a href="#" class="button-outline has-down-state inverted">
-                                <span class="button-outline-copy" >
-			
-			<span  class="">
-				
-				<span class="button-text-wrapper">GET STARTED</span>
-                                </span>
-                                </span>
-                                <span class="button-outline-bottom"></span>
-                            </a>
-                        </div>
-                        
-
-                        
-                        
-                        
-                    </div>
-
-                </div>
-                
-
-            </article>
+           
             
         </div>
     </section>
