@@ -17,7 +17,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css"  crossorigin="anonymous">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" type="text/css" href="css/style-v=1.0.1.css">
@@ -66,6 +66,25 @@
     <link rel="stylesheet" href="css/icons.data.svg.css">
     <link rel="stylesheet" href="css/aos.css">
 </head>
+
+<style>
+    .fieldbody{
+        display: none;
+    }
+.airforce-card{
+    background-color: #142240;
+    color: white;
+    padding: 10px;
+    margin-bottom:15px;
+}
+.airforce-card p{   
+    color: #9daac5;
+    font-size: 14px
+}
+.airforce-card:hover{
+    background-color: #1a305d
+}
+</style>
 
 <body class="home page-template-default page page-id-2">
 
@@ -298,205 +317,654 @@
             </header>
 
             <article class="content-wrapper a-page-intro" id="history-article" style="background-color: white !important; color:black !important">
-                <h6 class="heading-06 text-mask-background text-stroke-through" data-bind="css: { 'text-mask-background text-stroke-through': $data.strokeThrough }"><!--ko text:$data.caption-->HOME > HOW TO JOIN > CAREERS<!--/ko--></h6>
-                <div class="heading-block" data-transition="heading-block-02" data-bind="css: { 'small-margin-bottom': ko.unwrap($data.smallMarginBottom) }">
-                        <!-- ko if: typeof $data.headNumber != "undefined" --><!-- /ko -->
-                    
-                        <!-- ko if: !$data.hideTopline -->
+                <h6 class="heading-06 text-mask-background text-stroke-through">HOME > HOW TO JOIN > CAREERS</h6>
+                <div class="heading-block" data-transition="heading-block-02" >
+                       
                         <div class="heading-block-topline-v-wrapper"><hr class="heading-block-topline-v"></div>
-                        <!-- /ko -->
-                        <h6 class="heading-06" data-bind="css: { 'text-mask-background text-stroke-through': $data.strokeThrough }"><!--ko text:$data.caption--><!--/ko--></h6>
-                        <h2 class="heading-02 title responsive-title" data-bind="css: { 'text-mask-background text-stroke-through': $data.strokeThroughMainTitle }, html: $data.title">find careers <br>that suit you best.</h2>
+                      
+                        <h6 class="heading-06"></h6>
+                        <h2 class="heading-02 title responsive-title" >find careers <br>that suit you best.</h2>
                     
-                        <!-- ko if: $data.hasBottomline --><!-- /ko -->
-                    
-                        <!-- ko if: $data.subTitle --><!-- /ko -->
-                    
-                        <!-- ko if: $data.bodyCopy --><!-- /ko -->
-                    
-                        <!-- ko if: $data.image --><!-- /ko -->
-                    
-                        <div data-bind="foreach: new Array(($data.buttonAmount ? $data.buttonAmount() : 1)), css: {
-                                'button-wrapper-subtitle': $data.subTitle || $data.bodyCopy,
-                                'inline-button-wrapper extra-padding extra-button-spacing': $data.buttonAmount &amp;&amp; $data.buttonAmount() > 1
-                            }" class="">
-                            <!--ko block:{"optional":true,"definition":"button-outline","name":"button"} --><!--/ko-->
-                        </div>
-                    
+                        <p class="copy-body-01  subtitle">
+                                SELECT A FIELD BELOW
+                            </p>
                     </div>
                     <div class="result-filter">
-
-                            
-                        
-                            <!-- ko if: filters.indexOf(FilterOption.SEARCH) > -1 -->
-                            <div data-bind="visible: alwaysShowSearch() || currentFilter() == FilterOption.SEARCH" class="search-filter" style="display: none;">
-                                <!--ko block:{"optional":false,"definition":"search-input"} --><form action="" data-bind="submit : handleFormSubmit, css : {'has-value' : searchValue}" class="site-wrapper search-input">
-                          
-                        </form><!--/ko-->
+                            <div class="site-wrapper l single-margin-bottom"  id="tags-list" >
+                                   
+                               <ol class="ib-list site-wrapper s result-filter-tags tag-selector"> 
+                                    <li  class="listbtn " id="ENGINEERING-BTN">
+                                        <button type="button" onclick="showField('ENGINEERING')">ENGINEERING</button>
+                                    </li>
+                                
+                                    <li  class="listbtn" id="MEDICAL-BTN">
+                                        <button type="button"  onclick="showField('MEDICAL')">MEDICAL</button>
+                                    </li>
+                                
+                                    <li  class="listbtn" id="MEDICAL CONSULTANTS-BTN">
+                                        <button type="button"  onclick="showField('MEDICAL CONSULTANTS')">MEDICAL CONSULTANTS</button>
+                                    </li>
+                                
+                                    <li  class="listbtn" id="VET MEDICINE-BTN">
+                                        <button type="button" onclick="showField('VET MEDICINE')">VET MEDICINE</button>
+                                    </li>
+                                
+                                    <li  class="listbtn" id="ICT/SCIENCES-BTN">
+                                        <button type="button" onclick="showField('ICT/SCIENCES')">ICT/SCIENCES</button>
+                                    </li>
+                                
+                                    <li  class="listbtn" id="SPORTS-BTN">
+                                        <button type="button" onclick="showField('SPORTS')">SPORTS</button>
+                                    </li>
+                                
+                                    <li  class="listbtn" id="EDUCATION/LANGUAGES-BTN">
+                                        <button type="button" onclick="showField('EDUCATION/LANGUAGES')">EDUCATION/LANGUAGES</button>
+                                    </li>
+                                
+                                    <li  class="listbtn" id="ADMINISTRATION/FINANCE-BTN">
+                                        <button type="button" onclick="showField('ADMINISTRATION/FINANCE')">ADMINISTRATION/FINANCE</button>
+                                    </li>
+                                
+                                    <li  class="listbtn" id="LOGISTICS-BTN">
+                                        <button type="button" onclick="showField('LOGISTICS')">LOGISTICS</button>
+                                    </li>
+                                
+                                    <li  class="listbtn" id="CHAPLAINCY/ISLAMIC AFFAIRS-BTN">
+                                        <button type="button" onclick="showField('CHAPLAINCY/ISLAMIC AFFAIRS')">CHAPLAINCY/ISLAMIC AFFAIRS</button>
+                                    </li>
+                                
+                                    <li  class="listbtn" id="LEGAL STUDIES-BTN">
+                                        <button type="button" onclick="showField('LEGAL STUDIES')">LEGAL STUDIES</button>
+                                    </li>
+                      
+                        </ol>
                             </div>
-                            <!-- /ko -->
-                        
-                            <div class="site-wrapper l single-margin-bottom" data-bind="visible: currentFilter() == FilterOption.TAGS" id="tags-list" style="">
-                                <div class="advanced-applied-notice text-centered" data-bind="visible : keepAdvancedQueryOnTags() &amp;&amp; advancedFilterLabels().length" style="display: none;">
-                                    <p class="copy-body-01">
-                                           Filters are applied:
-                                        <!--ko text:advancedFilterLabels().join(', ')--><!--/ko-->
-                                    </p>
-                                </div>
-                                <!--ko block:{"optional":false,"definition":"tag-selector","name":"result-filter-tag-selector"} --><ol class="ib-list site-wrapper s result-filter-tags tag-selector">
-                            <!-- ko if: items() && items().length -->
-                                <!-- ko if : controller.options.showNoneTag -->
-                                    <li data-bind="css : {'is-active' : !selectedItemIndexes().length}" class="">
-                                        <button type="button" data-bind="click : controller.unselectAll"><!--ko text:controller.options.noneTagLabel-->All careers<!--/ko--></button>
-                                    </li>
-                                <!-- /ko -->
-                                <!-- ko foreach : items -->
-                                    <li data-bind="css : {'is-active' : $root.selectedItemIndexes().indexOf($index()) > -1}" class="">
-                                        <button type="button" data-bind="click : $root.controller.toggleTag"><!--ko text:label-->for you<!--/ko--></button>
-                                    </li>
-                                
-                                    <li data-bind="css : {'is-active' : $root.selectedItemIndexes().indexOf($index()) > -1}" class="is-active">
-                                        <button type="button" data-bind="click : $root.controller.toggleTag"><!--ko text:label-->ENGINEERING<!--/ko--></button>
-                                    </li>
-                                
-                                    <li data-bind="css : {'is-active' : $root.selectedItemIndexes().indexOf($index()) > -1}" class="">
-                                        <button type="button" data-bind="click : $root.controller.toggleTag"><!--ko text:label-->MEDICAL<!--/ko--></button>
-                                    </li>
-                                
-                                    <li data-bind="css : {'is-active' : $root.selectedItemIndexes().indexOf($index()) > -1}" class="">
-                                        <button type="button" data-bind="click : $root.controller.toggleTag"><!--ko text:label-->MEDICAL CONSULTANTS<!--/ko--></button>
-                                    </li>
-                                
-                                    <li data-bind="css : {'is-active' : $root.selectedItemIndexes().indexOf($index()) > -1}" class="">
-                                        <button type="button" data-bind="click : $root.controller.toggleTag"><!--ko text:label-->VET MEDICINE<!--/ko--></button>
-                                    </li>
-                                
-                                    <li data-bind="css : {'is-active' : $root.selectedItemIndexes().indexOf($index()) > -1}" class="">
-                                        <button type="button" data-bind="click : $root.controller.toggleTag"><!--ko text:label-->ICT/SCIENCES<!--/ko--></button>
-                                    </li>
-                                
-                                    <li data-bind="css : {'is-active' : $root.selectedItemIndexes().indexOf($index()) > -1}" class="">
-                                        <button type="button" data-bind="click : $root.controller.toggleTag"><!--ko text:label-->SPORTS<!--/ko--></button>
-                                    </li>
-                                
-                                    <li data-bind="css : {'is-active' : $root.selectedItemIndexes().indexOf($index()) > -1}" class="">
-                                        <button type="button" data-bind="click : $root.controller.toggleTag"><!--ko text:label-->EDUCATION/LANGUAGES<!--/ko--></button>
-                                    </li>
-                                
-                                    <li data-bind="css : {'is-active' : $root.selectedItemIndexes().indexOf($index()) > -1}" class="">
-                                        <button type="button" data-bind="click : $root.controller.toggleTag"><!--ko text:label-->ADMINISTRATION/FINANCE<!--/ko--></button>
-                                    </li>
-                                
-                                    <li data-bind="css : {'is-active' : $root.selectedItemIndexes().indexOf($index()) > -1}" class="">
-                                        <button type="button" data-bind="click : $root.controller.toggleTag"><!--ko text:label-->LOGISTICS<!--/ko--></button>
-                                    </li>
-                                
-                                    <li data-bind="css : {'is-active' : $root.selectedItemIndexes().indexOf($index()) > -1}" class="">
-                                        <button type="button" data-bind="click : $root.controller.toggleTag"><!--ko text:label-->CHAPLAINCY/ISLAMIC AFFAIRS<!--/ko--></button>
-                                    </li>
-                                
-                                    <li data-bind="css : {'is-active' : $root.selectedItemIndexes().indexOf($index()) > -1}" class="">
-                                        <button type="button" data-bind="click : $root.controller.toggleTag"><!--ko text:label-->LEGAL STUDIES<!--/ko--></button>
-                                    </li>
-                                
-                                    
-                                <!-- /ko -->
-                            <!-- /ko -->
-                        </ol><!--/ko-->
-                            </div>
-                        
-                            <!-- ko if: filters.indexOf(FilterOption.ADVANCED) > -1 -->
-                            <div class="site-wrapper grid-wrapper l result-filter-advanced text-left" data-bind="visible: currentFilter() == FilterOption.ADVANCED" style="display: none;">
-                                <!-- ko foreach : advancedFilters -->
-                                <div class="grid-item grid-one-third grid-s-one-whole">
-                                    <h5 class="copy-body-01 text-bravo"><!--ko text:header-->Education<!--/ko--></h5>
-                                    <ul class="reset-list result-filter-advanced-list" data-bind="foreach : filters">
-                                        <li data-bind="css : {'is-active' : isActive}" class="">
-                                            <a href="#" data-bind="click : $root.toggleIsActive"><!--ko text:label-->High School / Enlisted<!--/ko--> <span class="icon-checkmark" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="17" height="12"><path d="M16.711 1.705L6.703 11.74c-.323.324-.83.34-1.133.036l-.366-.367c-.303-.304-.287-.812.035-1.136L15.247.238c.322-.324.83-.339 1.133-.035l.366.366c.303.304.287.812-.035 1.136zM4.388 9.763c-.3.3-.792.294-1.1-.013L.222 6.677A.774.774 0 0 1 .209 5.58l.369-.368a.78.78 0 0 1 1.1.013l3.067 3.073a.775.775 0 0 1 .013 1.097l-.37.368z" class="cls-2" fill-rule="evenodd"></path></svg></span></a>
-                                        </li>
-                                    
-                                        <li data-bind="css : {'is-active' : isActive}" class="">
-                                            <a href="#" data-bind="click : $root.toggleIsActive"><!--ko text:label-->College Graduate / Officer<!--/ko--> <span class="icon-checkmark" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="17" height="12"><path d="M16.711 1.705L6.703 11.74c-.323.324-.83.34-1.133.036l-.366-.367c-.303-.304-.287-.812.035-1.136L15.247.238c.322-.324.83-.339 1.133-.035l.366.366c.303.304.287.812-.035 1.136zM4.388 9.763c-.3.3-.792.294-1.1-.013L.222 6.677A.774.774 0 0 1 .209 5.58l.369-.368a.78.78 0 0 1 1.1.013l3.067 3.073a.775.775 0 0 1 .013 1.097l-.37.368z" class="cls-2" fill-rule="evenodd"></path></svg></span></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="grid-item grid-one-third grid-s-one-whole">
-                                    <h5 class="copy-body-01 text-bravo"><!--ko text:header-->Professional careers<!--/ko--></h5>
-                                    <ul class="reset-list result-filter-advanced-list" data-bind="foreach : filters">
-                                        <li data-bind="css : {'is-active' : isActive}" class="">
-                                            <a href="#" data-bind="click : $root.toggleIsActive"><!--ko text:label-->Healthcare<!--/ko--> <span class="icon-checkmark" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="17" height="12"><path d="M16.711 1.705L6.703 11.74c-.323.324-.83.34-1.133.036l-.366-.367c-.303-.304-.287-.812.035-1.136L15.247.238c.322-.324.83-.339 1.133-.035l.366.366c.303.304.287.812-.035 1.136zM4.388 9.763c-.3.3-.792.294-1.1-.013L.222 6.677A.774.774 0 0 1 .209 5.58l.369-.368a.78.78 0 0 1 1.1.013l3.067 3.073a.775.775 0 0 1 .013 1.097l-.37.368z" class="cls-2" fill-rule="evenodd"></path></svg></span></a>
-                                        </li>
-                                    
-                                        <li data-bind="css : {'is-active' : isActive}" class="">
-                                            <a href="#" data-bind="click : $root.toggleIsActive"><!--ko text:label-->Law Professional<!--/ko--> <span class="icon-checkmark" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="17" height="12"><path d="M16.711 1.705L6.703 11.74c-.323.324-.83.34-1.133.036l-.366-.367c-.303-.304-.287-.812.035-1.136L15.247.238c.322-.324.83-.339 1.133-.035l.366.366c.303.304.287.812-.035 1.136zM4.388 9.763c-.3.3-.792.294-1.1-.013L.222 6.677A.774.774 0 0 1 .209 5.58l.369-.368a.78.78 0 0 1 1.1.013l3.067 3.073a.775.775 0 0 1 .013 1.097l-.37.368z" class="cls-2" fill-rule="evenodd"></path></svg></span></a>
-                                        </li>
-                                    
-                                        <li data-bind="css : {'is-active' : isActive}" class="">
-                                            <a href="#" data-bind="click : $root.toggleIsActive"><!--ko text:label-->Ministry Professional<!--/ko--> <span class="icon-checkmark" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="17" height="12"><path d="M16.711 1.705L6.703 11.74c-.323.324-.83.34-1.133.036l-.366-.367c-.303-.304-.287-.812.035-1.136L15.247.238c.322-.324.83-.339 1.133-.035l.366.366c.303.304.287.812-.035 1.136zM4.388 9.763c-.3.3-.792.294-1.1-.013L.222 6.677A.774.774 0 0 1 .209 5.58l.369-.368a.78.78 0 0 1 1.1.013l3.067 3.073a.775.775 0 0 1 .013 1.097l-.37.368z" class="cls-2" fill-rule="evenodd"></path></svg></span></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="grid-item grid-one-third grid-s-one-whole">
-                                    <h5 class="copy-body-01 text-bravo"><!--ko text:header-->ASVAB Categories<!--/ko--></h5>
-                                    <ul class="reset-list result-filter-advanced-list" data-bind="foreach : filters">
-                                        <li data-bind="css : {'is-active' : isActive}" class="">
-                                            <a href="#" data-bind="click : $root.toggleIsActive"><!--ko text:label-->Administrative<!--/ko--> <span class="icon-checkmark" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="17" height="12"><path d="M16.711 1.705L6.703 11.74c-.323.324-.83.34-1.133.036l-.366-.367c-.303-.304-.287-.812.035-1.136L15.247.238c.322-.324.83-.339 1.133-.035l.366.366c.303.304.287.812-.035 1.136zM4.388 9.763c-.3.3-.792.294-1.1-.013L.222 6.677A.774.774 0 0 1 .209 5.58l.369-.368a.78.78 0 0 1 1.1.013l3.067 3.073a.775.775 0 0 1 .013 1.097l-.37.368z" class="cls-2" fill-rule="evenodd"></path></svg></span></a>
-                                        </li>
-                                    
-                                        <li data-bind="css : {'is-active' : isActive}" class="">
-                                            <a href="#" data-bind="click : $root.toggleIsActive"><!--ko text:label-->Electronics<!--/ko--> <span class="icon-checkmark" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="17" height="12"><path d="M16.711 1.705L6.703 11.74c-.323.324-.83.34-1.133.036l-.366-.367c-.303-.304-.287-.812.035-1.136L15.247.238c.322-.324.83-.339 1.133-.035l.366.366c.303.304.287.812-.035 1.136zM4.388 9.763c-.3.3-.792.294-1.1-.013L.222 6.677A.774.774 0 0 1 .209 5.58l.369-.368a.78.78 0 0 1 1.1.013l3.067 3.073a.775.775 0 0 1 .013 1.097l-.37.368z" class="cls-2" fill-rule="evenodd"></path></svg></span></a>
-                                        </li>
-                                    
-                                        <li data-bind="css : {'is-active' : isActive}" class="">
-                                            <a href="#" data-bind="click : $root.toggleIsActive"><!--ko text:label-->General<!--/ko--> <span class="icon-checkmark" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="17" height="12"><path d="M16.711 1.705L6.703 11.74c-.323.324-.83.34-1.133.036l-.366-.367c-.303-.304-.287-.812.035-1.136L15.247.238c.322-.324.83-.339 1.133-.035l.366.366c.303.304.287.812-.035 1.136zM4.388 9.763c-.3.3-.792.294-1.1-.013L.222 6.677A.774.774 0 0 1 .209 5.58l.369-.368a.78.78 0 0 1 1.1.013l3.067 3.073a.775.775 0 0 1 .013 1.097l-.37.368z" class="cls-2" fill-rule="evenodd"></path></svg></span></a>
-                                        </li>
-                                    
-                                        <li data-bind="css : {'is-active' : isActive}" class="">
-                                            <a href="#" data-bind="click : $root.toggleIsActive"><!--ko text:label-->Mechanical<!--/ko--> <span class="icon-checkmark" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="17" height="12"><path d="M16.711 1.705L6.703 11.74c-.323.324-.83.34-1.133.036l-.366-.367c-.303-.304-.287-.812.035-1.136L15.247.238c.322-.324.83-.339 1.133-.035l.366.366c.303.304.287.812-.035 1.136zM4.388 9.763c-.3.3-.792.294-1.1-.013L.222 6.677A.774.774 0 0 1 .209 5.58l.369-.368a.78.78 0 0 1 1.1.013l3.067 3.073a.775.775 0 0 1 .013 1.097l-.37.368z" class="cls-2" fill-rule="evenodd"></path></svg></span></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- /ko -->
-                            </div>
-                            <!-- /ko -->
-                        
-                            <div class="site-wrapper text-centered apply-advanced-button-wrapper"  style="display: none;">
-                               
-                        <div class="button-alignment" >
-                            <a href="" class="button-outline" >
-                                <span class="button-outline-copy" >
-                                  
-                                    <span class="">
-                                     
-                                        <span class="button-text-wrapper">Apply filters</span>
-                                    </span>
-                                </span>
-                                <span class="button-outline-bottom"></span>
-                            </a>
                         </div>
-                   
-                            </div>
-                        
-                        </div>
+                        <h3 class="heading-03 has-margin text-mask-background text-stroke-through" id="field-title"></h3>
 
-                
-                
-                
+                        <div class="container fieldbody" id="ENGINEERING" >
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Software Engineering</h5>
+                                     <p>BSc/BEng/BTech/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Network Engineering</h5>
+                                     <p>BSc/BEng/BTech/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Computer Engineering</h5>
+                                     <p>BSc/BEng/BTech/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Electrical/Electronic Engineering</h5>
+                                     <p>BSc/BEng/BTech/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Mechanical Engineering</h5>
+                                     <p>BSc/BEng/BTech/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Chemical Engineering</h5>
+                                     <p>BSc/BEng/BTech/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Satellite Communication Engineering</h5>
+                                     <p>BSc/BEng/BTech/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Satellite Control Engineering</h5>
+                                     <p>BSc/BEng/BTech/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Satellite Ground Station Engineering</h5>
+                                     <p>BSc/BEng/BTech/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Telecommunication  Engineering</h5>
+                                     <p>BSc/BEng/BTech/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Aerospace & Aeronautical Engineering</h5>
+                                     <p>BSc/BEng/BTech/HND</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container fieldbody" id="MEDICAL">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Nursing</h5>
+                                     <p>BSc</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Pharmacy</h5>
+                                     <p>B.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">MBBS/ BDS</h5>
+                                     <br>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">BMLS/AMLS</h5>
+                                     <!-- <p>BSc/BEng/BTech/HND</p> -->
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Physiotherapy</h5>
+                                     <p>BSc</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Dental Therapy</h5>
+                                     <p>BSc/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Health Information Management.</h5>
+                                     <p>BSc/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Optometry</h5>
+                                     <p>D.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Biomedical Engineering </h5>
+                                     <p>BSc/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Clinical Psychology</h5>
+                                     <p>BSc</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Radiography</h5>
+                                     <p>BSc</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                        <div class="airforce-card">
+                                            <h5 style="margin-bottom:0px; font-size: 18px">Environmental Health </h5>
+                                         <p>BSc/HND</p>
+                                        </div>
+                                    </div>
+                                <div class="col-md-4">
+                                        <div class="airforce-card">
+                                            <h5 style="margin-bottom:0px; font-size: 18px">Nutrition and Dietetics</h5>
+                                         <p>HND</p>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="container fieldbody" id="MEDICAL CONSULTANTS">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Fellow of West Africa/National Postgraduate College in General Surgery</h5>
+                                     <!-- <p>BSc</p> -->
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Fellow of West Africa/National Postgraduate College in Cardiothorasic Surgery.</h5>
+                                     <!-- <p>B.</p> -->
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Fellow of West Africa/National Postgraduate College in Orthopaedics Surgery.</h5>
+                                     <!-- <br> -->
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px"> Fellow of West Africa/National Postgraduate College in Ophthalmology.</h5>
+                                     <!-- <p>BSc/BEng/BTech/HND</p> -->
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Fellow of West Africa/National Postgraduate College in Neurosurgery.</h5>
+                                     <!-- <p>BSc</p> -->
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Fellow of West Africa/National Postgraduate College in Internal Medicine</h5>
+                                     <!-- <p>BSc/HND</p> -->
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Fellow of West Africa/National Postgraduate College in Paediatrics.</h5>
+                                     <!-- <p>BSc/HND</p> -->
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Fellow of West Africa/National Postgraduate College in Obstetrics & Gynaecology.</h5>
+                                     <!-- <p>D.</p> -->
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Fellow of West Africa/National Postgraduate College in Anaesthesiology.</h5>
+                                     <!-- <p>BSc/HND</p> -->
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="container fieldbody" id="VET MEDICINE">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Vet Medicine</h5>
+                                     <p>DVM</p>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="container fieldbody" id="ICT/SCIENCES">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="airforce-card">
+                                            <h5 style="margin-bottom:0px; font-size: 18px">Database/Network Administration</h5>
+                                         <p>BSc/BEng/BTech/HND</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="airforce-card">
+                                            <h5 style="margin-bottom:0px; font-size: 18px">Web Development</h5>
+                                            <p>BSc/BEng/BTech/HND</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="airforce-card">
+                                            <h5 style="margin-bottom:0px; font-size: 18px">Network & Cyber Security.</h5>
+                                            <p>BSc/BEng/BTech/HND</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="airforce-card">
+                                            <h5 style="margin-bottom:0px; font-size: 18px"> IT Robotics</h5>
+                                            <p>BSc/BEng/BTech/HND</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="airforce-card">
+                                            <h5 style="margin-bottom:0px; font-size: 18px">GIS/Remote Sensing.</h5>
+                                            <p>BSc/BEng/BTech/HND</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="airforce-card">
+                                            <h5 style="margin-bottom:0px; font-size: 18px">Satellite Image Analyst.</h5>
+                                            <p>BSc/BEng/BTech/HND</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="airforce-card">
+                                            <h5 style="margin-bottom:0px; font-size: 18px">Data Telecommunication</h5>
+                                            <p>BSc/BEng/BTech/HND</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="airforce-card">
+                                            <h5 style="margin-bottom:0px; font-size: 18px">Cartography and Statistics/Record Analyst.</h5>
+                                            <p>BSc/BEng/BTech/HND</p>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                        </div>
+                        <div class="container fieldbody" id="SPORTS">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Physical & Health</h5>
+                                        <p>BSc/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Health Education & Human Kinetics</h5>
+                                        <p>BSc/HND</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="container fieldbody" id="EDUCATION/LANGUAGES">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Biology</h5>
+                                     <p>BEd</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Physics</h5>
+                                        <p>BEd</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Mathematics</h5>
+                                        <p>BEd</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Chemistry</h5>
+                                        <p>BEd</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">French language</h5>
+                                        <p>BEd</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">English language.</h5>
+                                        <p>BEd</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Fine Arts.</h5>
+                                        <p>BEd</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">History</h5>
+                                        <p>BEd</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">PE</h5>
+                                        <p>BEd</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Economics</h5>
+                                        <p>BEd</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">French language</h5>
+                                        <p>BA</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">German language</h5>
+                                        <p>BA</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Russian language</h5>
+                                        <p>BA</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Mandarin language</h5>
+                                        <p>BA</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Arabic languages</h5>
+                                        <p>BA</p>
+                                    </div>
+                                </div>                                
+                                
+                            </div>
+                        </div>
+                        <div class="container fieldbody" id="ADMINISTRATION/FINANCE">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Mass Communication</h5>
+                                     <p>BSc/BA/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Public Relations</h5>
+                                        <p>BSc/BA/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Journalism</h5>
+                                        <p>BSc/BA/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Television and Film Production</h5>
+                                        <p>BSc/BA/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Music/Instrument Technology</h5>
+                                        <p>BSc/BA/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Accounting</h5>
+                                        <p>BSc/BA/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Sociology</h5>
+                                        <p>BSc/BA/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Criminology</h5>
+                                        <p>BSc/BA/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Psychology</h5>
+                                        <p>BSc/BA/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Economics</h5>
+                                        <p>BSc/BA/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Marketing</h5>
+                                        <p>BSc/BA/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Purchasing and Supply</h5>
+                                        <p>BSc/BA/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Catering</h5>
+                                        <p>BSc/BA/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Business Management</h5>
+                                        <p>BSc/BA/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Intelligence and Security Studies</h5>
+                                        <p>BSc/BEng/BTech/HND</p>
+                                    </div>
+                                </div>                                
+                                
+                            </div>
+                        </div>
+                        <div class="container fieldbody" id="LOGISTICS">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Architects</h5>
+                                     <p>BSc/BEng/MTech/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Civil Engineering</h5>
+                                        <p>BSc/BEng/MTech/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Estate Surveyors</h5>
+                                        <p>BSc/BEng/MTech/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Quantity Surveyors</h5>
+                                        <p>BSc/BEng/MTech/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Land Surveyors</h5>
+                                        <p>BSc/BEng/MTech/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Structural Engineers</h5>
+                                        <p>BSc/BEng/MTech/HND</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Services Engineers</h5>
+                                        <p>BSc/BEng/MTech/HND</p>
+                                    </div>
+                                </div>
+                                           
+                                
+                            </div>
+                        </div>
+                        <div class="container fieldbody" id="CHAPLAINCY/ISLAMIC AFFAIRS">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Theology</h5>
+                                     <p>BA</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Arabic & Islamic Studies</h5>
+                                        <p>BA</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="container fieldbody" id="LEGAL STUDIES">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Criminal Law</h5>
+                                     <p>LLB</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Constitutional Law</h5>
+                                        <p>LLB</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Procurement Law</h5>
+                                     <p>LLB</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="airforce-card">
+                                        <h5 style="margin-bottom:0px; font-size: 18px">Land and Alternative Dispute Resolution (ADR) Law</h5>
+                                        <p>LLB</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
                 </div>
     
                 </p>
 
             </article>
-
-            
-            <ul class="satellites reset-list grid-wrapper text-inverted block-grid-animate" data-bind="visible : satellitesReady, foreach : satelliteData" style="display: none;"></ul>
-            
-
-            
-           
-            
         </div>
     </section>
     <footer class="site-footer">
