@@ -21671,3 +21671,11 @@ html.is-mobile .chat-live-contact-options .boxed-option-item.active .button-cont
         transform: scaleX(0)!important;
     }
 }
+
+.p-top-none{
+    padding-top: 20px!important;
+}
+.news-detail .story-intro-image-caption{
+    margin-top: -9rem;
+    margin-bottom: 1rem;
+}
