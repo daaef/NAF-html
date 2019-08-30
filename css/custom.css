@@ -1571,6 +1571,10 @@ div.site-header .main-nav-toggle.is-active .cross-diagonal:after, div.site-heade
     transition-delay: 0s
 }
 
+.main-navigation.is-hidden{
+    visibility: hidden;
+}
+
 .main-navigation:after {
     content: '';
     position: absolute;
