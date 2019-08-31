@@ -2425,7 +2425,6 @@ section#home .social .item p {
 
 .apply-now-label:hover a {
   color: #ffffff;
-  filter: brightness(60%);
 }
 
 #choose .background-image-cover {
@@ -2588,7 +2587,7 @@ div.site-header
   filter: brightness(50%);
 }
 
-.text-anime > span {
+.text-anime > span > span {
   opacity: 0;
 }
 
