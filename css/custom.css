@@ -21722,7 +21722,7 @@ html.is-mobile .chat-live-contact-options .boxed-option-item.active .button-cont
 }
 @media (max-width: 992px) {
     .padding\@mobile{
-        padding: 0 20px;
+        padding: 0 30px;
     }
     .bg-contain img{
         width: 100%;
