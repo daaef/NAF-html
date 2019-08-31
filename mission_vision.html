@@ -275,7 +275,7 @@
             </div>
         </header>
 
-        <article class="content-wrapper">
+        <article class="content-wrapper mission">
             <div class="site-wrapper s text-left single-margin-bottom">
                 <h6 class="heading-03">MISSION</h6>
                 
@@ -289,7 +289,7 @@
                     “To reposition the NAF into a highly professional and disciplined force through capacity building initiatives for effective, efficient and timely employment of air power in response to Nigeria's national security imperatives". 
                     <br />
                     <br />
-                    <span class="heading-block-number">
+                    <span class="heading-07 mb-1">
                         Air Marshal SB Abubakar DFS GSS psc(+) fwc ndc(+) MSc
                     </span>                   
                     
@@ -307,59 +307,49 @@
             </h6>
 
             <div class="site-wrapper sm grid-wrapper text-left">
-                <!-- ko if : categorySearchNumResults() >= 0 -->
-                <div class="grid-item grid-one-whole grid-padding-side-half">
-                    <p class="copy-body-01 text-light single-margin-bottom"><!--ko text:categorySearchNumResults-->27
-                        <!--/ko--> <!--ko text:'Result'|plural:categorySearchNumResults():'Results'-->Results<!--/ko-->
-                        found</p>
-                </div>
               
-                <ul class="reset-list grid-item grid-one-half grid-padding-side-half grid-s-no-padding"
-                    data-bind="foreach: items">
-                    <li class="single-margin-bottom">
+                <ul class="reset-list grid-item grid-one-whole grid-padding-side-half grid-s-no-padding">
+                    <li class="mb-1 grid-item grid-one-half grid-padding-side-half grid-s-no-padding">
                         
                         <hr class="double-line">
                         <h4 class="copy-intro-02">Human capacity development through robust and result oriented training for enhanced professional performance.</h4>
                         
                     </li>
 
-                    <li class="single-margin-bottom">
+                    <li class="mb-1 grid-item grid-one-half grid-padding-side-half grid-s-no-padding">
                         <hr class="double-line">
                         <h4 class="copy-intro-02">Robust logistics support and maitenance culture to sustain platforms and equipment serviceability.</h4>
                     </li>
 
-                    <li class="single-margin-bottom">
+                    <li class="mb-1 grid-item grid-one-half grid-padding-side-half grid-s-no-padding">
                         <hr class="double-line">
                         <h4 class="copy-intro-02">
                             Reinforce a culture of self-reliance and prudent management of resources.
                         </h4>
                     </li>
-                </ul>
-
-                <ul class="reset-list grid-item grid-one-half grid-padding-side-half grid-s-no-padding"
-                    data-bind="foreach: items">
-                    <li class="single-margin-bottom">
+                    <li class="grid-item grid-one-half grid-padding-side-half grid-s-no-padding">
                         <hr class="double-line">
                         <h4 class="copy-intro-02">
                             Strategic partnerships with MDAs for enhanced research and development.
-                        </h4>                            
+                        </h4>
                     </li>
 
-                    <li class="single-margin-bottom">
+                    <li class="mb-1 grid-item grid-one-half grid-padding-side-half grid-s-no-padding">
                         <hr class="double-line">
                         <h4 class="copy-intro-02">
                             Promote and inculcate the core values of integrity, excellence and service delivery.
                         </h4>
-                        
+
                     </li>
 
-                    <li class="single-margin-bottom">
+                    <li class="mb-1 grid-item grid-one-half grid-padding-side-half grid-s-no-padding">
                         <hr class="double-line">
                         <h4 class="copy-intro-02">
                             Focus on comradeship, regimentation and inter-Service cooperation.
                         </h4>
                     </li>
-                </ul>                
+                </ul>
+
             </div>
         </article>
 
@@ -554,6 +544,14 @@
     AOS.init({
         easing: 'ease-out-back',
         duration: 1000
+    });
+    $(function() {
+        $('.card.no-overflow').matchHeight({
+            byRow: true,
+            property: 'height',
+            target: null,
+            remove: false
+        });
     });
 </script>
 </body>
