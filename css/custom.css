@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box!important;
+}
+
 /*! normalize.css v2.0.1 | MIT License | git.io/normalize */
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
     display: block
@@ -14,6 +18,10 @@ audio:not([controls]) {
 
 [hidden] {
     display: none
+}
+
+a:hover{
+    color: inherit;
 }
 
 html {
@@ -21394,3 +21402,195 @@ html.is-mobile .chat-live-contact-options .boxed-option-item.active .button-cont
 #history-article > *{
     color: #000;
 }
+
+.btn-outline-dark{
+    transition: all .3s ease-in-out;
+}
+
+.btn-outline-dark:hover {
+    color: #fff;
+    background-color: rgb(29, 34, 54);
+    border-color: rgb(29, 34, 54);
+}
+
+.logo-title{
+    text-shadow: none;
+}
+
+.news-detail .copy-body-01{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.news-detail .hero-image{
+    position: relative;
+}
+.news-detail .hero-image:before{
+    background: url(../img/news-1.jpg) center no-repeat;
+    background-size: cover;
+    filter: brightness(65%);
+    z-index: 0
+}
+
+.story-intro-image-caption{
+    border-left-color: white;
+}
+
+.section {
+    column-width: 300px;
+    column-gap: 5px;
+    padding: 5px;
+}
+
+.section img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.lightbox {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: none;
+    background: #7f8c8d;
+    perspective: 1000;
+    left: 0;
+    z-index: 20000;
+}
+
+.filter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(20px);
+    opacity: 0.5;
+    background-position: center;
+    background-size: cover;
+}
+
+.lightbox img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: translate(-50%, -50%) rotateY(0deg);
+    max-height: 95vh;
+    max-width: calc(95vw - 100px);
+    transition: 0.8s cubic-bezier(0.7, 0, 0.4, 1);
+    transform-style: preserve-3d;
+}
+
+
+/*.lightbox:hover img{
+  transform: translate(-50%, -50%) rotateY(180deg);
+}*/
+
+[class^="arrow"] {
+    height: 200px;
+    width: 50px;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+[class^="arrow"]:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 15px;
+    height: 15px;
+}
+
+.arrowr {
+    right: 0;
+}
+
+.arrowr:after {
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.arrowl {
+    left: 0;
+}
+
+.arrowl:after {
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.4);
+    margin: 20px;
+    cursor: pointer;
+}
+
+.close:after,
+.close:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background: #ffffff;
+}
+
+.close:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.close:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.lightbox .title {
+    font-size: 20px;
+    color: #000;
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.leadership .card-body{
+    background: rgb(29, 34, 54);
+    color: #ffffff;
+}
+
+.is-horizontal-line{
+    margin: 40px 0;
+    border-top: 1px solid rgba(0, 0, 0, .3);
+}
+
+.font-medium{
+    font-size: 16px;
+}
+/*
+
+.small-padding{
+    padding: 50px;
+}*/
+
+.commander-img img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 767px){
+    .story-intro-image-content .content {
+        box-sizing: border-box;
+        padding-right: 0;
+    }}

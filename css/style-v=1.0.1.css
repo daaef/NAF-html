@@ -2608,6 +2608,10 @@ div.site-header
   padding-right: 5px;
 }
 
+.leadership .media {
+  overflow: hidden;
+}
+
 .description p {
   font-size: 15px;
 }

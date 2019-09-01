@@ -277,120 +277,81 @@
         </dl>
     </div>
 </nav>
-<section id="home" class="news">
+<section id="home" class="news-detail">
     <div data-bind="template: { name: 'faq' }" class="view view-faq" style="visibility: visible;">
         <!--ko block:{"optional":false,"definition":"hero-image","name":"hero-image","placeholder":"hero-small"} -->
-        <header class="hero-image text-inverted is-small"
-                data-bind="css: { 'is-small': isSmall, 'has-option-slider': hasOptionSlider }">
-            <div class="hero-image-title">
-                <h6 class="heading-06 subtitle">Nigerian Air Force</h6>
-                <h1 class="heading-02 title">News</h1>
-            </div>
+        <header class="hero-image text-inverted is-small" style="background-image: none, linear-gradient(to bottom, #0e182d , rgba(14,24,45,0.44))!important; ">
         </header>
-        <article data-aos="fade"
-                 data-aos-duration="2500" data-aos-delay="300" class="content-wrapper content-small-head s-small-padding">
-            <div class="heading-block mt-70px">
-                <h2 class="heading-02 title responsive-title" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                    Latest News</h2>
-            </div>
-            <!--/ko-->
+        <section>
+            <div data-bind="css : 'block-container ' + (controller.options.extraClassName || '')"
+                 class="block-container">
+                <div class="site-wrapper xl content-wrapper content-xsmall-head">
+                    <div class="story-intro-image-content site-wrapper l grid-wrapper text-left">
+                        <div class="grid-item grid-seven-sixteenth story-intro-image-caption text-inverted small-right">
+                            <p class="heading-03 quote-copy"
+                               data-bind="html: $data.quote, css: {'quote-copy': !$data.quoteMark}">NAF AIRLIFTS
+                                REFUGEES FROM CAMEROON TO
+                                NIGERIA</p>
+                        </div>
 
-            <div class="site-wrapper">
-                <div class="grid-wrapper home-grid-items text-inverted single-margin-bottom" data-transition="">
-                    <div class="grid-item grid-four-seventh">
-                        <a href="news-detail.html" class="button-block full-image-grid-item-small">
-                            <figure class="full-image-ratio ratio-1-1 is-active">
-                                <img src="./img/news1.jpg"
-                                     alt="" style="">
-                            </figure><!--/ko-->
+                        <div class="content grid-item grid-nine-sixteenth grid-s-one-whole">
+                            <!--ko block:{"optional":false,"definition":"story-tabs"} -->
+                            <div class="story-tabs">
+                                <!--{{ block?:horizontal-option-slider:tabs }}-->
+                                <!--ko block:{"optional":true,"definition":"tabs-inline-list","name":"inline-tabs"} -->
+                                <!--/ko-->
 
-                            <div class="full-image-caption">
-                                <h4 class="heading-07" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    <!--ko text:$data.careers()[0].caption-->26/Aug/2019<!--/ko--></h4>
-                                <h3 class="copy-intro-01 text-no-margin"
-                                    style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    INTERNAL SECURITY OPERATIONS: NAF INDUCTS ANOTHER HELICOPTER REACTIVATED LOCALLY IN PORT HARCOURT
-                                    <!--/ko--></h3>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="grid-item grid-three-seventh">
+                                <!--ko block:{"optional":false,"definition":"container","name":"story-tabs-content"} -->
+                                <div class="block-container">
+                                    <p class="copy-body-01 null">
+                                        The Nigerian Air Force (NAF) has airlifted back to the Country no fewer than 135 Nigerians who took refuge in neighbouring Cameroon. The returnees were airlifted today, 22 August 2019, by a NAF C-130H aircraft from the Maroua Salak International Airport in Cameroon’s Northern Region to Yola International Airport, in furtherance of the NAF’s constitutional role of providing Military Aid to Civil Authority.
+                                    </p>
+                                </div><!--/ko-->
+                            </div><!--/ko-->
+                        </div>
+                        <div class="grid-item mt-1 grid-one-whole grid-s-one-whole">
+                            <!--ko block:{"optional":false,"definition":"story-tabs"} -->
+                            <div class="story-tabs">
+                                <div class="block-container">
+                                    <p class="copy-body-01">
+                                        The NAF also provided airlift for Nigeria’s Technical Working Group (TWG) for the "Repatriation of Nigerian Refugees in Cameroon” led by the Honourable Minister of Humanitarian Affairs, Disaster Management and Social Development, Hajiya Sadiya Umar Farouq, who oversaw the commencement of the return process. The NAF aircrew, alongside the TWG, received the refugees from the United Nations High Commission for Refugees and Cameroonian Government Officials.
+                                    </p>
 
-                        <a href="news-detail.html"
-                           class="button-block full-image-grid-item-small">
-                            <!--ko block:{"optional":false,"definition":"full-image","name":"image-small"} -->
-                            <figure class="full-image-ratio ratio-3-2 is-active">
-                                <img src="./img/news-1.jpg"
-                                     alt="" style="">
-                            </figure><!--/ko-->
-                            <div class="full-image-caption">
-                                <h4 class="heading-07" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    <!--ko text:$data.careers()[1].caption-->22/Aug/2019<!--/ko--></h4>
-                                <h3 class="copy-intro-01 text-no-margin"
-                                    style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    <!--ko text:$data.careers()[0].title-->JUST IN: NAF AIRLIFTS REFUGEES FROM CAMEROON TO
-                                    NIGERIA ...</h3>
-                            </div>
-                        </a>
-                        <a href="news-detail.html"
-                           class="button-block full-image-grid-item-small">
-                            <!--ko block:{"optional":false,"definition":"full-image","name":"image-small"} -->
-                            <figure class="full-image-ratio ratio-3-2 is-active">
-                                <img src="./img/news-2.jpg"
-                                     alt="" style="">
-                            </figure><!--/ko-->
-                            <div class="full-image-caption">
-                                <h4 class="heading-07" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    <!--ko text:$data.careers()[1].caption-->20/Aug/2019<!--/ko--></h4>
-                                <h3 class="copy-intro-01 text-no-margin"
-                                    style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    NAF COMMISSIONS RENOVATED ACCOMMODATION FOR SNCOS IN KADUNA...<!--/ko--></h3>
-                            </div>
-                        </a>
-
-                    </div>
-                    <div class="grid-item grid-one-half">
-
-
-                        <a href="news-detail.html"
-                           class="button-block full-image-grid-item-small" style="">
-                            <figure class="full-image-ratio ratio-3-2 is-active">
-                                <img src="./img/news-3.jpg"
-                                     alt="" style="">
-                            </figure><!--/ko-->
-                            <div class="full-image-caption">
-                                <h4 class="heading-07" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    18/Aug/2019</h4>
-                                <h3 class="copy-intro-01 text-no-margin"
-                                    style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    PRESIDENT MUHAMMADU BUHARI COMMISSIONS NAF REFERENCE HOSPITAL...</h3>
-                            </div>
-                        </a>
-
-                    </div>
-                    <div class="grid-item grid-one-half">
-
-                        <a href="news-detail.html"
-                           class="button-block full-image-grid-item-small">
-                            <!--ko block:{"optional":false,"definition":"full-image","name":"image-small"} -->
-                            <figure class="full-image-ratio ratio-3-2 is-active">
-                                <img src="./img/news-2.jpg"
-                                     alt="" style="">
-                            </figure><!--/ko-->
-                            <div class="full-image-caption">
-                                <h4 class="heading-07" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    <!--ko text:$data.careers()[1].caption-->20/Aug/2019<!--/ko--></h4>
-                                <h3 class="copy-intro-01 text-no-margin"
-                                    style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                    NAF COMMISSIONS RENOVATED ACCOMMODATION FOR SNCOS IN KADUNA...<!--/ko--></h3>
-                            </div>
-                        </a>
-
-                    </div>
-                </div><!--/ko-->
-                <!-- /ko -->
-            </div>
-        </article>
+                                </div><!--/ko-->
+                            </div><!--/ko-->
+                        </div>
+                        <section class="section">
+                            <img src="./img/post-gallery/5767.jpg" />
+                            <img src="./img/post-gallery/5776.jpg" />
+                            <img src="./img/post-gallery/5770.jpg" />
+                            <img src="./img/post-gallery/5769.jpg" />
+                            <img src="./img/post-gallery/5766.jpg" />
+                            <img src="./img/post-gallery/5771.jpg" />
+                            <img src="./img/post-gallery/5772.jpg" />
+                            <img src="./img/post-gallery/5773.jpg" />
+                            <img src="./img/post-gallery/5774.jpg" />
+                            <img src="./img/post-gallery/5775.jpg" />
+                            <img src="./img/post-gallery/5777.jpg" />
+                            <img src="./img/post-gallery/5778.jpg" />
+                            <img src="./img/post-gallery/5779.jpg" />
+                            <img src="./img/post-gallery/5780.jpg" />
+                            <img src="./img/post-gallery/5781.jpg" />
+                            <img src="./img/post-gallery/5782.jpg" />
+                            <img src="./img/post-gallery/5783.jpg" />
+                            <img src="./img/post-gallery/5784.jpg" />
+                            <img src="./img/post-gallery/5785.jpg" />
+                        </section>
+                        <div class="lightbox">
+                            <div class="title"></div>
+                            <div class="filter"></div>
+                            <div class="arrowr"></div>
+                            <div class="arrowl"></div>
+                            <div class="close"></div>
+                        </div>
+                    </div><!--/ko-->
+                </div>
+            </div><!--/ko-->
+        </section>
     </div>
 </section>
 <footer class="site-footer">
@@ -582,8 +543,6 @@
 <script src="js/script.js"></script>
 <script type='text/javascript' src='js/scripts-ver=5.0.5.js'></script>
 <script src="js/fixes.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDl7qvcP18DbNkAoeGscVNA1VPE8Ni4bYI&callback=initMap" async
-        defer></script>
 <script src="js/aos.js"></script>
 <script src="js/jquery.matchHeight.js"></script>
 <script>
@@ -591,7 +550,7 @@
         easing: 'ease-out-back',
         duration: 1000
     });
-    $(function() {
+    $(function () {
         $('.card.no-overflow').matchHeight({
             byRow: true,
             property: 'height',
@@ -599,6 +558,70 @@
             remove: false
         });
     });
+
+        console.log($(".section img"))
+        $(".section img").click(function() {
+            $(".lightbox").fadeIn(300);
+            $(".lightbox").append("<img src='" + $(this).attr("src") + "' alt='" + $(this).attr("alt") + "' />");
+            $(".filter").css("background-image", "url(" + $(this).attr("src") + ")");
+            /*$(".title").append("<h1>" + $(this).attr("alt") + "</h1>");*/
+            $("html").css("overflow", "hidden");
+            if ($(this).is(":last-child")) {
+                $(".arrowr").css("display", "none");
+                $(".arrowl").css("display", "block");
+            } else if ($(this).is(":first-child")) {
+                $(".arrowr").css("display", "block");
+                $(".arrowl").css("display", "none");
+            } else {
+                $(".arrowr").css("display", "block");
+                $(".arrowl").css("display", "block");
+            }
+        });
+
+        $(".close").click(function() {
+            $(".lightbox").fadeOut(300);
+            $("h1").remove();
+            $(".lightbox img").remove();
+            $("html").css("overflow", "auto");
+        });
+
+        $(document).keyup(function(e) {
+            if (e.keyCode == 27) {
+                $(".lightbox").fadeOut(300);
+                $(".lightbox img").remove();
+                $("html").css("overflow", "auto");
+            }
+        });
+
+        $(".arrowr").click(function() {
+            var imgSrc = $(".lightbox img").attr("src");
+            var search = $("section").find("img[src$='" + imgSrc + "']");
+            var newImage = search.next().attr("src");
+            /*$(".lightbox img").attr("src", search.next());*/
+            $(".lightbox img").attr("src", newImage);
+            $(".filter").css("background-image", "url(" + newImage + ")");
+
+            if (!search.next().is(":last-child")) {
+                $(".arrowl").css("display", "block");
+            } else {
+                $(".arrowr").css("display", "none");
+            }
+        });
+
+        $(".arrowl").click(function() {
+            var imgSrc = $(".lightbox img").attr("src");
+            var search = $("section").find("img[src$='" + imgSrc + "']");
+            var newImage = search.prev().attr("src");
+            /*$(".lightbox img").attr("src", search.next());*/
+            $('.lightbox img').attr("src", newImage);
+            $(".filter").css("background-image", "url(" + newImage + ")");
+
+            if (!search.prev().is(":first-child")) {
+                $(".arrowr").css("display", "block");
+            } else {
+                $(".arrowl").css("display", "none");
+            }
+        });
 </script>
 </body>
 
