@@ -585,7 +585,8 @@ html.is-mobile .copy-body-01 a.active, html.is-mobile .copy-body-02 a.active, ht
     width: 1px;
     position: relative;
     display: block;
-    margin: 0 auto 1rem
+    margin: 0 auto 1rem;
+    display: none;
 }
 
 .heading-block-topline-v-wrapper .heading-block-topline-v {
