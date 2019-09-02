@@ -30,14 +30,13 @@ $(function() {
   sr.reveal('#footer .p-0', { duration: 1000, origin: "top", distance: "50px", delay: 200 });
   sr.reveal('#footer .container', { duration: 1000, origin: "top", distance: "50px", delay: 200 });
   sr.reveal('header h1', { duration: 1000, origin: "right", distance: "50px", delay: 200 });
-
-
+  if ($('#player').hasClass('video-foreground')){
   // play and show the video
   $("#player").show();
   $("#player").addClass("active");
   var video = document.getElementById("player");
   video.play();
-
+  }
 });
 
 var tag = document.createElement('script');

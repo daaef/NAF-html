@@ -585,7 +585,8 @@ html.is-mobile .copy-body-01 a.active, html.is-mobile .copy-body-02 a.active, ht
     width: 1px;
     position: relative;
     display: block;
-    margin: 0 auto 1rem
+    margin: 0 auto 1rem;
+    display: none;
 }
 
 .heading-block-topline-v-wrapper .heading-block-topline-v {
@@ -11528,7 +11529,7 @@ html.is-mobile .tag-selector.result-filter-tags li.active, html:not(.is-mobile) 
     position: relative;
     height: 100vh;
     overflow: hidden;
-    background: #0e182d url(../img/pagetop2.png) !important;
+    background: url(../img/pagetop2.png);
     background-size: cover !important;
 }
 
@@ -21834,4 +21835,102 @@ html.is-mobile .chat-live-contact-options .boxed-option-item.active .button-cont
 }
 .sublist > li >p{
     font-size:20px !important;
+}
+.videos-header{
+    height: 75vh;
+    background: linear-gradient(rgb(29, 34, 54), rgba(29, 34, 54, .03));
+}
+
+
+.videos-header img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.bgnone{
+    background: transparent!important;
+}
+
+.videos-header .hero-image-media-button {
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+    cursor: pointer;
+    display: none;
+}
+
+.noframe .hero-image-media-button{
+    display: block;
+}
+
+.videos-header iframe{
+    width: 100%;
+    height: 76%;
+    position: fixed;
+    z-index: 45678;
+    left: 0;
+}
+
+.noframe .frameBTN{
+    display: none;
+}
+
+.frameBTN{
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    transform: translateY(-150%);
+    transition: all .4s ease-in-out;
+    z-index: 46678;
+}
+
+.videos-header picture:hover .frameBTN{
+    transform: translateY(0);
+}
+
+
+.noframe iframe{
+    display: none;
+}
+
+.my-gallery {
+    width: 100%;
+    float: left;
+}
+.my-gallery img {
+    width: 100%;
+    height: auto;
+}
+.my-gallery figure {
+    display: block;
+    float: left;
+    margin: 0 5px 5px 0;
+    width: 150px;
+}
+.my-gallery figcaption {
+    display: none;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+.marginx{
+    margin: 0 10px;
+}
+
+.img-contain img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain!important;
+    object-position: center;
+}
+.downloads .card-title{
+    color: #f15642!important;
+}
+
+.organogram img{
+    width: 100%;
 }

@@ -286,12 +286,10 @@ section header {
   height: 100vh;
 }
 section#home header {
-  background: #000 center center no-repeat;
   background-size: cover;
   overflow: hidden;
 }
 section#home header .video-background {
-  background: #000 center center no-repeat;
   background-size: cover;
   position: absolute;
   top: 0;
