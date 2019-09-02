@@ -5,8 +5,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" type="text/css" href="css/style-v=1.0.1.css">
@@ -247,20 +246,166 @@
     <div class="main-navigation-list-wrapper main-bg">
     </div>
 </nav>
-<section id="home" class="gallery">
+<section id="home" class="videos">
     <div data-bind="template: { name: 'faq' }" class="view view-faq" style="visibility: visible;">
-        <header class="hero-image text-inverted is-small"
-                data-bind="css: { 'is-small': isSmall, 'has-option-slider': hasOptionSlider }">
-            <div class="hero-image-title">
-                <h6 class="heading-06 subtitle">Nigerian Air Force</h6>
-                <h1 class="heading-02 title">Videos</h1>
-            </div>
+        <header class="hero-image hero-video-clickout text-inverted videos-header">
+            <picture class="image-variants noframe margin-top-header"
+                     style="top: -15.625px; left: 0px; width: 100%; height: 75vh; opacity: 1;">
+                <button class="btn btn-lg frameBTN btn-dark bg-danger">close</button>
+                <iframe src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <img srcset="img/shot3.png" alt="Phase 04: Transition">
+                <!-- /ko -->
+
+                <!-- ko ifnot : $data.variants && $data.variants().length --><!-- /ko -->
+                <a href="#" data-url="https://www.youtube.com/embed/RZ4R2h0Rxmk?autoplay=1" class="hero-image-media-button frameToggle button-icon-wrapper">
+                 <span class="button-icon icon-before is-inverted is-large">
+                    <svg
+                            class="circle-svg button-icon-outline" width="100px" height="100px" viewBox="0 0 100 100"
+                            data-bind="attr: {
+		class: 'circle-svg ' + (typeof $data !== 'undefined' ? $data.elementClassName : '')
+	}">
+	<circle class="circle" cx="50" cy="50" r="48.8" fill="none" stroke="#fff" stroke-width="1.2"
+            vector-effect="non-scaling-stroke"></circle>
+</svg>
+    <span class="icon icon-play" data-bind="css: $data.icon" style="background-image: none;"><svg
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49.94 50"><path
+            d="M1.67 0a1.74 1.74 0 0 0-1.7 2v46a1.75 1.75 0 0 0 1.66 2 2.58 2.58 0 0 0 1.15-.3l46-23.28c1.54-.78 1.54-2.06 0-2.84L2.81.3A2.57 2.57 0 0 0 1.67 0"
+            fill="#fff"></path></svg></span>
+    </span>
+                </a>
+            </picture>
         </header>
         <section>
             <div data-bind="css : 'block-container ' + (controller.options.extraClassName || '')"
                  class="block-container">
-                <div class="site-wrapper xl content-wrapper content-xsmall-head">
+                <div class="site-wrapper xl content-wrapper content-xsmall-head margin">
+                    <ul class="satellites reset-list grid-wrapper text-inverted block-grid-animate" >
+                        <li class="grid-item grid-one-third grid-s-one-whole">
+                            <a href="#" data-url="https://www.youtube.com/embed/RZ4R2h0Rxmk?autoplay=1" class="button-block frameToggle" >
+                                <figure class="full-image-ratio ratio-3-2">
+                                <img src="img/vid1.webp">
+                            </figure><!--/ko-->
+                                <h3 class="full-image-caption top heading-03 text-no-margin"><!--ko text:title-->OPERATION GREEN SWEEP 3<!--/ko--></h3>
+                                <h4 class="full-image-caption heading-07 text-no-margin"><!--ko text:name-->NAF DESTROYS TERRORISTS’ LOGISTICS BASE/ASSEMBLY AREA AT BULA BELLO IN BORN<!--/ko--></h4>
+                            </a>
+                        </li>
 
+                        <li class="grid-item grid-one-third grid-s-one-whole">
+                            <a href="#" data-url="https://www.youtube.com/embed/1djSubMxHdI?autoplay=1" class="button-block frameToggle">
+                                <!--ko block:{"optional":false,"definition":"full-image","name":"satellites-image"} --><figure data-bind="attr.class:($data.ratio ? 'full-image-ratio ratio-' + $data.ratio() : 'full-image')" class="full-image-ratio ratio-3-2">
+                                <img src="img/vid2.webp">
+                            </figure><!--/ko-->
+                                <h3 class="full-image-caption top heading-03 text-no-margin"><!--ko text:title--><!--/ko--></h3>
+                                <h4 class="full-image-caption heading-07 text-no-margin"><!--ko text:name-->NAF SCORES SUCCESS AS JETS DECIMATE TACTICAL BASE OF TERRORISTS AT IZZA IN BORNO STATE
+                                    <!--/ko--></h4>
+                            </a>
+                        </li>
+
+                        <li class="grid-item grid-one-third grid-s-one-whole">
+                            <a href="#" data-url="https://www.youtube.com/embed/Yy8IpID2F-E?autoplay=1" class="button-block frameToggle">
+                                <figure class="full-image-ratio ratio-3-2">
+                                <img src="img/vid3.webp">
+                            </figure><!--/ko-->
+                                <h3 class="full-image-caption top heading-03 text-no-margin"><!--ko text:title--><!--/ko--></h3>
+                                <h4 class="full-image-caption heading-07 text-no-margin"><!--ko text:name-->NAF FIGHTER JETS DESTROY HIDEOUTS, NEUTRALIZE TERRORISTS AT ALAFA IN BORNO STATE
+                                    <!--/ko--></h4>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="satellites reset-list grid-wrapper text-inverted block-grid-animate" >
+                        <li class="grid-item grid-one-third grid-s-one-whole">
+                            <a href="#" data-url="https://www.youtube.com/embed/pF6CHbDgdLA?autoplay=1" class="button-block frameToggle" data-bind="click: $root.targetBranchHandler.bind($root, targetBranch, $data)">
+                                <figure class="full-image-ratio ratio-3-2">
+                                <img src="img/vid4.webp">
+                            </figure><!--/ko-->
+                                <h3 class="full-image-caption top heading-03 text-no-margin"><!--ko text:title--><!--/ko--></h3>
+                                <h4 class="full-image-caption heading-07 text-no-margin"><!--ko text:name-->I'M CORPORAL BASHIR UMAR AND THIS IS MY STORY<!--/ko--></h4>
+                            </a>
+                        </li>
+
+                        <li class="grid-item grid-one-third grid-s-one-whole">
+                            <a href="#" data-url="https://www.youtube.com/embed/soSbbGV5lQQ?autoplay=1" class="button-block frameToggle" data-bind="click: $root.targetBranchHandler.bind($root, targetBranch, $data)">
+                                <!--ko block:{"optional":false,"definition":"full-image","name":"satellites-image"} --><figure data-bind="attr.class:($data.ratio ? 'full-image-ratio ratio-' + $data.ratio() : 'full-image')" class="full-image-ratio ratio-3-2">
+                                <img src="img/vid5.webp">
+                            </figure><!--/ko-->
+                                <h3 class="full-image-caption top heading-03 text-no-margin"><!--ko text:title--><!--/ko--></h3>
+                                <h4 class="full-image-caption heading-07 text-no-margin"><!--ko text:name-->HIGHLIGHTS OF NAF K-9 UNIT SPECIAL OPERATIONS TRAINING
+                                    <!--/ko--></h4>
+                            </a>
+                        </li>
+
+                        <li class="grid-item grid-one-third grid-s-one-whole">
+                            <a href="#" data-url="https://www.youtube.com/embed/zLRnL8ydliM?autoplay=1" class="button-block frameToggle">
+                                <figure class="full-image-ratio ratio-3-2">
+                                <img src="img/vid6.webp">
+                            </figure><!--/ko-->
+                                <h3 class="full-image-caption top heading-03 text-no-margin"><!--ko text:title--><!--/ko--></h3>
+                                <h4 class="full-image-caption heading-07 text-no-margin"><!--ko text:name-->NAF SUSTAINS AIR STRIKES AGAINST TERRORISTS TARGETS, DEGRADES ANOTHER HIDEOUT IN SAMBISA FOREST<!--/ko--></h4>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="satellites reset-list grid-wrapper text-inverted block-grid-animate" >
+                        <li class="grid-item grid-one-third grid-s-one-whole">
+                            <a href="#" data-url="https://www.youtube.com/embed/qxzmPrN75y4?autoplay=1" class="button-block frameToggle">
+                                <figure class="full-image-ratio ratio-3-2">
+                                <img src="img/vid7.webp">
+                            </figure><!--/ko-->
+                                <h3 class="full-image-caption top heading-03 text-no-margin"><!--ko text:title--><!--/ko--></h3>
+                                <h4 class="full-image-caption heading-07 text-no-margin"><!--ko text:name-->NAF INFLICTS HEAVY CASUALTIES ON TERRORISTS AT TUMBUN HAMMA IN NORTHERN BORNO STATE<!--/ko--></h4>
+                            </a>
+                        </li>
+
+                        <li class="grid-item grid-one-third grid-s-one-whole">
+                            <a href="#" data-url="https://www.youtube.com/embed/sqdV-yViMrA?autoplay=1" class="button-block frameToggle" data-bind="click: $root.targetBranchHandler.bind($root, targetBranch, $data)">
+                                <!--ko block:{"optional":false,"definition":"full-image","name":"satellites-image"} --><figure data-bind="attr.class:($data.ratio ? 'full-image-ratio ratio-' + $data.ratio() : 'full-image')" class="full-image-ratio ratio-3-2">
+                                <img src="img/vid8.webp">
+                            </figure><!--/ko-->
+                                <h3 class="full-image-caption top heading-03 text-no-margin"><!--ko text:title-->DOCUMENTARY<!--/ko--></h3>
+                                <h4 class="full-image-caption heading-07 text-no-margin"><!--ko text:name-->NIGERIAN AIR FORCE: ATTAINING NEW HEIGHTS AT 55<!--/ko--></h4>
+                            </a>
+                        </li>
+
+                        <li class="grid-item grid-one-third grid-s-one-whole">
+                            <a href="#" data-url="https://www.youtube.com/embed/Gosthl6HKNo?autoplay=1" class="button-block frameToggle">
+                                <figure class="full-image-ratio ratio-3-2">
+                                <img src="img/vid9.webp">
+                            </figure><!--/ko-->
+                                <h3 class="full-image-caption top heading-03 text-no-margin"><!--ko text:title-->DOCUMENTARY<!--/ko--></h3>
+                                <h4 class="full-image-caption heading-07 text-no-margin"><!--ko text:name-->NIGERIAN AIR FORCE REGIMENT AND SPECIAL FORCES<!--/ko--></h4>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="satellites reset-list grid-wrapper text-inverted block-grid-animate" >
+                        <li class="grid-item grid-one-third grid-s-one-whole">
+                            <a href="#" data-url="https://www.youtube.com/embed/G2Bf_1rbdYs?autoplay=1" class="button-block frameToggle" data-bind="click: $root.targetBranchHandler.bind($root, targetBranch, $data)">
+                                <figure class="full-image-ratio ratio-3-2">
+                                <img src="img/vid10.png">
+                            </figure><!--/ko-->
+                                <h3 class="full-image-caption top heading-03 text-no-margin"><!--ko text:title--><!--/ko--></h3>
+                                <h4 class="full-image-caption heading-07 text-no-margin"><!--ko text:name-->Nigerian Air Force Day Celebration 2019 (NAF@55)<!--/ko--></h4>
+                            </a>
+                        </li>
+
+                        <li class="grid-item grid-one-third grid-s-one-whole">
+                            <a href="#" data-url="https://www.youtube.com/embed/iqBgHzMzjyw?autoplay=1" class="button-block frameToggle" data-bind="click: $root.targetBranchHandler.bind($root, targetBranch, $data)">
+                                <!--ko block:{"optional":false,"definition":"full-image","name":"satellites-image"} --><figure data-bind="attr.class:($data.ratio ? 'full-image-ratio ratio-' + $data.ratio() : 'full-image')" class="full-image-ratio ratio-3-2">
+                                <img src="img/vid11.webp">
+                            </figure><!--/ko-->
+                                <h3 class="full-image-caption top heading-03 text-no-margin"><!--ko text:title--><!--/ko--></h3>
+                                <h4 class="full-image-caption heading-07 text-no-margin"><!--ko text:name-->Nigerian Air Force Day Celebration 2019 (NAF@55)<!--/ko--></h4>
+                            </a>
+                        </li>
+
+                        <li class="grid-item grid-one-third grid-s-one-whole">
+                            <a href="#" data-url="https://www.youtube.com/embed/raLjQkqS_24?autoplay=1" class="button-block frameToggle">
+                                <figure class="full-image-ratio ratio-3-2">
+                                <img src="img/vid12.webp">
+                            </figure><!--/ko-->
+                                <h3 class="full-image-caption top heading-03 text-no-margin"><!--ko text:title-->AIRING OF DOCUMENTARY<!--/ko--></h3>
+                                <h4 class="full-image-caption heading-07 text-no-margin"><!--ko text:name-->NIGERIAN AIR FORCE: ATTAINING NEW HEIGHTS AT 55<!--/ko--></h4>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div><!--/ko-->
         </section>
@@ -471,69 +616,88 @@
         });
     });
 
-        console.log($(".section img"))
-        $(".section img").click(function() {
-            $(".lightbox").fadeIn(300);
-            $(".lightbox").append("<img src='" + $(this).attr("src") + "' alt='" + $(this).attr("alt") + "' />");
-            $(".filter").css("background-image", "url(" + $(this).attr("src") + ")");
-            /*$(".title").append("<h1>" + $(this).attr("alt") + "</h1>");*/
-            $("html").css("overflow", "hidden");
-            if ($(this).is(":last-child")) {
-                $(".arrowr").css("display", "none");
-                $(".arrowl").css("display", "block");
-            } else if ($(this).is(":first-child")) {
-                $(".arrowr").css("display", "block");
-                $(".arrowl").css("display", "none");
-            } else {
-                $(".arrowr").css("display", "block");
-                $(".arrowl").css("display", "block");
-            }
-        });
+    console.log($(".section img"));
+    $(".section img").click(function () {
+        $(".lightbox").fadeIn(300);
+        $(".lightbox").append("<img src='" + $(this).attr("src") + "' alt='" + $(this).attr("alt") + "' />");
+        $(".filter").css("background-image", "url(" + $(this).attr("src") + ")");
+        /*$(".title").append("<h1>" + $(this).attr("alt") + "</h1>");*/
+        $("html").css("overflow", "hidden");
+        if ($(this).is(":last-child")) {
+            $(".arrowr").css("display", "none");
+            $(".arrowl").css("display", "block");
+        } else if ($(this).is(":first-child")) {
+            $(".arrowr").css("display", "block");
+            $(".arrowl").css("display", "none");
+        } else {
+            $(".arrowr").css("display", "block");
+            $(".arrowl").css("display", "block");
+        }
+    });
 
-        $(".close").click(function() {
+    $(".close").click(function () {
+        $(".lightbox").fadeOut(300);
+        $(".lightbox h1").remove();
+        $(".lightbox img").remove();
+        $("html").css("overflow", "auto");
+    });
+
+    $(document).keyup(function (e) {
+        if (e.keyCode == 27) {
             $(".lightbox").fadeOut(300);
-            $(".lightbox h1").remove();
             $(".lightbox img").remove();
             $("html").css("overflow", "auto");
+        }
+    });
+
+    $(".arrowr").click(function () {
+        var imgSrc = $(".lightbox img").attr("src");
+        var search = $("section").find("img[src$='" + imgSrc + "']");
+        var newImage = search.next().attr("src");
+        /*$(".lightbox img").attr("src", search.next());*/
+        $(".lightbox img").attr("src", newImage);
+        $(".filter").css("background-image", "url(" + newImage + ")");
+
+        if (!search.next().is(":last-child")) {
+            $(".arrowl").css("display", "block");
+        } else {
+            $(".arrowr").css("display", "none");
+        }
+    });
+
+    $(".arrowl").click(function () {
+        var imgSrc = $(".lightbox img").attr("src");
+        var search = $("section").find("img[src$='" + imgSrc + "']");
+        var newImage = search.prev().attr("src");
+        /*$(".lightbox img").attr("src", search.next());*/
+        $('.lightbox img').attr("src", newImage);
+        $(".filter").css("background-image", "url(" + newImage + ")");
+
+        if (!search.prev().is(":first-child")) {
+            $(".arrowr").css("display", "block");
+        } else {
+            $(".arrowl").css("display", "none");
+        }
+    });
+
+    let iframe = $('.videos-header iframe');
+    let videoHeader = $('.videos-header > picture');
+    let frameButton = $('.frameToggle');
+    let frameClose = $('.frameBTN');
+    frameButton.each(function () {
+        $(this).on("click", function(event){
+            event.preventDefault();
+            console.log($(this));
+            let dataUrl = $(this).attr("data-url");
+            iframe.attr('src', dataUrl);
+            videoHeader.removeClass('noframe')
         });
-
-        $(document).keyup(function(e) {
-            if (e.keyCode == 27) {
-                $(".lightbox").fadeOut(300);
-                $(".lightbox img").remove();
-                $("html").css("overflow", "auto");
-            }
-        });
-
-        $(".arrowr").click(function() {
-            var imgSrc = $(".lightbox img").attr("src");
-            var search = $("section").find("img[src$='" + imgSrc + "']");
-            var newImage = search.next().attr("src");
-            /*$(".lightbox img").attr("src", search.next());*/
-            $(".lightbox img").attr("src", newImage);
-            $(".filter").css("background-image", "url(" + newImage + ")");
-
-            if (!search.next().is(":last-child")) {
-                $(".arrowl").css("display", "block");
-            } else {
-                $(".arrowr").css("display", "none");
-            }
-        });
-
-        $(".arrowl").click(function() {
-            var imgSrc = $(".lightbox img").attr("src");
-            var search = $("section").find("img[src$='" + imgSrc + "']");
-            var newImage = search.prev().attr("src");
-            /*$(".lightbox img").attr("src", search.next());*/
-            $('.lightbox img').attr("src", newImage);
-            $(".filter").css("background-image", "url(" + newImage + ")");
-
-            if (!search.prev().is(":first-child")) {
-                $(".arrowr").css("display", "block");
-            } else {
-                $(".arrowl").css("display", "none");
-            }
-        });
+    });
+    frameClose.on("click", function(event){
+        event.preventDefault();
+        iframe.attr('src', '');
+        videoHeader.addClass('noframe')
+    });
 </script>
 </body>
 
