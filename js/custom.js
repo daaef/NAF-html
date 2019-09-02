@@ -30,3 +30,10 @@ showField = field => {
   document.getElementById("field-title").innerText = field;
   document.getElementById(field + "-BTN").classList.add("is-active");
 };
+
+animateRight = () => {
+  document.getElementById("sob-mask").classList.add("animate-right");
+};
+returnCenter = () => {
+  document.getElementById("sob-mask").classList.remove("animate-right");
+};

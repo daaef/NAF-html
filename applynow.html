@@ -1,19 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-131272747-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag("js", new Date());
+      gtag("config", "UA-131272747-1");
+    </script>
+
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
     <link rel="stylesheet" type="text/css" href="css/style-v=1.0.1.css" />
     <link rel="stylesheet" type="text/css" href="css/fixes.css" />
 
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script
+      src="js/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/scrollreveal.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+
     <link rel="icon" href="img/favicon.png" />
-    <title>Nigerian Air Force | Leadership</title>
+    <title>Nigerian Air Force</title>
+
     <link rel="canonical" href="index.html" />
     <meta property="og:locale" content="en_GB" />
     <meta property="og:type" content="website" />
@@ -22,7 +56,6 @@
     <meta property="og:site_name" content="Nigerian Air FOrce" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Nigerian Air Force" />
-    <!-- / Yoast SEO plugin. -->
 
     <link rel="dns-prefetch" href="https://s.w.org" />
     <style type="text/css">
@@ -57,16 +90,35 @@
     <link rel="stylesheet" href="css/aos.css" />
   </head>
 
+  <style>
+    .fieldbody {
+      display: none;
+    }
+    .airforce-card {
+      background-color: #142240;
+      color: white;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+    .airforce-card p {
+      color: #9daac5;
+      font-size: 14px;
+    }
+    .airforce-card:hover {
+      background-color: #1a305d;
+    }
+  </style>
+
   <body class="home page-template-default page page-id-2">
     <div class="site-header">
       <header class="site-header">
-        <a
-          class="header-site-logo text-uppercase icon-logo-airforce"
-          href="index.html"
+        <h1
+          class="header-site-logo icon-logo-airforce"
+          href="#"
           style="background-image: none;"
         >
           <span class="logo-title">Nigerian Air Force</span>
-        </a>
+        </h1>
 
         <ul class="main-top-nav">
           <li class="apply-now-label">
@@ -76,10 +128,7 @@
             <a class="label-text" href="#">Contact</a>
           </li>
           <li class="page-label">
-            <span class="label-text is-filled"
-              ><!--ko text:navPageName-->Leadership
-              <!--/ko--></span
-            >
+            <span class="label-text is-filled">How to Join </span>
           </li>
           <li>
             <a href="#" class="ir top-nav-button main-nav-toggle">
@@ -103,8 +152,8 @@
           style="background-image: url('img/shot5.png')"
         ></span>
         <dl class="main-navigation-list">
-          <dt class="main-navigation-title" href="" style="">About</dt>
-          <dd style="">
+          <dt class="main-navigation-title" href="">About</dt>
+          <dd>
             <a class="main-navigation-link" href="history.html">
               <span
                 class="hover-arrow icon-arrow-right"
@@ -120,7 +169,7 @@
               History
             </a>
           </dd>
-          <dd style="">
+          <dd>
             <a class="main-navigation-link" href="./leadership.html">
               <span
                 class="hover-arrow icon-arrow-right"
@@ -136,7 +185,7 @@
               Leadership
             </a>
           </dd>
-          <dd style="">
+          <dd>
             <a class="main-navigation-link" href="mission_vision.html">
               <span
                 class="hover-arrow icon-arrow-right"
@@ -152,7 +201,7 @@
               Mission & Vision
             </a>
           </dd>
-          <dd style="">
+          <dd>
             <a class="main-navigation-link" href="#">
               <span
                 class="hover-arrow icon-arrow-right"
@@ -180,8 +229,8 @@
           style="background-image: url('img/shot4.png')"
         ></span>
         <dl class="main-navigation-list">
-          <dt class="main-navigation-title" href="#" style="">News</dt>
-          <dd style="">
+          <dt class="main-navigation-title" href="#">News</dt>
+          <dd>
             <a class="main-navigation-link" href="news.html">
               <span
                 class="hover-arrow icon-arrow-right"
@@ -197,7 +246,7 @@
               Events
             </a>
           </dd>
-          <dd style="">
+          <dd>
             <a class="main-navigation-link" href="#">
               <span
                 class="hover-arrow icon-arrow-right"
@@ -213,7 +262,7 @@
               Lifestyle
             </a>
           </dd>
-          <dd style="">
+          <dd>
             <a
               class="main-navigation-link"
               href="/airmanchallenge"
@@ -245,8 +294,8 @@
           style="background-image: url('img/shot7.png')"
         ></span>
         <dl class="main-navigation-list">
-          <dt class="main-navigation-title" href="#" style="">Media</dt>
-          <dd style="">
+          <dt class="main-navigation-title" href="#">Media</dt>
+          <dd>
             <a class="main-navigation-link" href="#">
               <span
                 class="hover-arrow icon-arrow-right"
@@ -262,7 +311,7 @@
               Downloads
             </a>
           </dd>
-          <dd style="">
+          <dd>
             <a class="main-navigation-link" href="gallery.html">
               <span
                 class="hover-arrow icon-arrow-right"
@@ -290,8 +339,8 @@
           style="background-image: url('img/shot3.png')"
         ></span>
         <dl class="main-navigation-list">
-          <dt class="main-navigation-title" href="#" style="">How to Join</dt>
-          <dd style="">
+          <dt class="main-navigation-title" href="#">How to Join</dt>
+          <dd>
             <a href="applynow.html" class="main-navigation-link">
               <span
                 class="hover-arrow icon-arrow-right"
@@ -307,7 +356,7 @@
               <span>Apply now</span>
             </a>
           </dd>
-          <dd style="">
+          <dd>
             <a class="main-navigation-link" href="#">
               <span
                 class="hover-arrow icon-arrow-right"
@@ -323,7 +372,7 @@
               Connect
             </a>
           </dd>
-          <dd style="">
+          <dd>
             <a class="main-navigation-link" data-close="" href="#">
               <span
                 class="hover-arrow icon-arrow-right"
@@ -339,7 +388,7 @@
               Prepare for success
             </a>
           </dd>
-          <dd style="">
+          <dd>
             <a class="main-navigation-link" href="#">
               <span
                 class="hover-arrow icon-arrow-right"
@@ -363,396 +412,163 @@
       ></span>
       <div class="main-navigation-list-wrapper main-bg"></div>
     </nav>
-    <section id="home" class="leadership">
+    <section id="home">
       <div class="view view-faq" style="visibility: visible;">
         <header class="hero-image text-inverted is-small">
+          <picture
+            class="image-variants"
+            style="top: -0.777778px; left: 0px;  opacity: 1;"
+          >
+            <img
+              src="./img/carrer-top.jpg"
+              style="bottom: 194px;position: relative;"
+              alt="CAREER"
+            />
+          </picture>
+
+          <video
+            class="video-loop-hero"
+            autoplay=""
+            loop=""
+            muted=""
+            playsinline=""
+            style="width: 1364px; height: 504px;"
+          >
+            <source data-bind="attr : {src : videoSrc}" />
+          </video>
+
           <div class="hero-image-title">
-            <h6 class="heading-06 subtitle">Nigerian Air Force</h6>
-            <h1 class="heading-02 title">LEADERSHIP</h1>
+            <h6 class="heading-06 subtitle">How to join the</h6>
+
+            <h1 class="heading-02 title">NIGERIAN AIR FORCE</h1>
           </div>
         </header>
-        <div class="site-wrapper mt-70px">
-          <div
-            class="heading-block text-center"
-            data-transition="heading-block-02"
-            data-bind="css: { 'small-margin-bottom': ko.unwrap($data.smallMarginBottom) }"
-          >
-            <h6 class="heading-06 text-mask-background text-stroke-through">
-              <!--ko text:$data.caption-->HOME > ABOUT > LEADERSHIP<!--/ko-->
-            </h6>
+
+        <article
+          class="content-wrapper a-page-intro"
+          id="history-article"
+          style="background-color: white !important; color:black !important; padding-bottom: 0px !important"
+        >
+          <h6 class="heading-06 text-mask-background text-stroke-through">
+            HOME > HOW TO JOIN > APPLY NOW
+          </h6>
+          <div class="heading-block" data-transition="heading-block-02">
+            <div class="heading-block-topline-v-wrapper">
+              <hr class="heading-block-topline-v" />
+            </div>
+
+            <h6 class="heading-06"></h6>
             <h2 class="heading-02 title responsive-title">
-              Chief of Air Staff (CAS)
+              choose the direction <br />that's right for you'.
             </h2>
           </div>
-          <div class="row padding@mobile">
-            <div class="col-12 col-md-5 image bg-contain">
-              <img src="./img/avm.png" class="img-fluid" />
-            </div>
-            <div class="col-12 col-md-7 description grid-padding-around">
-              <h4 class="feature-title">Air Marshal Sadique Baba Abubakar</h4>
-              <h5 class="title">DFS GSS psc(+) fwc ndc(+) MSc</h5>
-              <p>
-                Air Marshal SB Abubakar was born on 8 April 1960 at Azare in
-                Bauchi State. He had his primary education at St Paul’s Primary
-                School Bauchi from 1967 to 1973 and his secondary education at
-                GSS Bauchi. He joined the Nigerian Air Force as a member of
-                Cadet Military Training Course (CMTC 5) in November 1979.
-              </p>
-              <div class="button-alignment">
-                <a
-                  href="#"
-                  class="btn btn-outline-dark btn-lg btn-more"
-                  target=""
-                  >Read More
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <article
-          class="content-wrapper content-small-head section-specialty-careers"
-        >
-          <div class="heading-block" data-transition="">
-            <!-- ko if: $data.title -->
-            <h3
-              class="heading-03 has-small-margin text-mask-background text-stroke-through"
-              data-bind="
-			css: {
-				'has-margin': $data.bodyCopy,
-				'has-small-margin': !$data.bodyCopy,
-				'text-mask-background text-stroke-through': !$data.noStrokeThrough
-			}"
-              style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"
-            >
-              <!--ko if:$data.html--><!--/ko-->
-              <!--ko ifnot:$data.html-->
-              <!--ko text:$data.title-->Senior Commanders<!--/ko-->
-              <!--/ko-->
-            </h3>
-            <!-- /ko -->
-
-            <!-- ko if: $data.bodyCopy --><!-- /ko -->
-          </div>
-          <!--/ko-->
-
-          <ol
-            class="reset-list grid-wrapper justify-content-center site-wrapper block-grid-animate"
-          >
-            <li class="grid-item mt-1 mb-1 grid-one-quarter">
-              <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-              <a href="commanders.html" class="card no-overflow">
-                <div class="media">
-                  <img
-                    class="card-img-top"
-                    src="img/cmd1.jpg"
-                    alt="Card image cap"
-                  />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">Air Vice Marshal EO Anebi</h5>
-                  <p class="card-text">Chief of Policy and Plans (COPP)</p>
-                </div> </a
-              ><!--/ko-->
-            </li>
-            <li class="grid-item mt-1 mb-1 grid-one-quarter">
-              <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-              <a href="commanders.html" class="card no-overflow">
-                <div class="media">
-                  <img
-                    class="card-img-top"
-                    src="img/cmd2.jpg"
-                    alt="Card image cap"
-                  />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Air Vice Marshal IO Amao
-                  </h5>
-                  <p class="card-text">
-                    Chief of Training and Operations (CTOPS)
-                  </p>
-                </div> </a
-              ><!--/ko-->
-            </li>
-            <li class="grid-item mt-1 mb-1 grid-one-quarter">
-              <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-              <a href="commanders.html" class="card no-overflow">
-                <div class="media">
-                  <img
-                    class="card-img-top"
-                    src="img/cmd3.jpg"
-                    alt="Card image cap"
-                  />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Air Vice Marshal M Muktar
-                  </h5>
-                  <p class="card-text">
-                    Chief of Aircraft Engineering (CAcE)
-                  </p>
-                </div> </a
-              ><!--/ko-->
-            </li>
-            <li class="grid-item mt-1 mb-1 grid-one-quarter">
-              <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-              <a href="commanders.html" class="card no-overflow">
-                <div class="media">
-                  <!--                            <img class="card-img-top" src="img/cmd1.jpg" alt="Card image cap">-->
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Air Vice Marshal MA Yakubu
-                  </h5>
-                  <p class="card-text">Chief of Logistics (CLOG)</p>
-                </div> </a
-              ><!--/ko-->
-            </li>
-            <li class="grid-item mt-1 mb-1 grid-one-quarter">
-              <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-              <a href="commanders.html" class="card no-overflow">
-                <div class="media">
-                  <img
-                    class="card-img-top"
-                    src="img/cmd4.jpg"
-                    alt="Card image cap"
-                  />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Air Vice Marshal PN DIMFWINA
-                  </h5>
-                  <p class="card-text">
-                    Chief of Communication Information Systems (CCIS)
-                  </p>
-                </div> </a
-              ><!--/ko-->
-            </li>
-            <li class="grid-item mt-1 mb-1 grid-one-quarter">
-              <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-              <a href="commanders.html" class="card no-overflow">
-                <div class="media">
-                  <img
-                    class="card-img-top"
-                    src="img/cmd5.jpg"
-                    alt="Card image cap"
-                  />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Air Vice Marshal KG Lar
-                  </h5>
-                  <p class="card-text">
-                    Chief of Administrations (COA)
-                  </p>
-                </div> </a
-              ><!--/ko-->
-            </li>
-            <li class="grid-item mt-1 mb-1 grid-one-quarter">
-              <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-              <a href="commanders.html" class="card no-overflow">
-                <div class="media">
-                  <img
-                    class="card-img-top"
-                    src="img/cmd6.jpg"
-                    alt="Card image cap"
-                  />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Air Vice Marshal RN Ekeh
-                  </h5>
-                  <p class="card-text">
-                    Chief of Standard and Evaluation (COSE)
-                  </p>
-                </div> </a
-              ><!--/ko-->
-            </li>
-            <li class="grid-item mt-1 mb-1 grid-one-quarter">
-              <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-              <a href="commanders.html" class="card no-overflow">
-                <div class="media">
-                  <img
-                    class="card-img-top"
-                    src="img/cmd8.jpg"
-                    alt="Card image cap"
-                  />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Air Cdre ME Shuaibu
-                  </h5>
-                  <p class="card-text">
-                    Chief of Medical Services
-                  </p>
-                </div> </a
-              ><!--/ko-->
-            </li>
-            <li class="grid-item mt-1 mb-1 grid-one-quarter">
-              <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-              <a href="commanders.html" class="card no-overflow">
-                <div class="media">
-                  <img
-                    class="card-img-top"
-                    src="img/cmd9.jpg"
-                    alt="Card image cap"
-                  />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Air Vice Marshal CA Ogbeche
-                  </h5>
-                  <p class="card-text">Chief of Accounts and Budget (CAB)</p>
-                </div> </a
-              ><!--/ko-->
-            </li>
-          </ol>
-          <hr class="is-horizontal-line" />
-          <ol
-            class="reset-list grid-wrapper justify-content-center site-wrapper block-grid-animate"
-          >
-            <li class="grid-item mt-1 mb-1 grid-one-quarter">
-              <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-              <a href="commanders.html" class="card no-overflow">
-                <div class="media">
-                  <img
-                    class="card-img-top"
-                    src="img/cmd10.jpg"
-                    alt="Card image cap"
-                  />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Air Vice Marshal CA OHWO
-                  </h5>
-                  <p class="card-text">
-                    Air Officer Commanding Tactical Air Command
-                  </p>
-                </div> </a
-              ><!--/ko-->
-            </li>
-            <li class="grid-item mt-1 mb-1 grid-one-quarter">
-              <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-              <a href="commanders.html" class="card no-overflow">
-                <div class="media">
-                  <img
-                    class="card-img-top"
-                    src="img/cmd11.jpg"
-                    alt="Card image cap"
-                  />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Air Vice Marshal NB Bali
-                  </h5>
-                  <p class="card-text">
-                    Air Officer Commanding Special Operations Command
-                  </p>
-                </div> </a
-              ><!--/ko-->
-            </li>
-            <li class="grid-item mt-1 mb-1 grid-one-quarter">
-              <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-              <a href="commanders.html" class="card no-overflow">
-                <div class="media">
-                  <img
-                    class="card-img-top"
-                    src="img/cmd12.jpg"
-                    alt="Card image cap"
-                  />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Air Vice Marshal UP Uzezi
-                  </h5>
-                  <p class="card-text">
-                    Air Officer Commanding Mobility Command
-                  </p>
-                </div> </a
-              ><!--/ko-->
-            </li>
-            <li class="grid-item mt-1 mb-1 grid-one-quarter">
-              <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-              <a href="commanders.html" class="card no-overflow">
-                <div class="media">
-                  <img
-                    class="card-img-top"
-                    src="img/cmd13.jpg"
-                    alt="Card image cap"
-                  />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Air Vice Marshal MZ Suleiman
-                  </h5>
-                  <p class="card-text">
-                    Air Officer Commanding Air Training Command
-                  </p>
-                </div> </a
-              ><!--/ko-->
-            </li>
-            <li class="grid-item mt-1 mb-1 grid-one-quarter">
-              <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-              <a href="commanders.html" class="card no-overflow">
-                <div class="media">
-                  <img
-                    class="card-img-top"
-                    src="img/cmd14.jpg"
-                    alt="Card image cap"
-                  />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Air Vice Marshal I Amin
-                  </h5>
-                  <p class="card-text">
-                    Air Officer Commanding Ground Training Command
-                  </p>
-                </div> </a
-              ><!--/ko-->
-            </li>
-            <li class="grid-item mt-1 mb-1 grid-one-quarter">
-              <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-              <a href="commanders.html" class="card no-overflow">
-                <div class="media">
-                  <img
-                    class="card-img-top"
-                    src="img/cmd15.jpg"
-                    alt="Card image cap"
-                  />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Air Vice Marshal AA Olabisi
-                  </h5>
-                  <p class="card-text">
-                    Air Officer Commanding Logistics Command
-                  </p>
-                </div> </a
-              ><!--/ko-->
-            </li>
-            <li class="grid-item mt-1 mb-1 grid-one-quarter">
-              <!--ko block:{"optional":false,"definition":"speciality-careers-grid-block"} -->
-              <a href="commanders.html" class="card no-overflow">
-                <div class="media">
-                  <img
-                    class="card-img-top"
-                    src="img/cmd7.jpg"
-                    alt="Card image cap"
-                  />
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Air Vice Marshal ME Ahmed
-                  </h5>
-                  <p class="card-text">
-                    Air Secretary (Air Sec)
-                  </p>
-                </div> </a
-              ><!--/ko-->
-            </li>
-          </ol>
         </article>
+        <div class="single-margin-bottom">
+           <div class="skewed-option-block"  data-position="right">
+        
+            <div class="content-small-head" >
+                <div class="heading-block heading-block-07" data-transition="">
+        </div>
+            </div>
+        
+            <div class="skewed-option-block-wrapper" >
+               <div class="option js-option option-01">
+            <div class="option-main-title" id="title01" >
+                <h2 class="heading-01">DSSC</h2>
+                    <!-- <h4 class="heading-01" style="font-size:50px; margin-left: 280px">ENLISTMENT</h4> -->
+            </div>
+            <div class="centerer option-hover-content js-content" style="opacity: 0; transform: matrix(1, 0, 0, 1, 50, -24.0167);">
+                <p class="copy-body-01 ">All you need to know about the DSSC Enlistment</p>
+  
+        <div class="button-alignment" >
+            <a href="https://www.airforce.com/education/college" class="button-outline has-down-state" >
+                <span class="button-outline-copy small-padding" data-bind="css: { 'small-padding': $data.smallPadding, 'small-copy': $data.smallCopy }">
+                    <!-- ko if: $data.isLoading --><!-- /ko -->
+                    <span class="">
+                        <!-- ko if: $data.iconLeft --><!-- /ko -->
+                        <span class="button-text-wrapper"><!--ko text:$data.text-->Visit DSSC Enlistment PAGE<!--/ko--></span>
+                    </span>
+                </span>
+                <span class="button-outline-bottom"></span>
+            </a>
+        </div>
+        <!-- /ko -->
+        
+        <!-- ko if: $data.button --><!-- /ko -->
+        <!--/ko-->
+            </div>
+        </div><!--/ko-->
+                <div class="skewed-option-block-mask js-mask"  id="sob-mask" >
+                    <div class="vs-icon"  style="transition:all 0.1s ease-in ">
+        <span class="button-icon" >
+          <svg class="circle-svg button-icon-outline" width="100px" height="100px" viewBox="0 0 100 100" >
+            <circle class="circle" cx="50" cy="50" r="48.8" fill="none" stroke="#fff" stroke-width="1.2" vector-effect="non-scaling-stroke"></circle>
+        </svg>
+            <span class="icon icon-vs" data-bind="css: $data.icon" style="background-image: none;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><g fill="#FFF"><path d="M5 12.8H2.9L0 3.2h2.1L4 9.7l1.9-6.5H8l-3 9.6zM16 11.2c0 .9-.7 1.6-1.6 1.6h-3.3c-.9 0-1.6-.7-1.6-1.6V9.9h2v.8c0 .1.1.1.1.1h2c.1 0 .1-.1.1-.1V9.4c0-.1-.1-.2-.2-.2-.2-.1-1-.3-2.8-.8-.9-.2-1.3-.6-1.3-1.5V4.8c0-.9.7-1.6 1.6-1.6h3.2c.9 0 1.6.7 1.6 1.6v1.3h-2v-.9c0-.1-.1-.1-.1-.1h-1.9c-.1 0-.1.1-.1.1v1.2c0 .1.1.2.2.2s1 .3 2.9.8c.7.3 1.2.7 1.2 1.6v2.2z"></path></g></svg></span>
+            <!-- /ko -->
+        
+            <!-- ko if: $data.outerLabel --><!-- /ko -->
+        </span><!--/ko--></div>
+                </div>
+              <div class="option js-option option-02">
+            <div class="option-main-title" id="title02">
+                <h2 class="heading-01" >BMTC </h2>
+                <!-- <h4 class="heading-01" style="font-size:50px; margin-left: 120px">RECRUITMENT</h4> -->
+            </div>
+            <div class="centerer option-hover-content js-content" style="opacity: 0; transform: matrix(1, 0, 0, 1, -50, -24.0167);">
+                <p class="copy-body-01 " data-bind="html: $data.content">All you need to know about the BMTC Reccruitment</p>
+
+        <div class="button-alignment">
+            <a href="https://www.airforce.com/education/technical-training" class="button-outline has-down-state" >
+                <span class="button-outline-copy small-padding" data-bind="css: { 'small-padding': $data.smallPadding, 'small-copy': $data.smallCopy }">
+                    <!-- ko if: $data.isLoading --><!-- /ko -->
+                    <span data-bind="css: {'not-visible': $data.isLoading}" class="">
+                        <!-- ko if: $data.iconLeft --><!-- /ko -->
+                        <span class="button-text-wrapper"><!--ko text:$data.text-->Visit BMTC Recruitment PAGE<!--/ko--></span>
+                    </span>
+                </span>
+                <span class="button-outline-bottom"></span>
+            </a>
+        </div>
+        <!-- /ko -->
+        
+        <!-- ko if: $data.button --><!-- /ko -->
+        <!--/ko-->
+            </div>
+        </div><!--/ko-->
+            </div>
+            <div data-bind="visible: controller.options.isSingleOption" style="display: none;">
+     
+        <div class="heading-block" data-transition="" data-bind="css: { 'small-margin-bottom': ko.unwrap($data.smallMarginBottom) }">
+     
+            <div class="heading-block-topline-v-wrapper"><hr class="heading-block-topline-v" style=""></div>
+            <!-- /ko -->
+            <h6 class="heading-06 text-mask-background text-stroke-through" data-bind="css: { 'text-mask-background text-stroke-through': $data.strokeThrough }"><div style="position:relative;display:inline-block;"><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">L</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">e</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">t</div></div> <div style="position:relative;display:inline-block;"><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">t</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">h</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">e</div></div> <div style="position:relative;display:inline-block;"><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">a</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">i</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">r</div></div> <div style="position:relative;display:inline-block;"><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">f</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">o</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">r</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">c</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">e</div></div> <div style="position:relative;display:inline-block;"><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">h</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">e</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">l</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">p</div></div> <div style="position:relative;display:inline-block;"><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">y</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">o</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">u</div></div> <div style="position:relative;display:inline-block;"><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">g</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">e</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">t</div></div> <div style="position:relative;display:inline-block;"><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">a</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">h</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">e</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">a</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">d</div></div></h6>
+            <h2 class="heading-02 title responsive-title" data-bind="css: { 'text-mask-background text-stroke-through': $data.strokeThroughMainTitle }, html: $data.title" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">We can help you continue your education before you serve.</h2>
+     
+        
+            <div  class="">
+       
+        <div class="button-alignment" >
+            <a href="" class="button-outline has-down-state" style="opacity: 1;">
+                <span class="button-outline-copy small-padding">
+                  
+                    <span  class="">
+                    
+                        <span class="button-text-wrapper"><div style="position:relative;display:inline-block;"><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">E</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">x</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">p</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">l</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">o</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">r</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">e</div></div> <div style="position:relative;display:inline-block;"><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">y</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">o</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">u</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">r</div></div> <div style="position:relative;display:inline-block;"><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">o</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">p</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">t</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">i</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">o</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">n</div><div style="position:relative;display:inline-block;" class="text-animation state-1 state-2 state-3">s</div></div></span>
+                    </span>
+                </span>
+                <span class="button-outline-bottom"></span>
+            </a>
+        </div>
+  
+            </div>
+        
+        </div>
+
+            </div>
+        </div>
+        </div>
       </div>
     </section>
     <footer class="site-footer">
@@ -774,15 +590,6 @@
           <li><a href="#">Downloads</a></li>
           <li><a href="#">Videos</a></li>
         </ul>
-
-        <!--<ul class="reset-list footer-nav footer-sub-nav footer-af-desktop">
-            <li><a href="#" target="_blank">AF Academy</a></li>
-            <li><a href="#" target="_blank">AF ROTC</a></li>
-
-            <li><a href="#">AF Reserve</a></li>
-            <li><a href="#">Air National Guard</a></li>
-            <li><a href="#">AF.mil</a></li>
-        </ul>-->
       </div>
 
       <ul class="reset-list footer-nav footer-sub-nav full">
@@ -792,36 +599,12 @@
         <li><a href="#">Terms of Use</a></li>
       </ul>
 
-      <!-- <ul class="reset-list footer-nav footer-sub-nav footer-af-mobile">
-         <li><a href="#" target="_blank">AF Academy</a></li>
-         <li><a href="#" target="_blank">AF ROTC</a></li>
-
-         <li><a href="#">AF Reserve</a></li>
-         <li><a href="#">Air National Guard</a></li>
-         <li><a href="#">AF.mil</a></li>
-         <li><a href="#">AF Civilian Careers</a></li>
-     </ul>-->
-      <!--
-        <ul class="reset-list ib-list footer-inline-nav">
-            <li><a href="#">Privacy
-                Policy</a></li>
-            <li><a href="#">About Our
-                Ads</a></li>
-            <li><a href="#">Sitemap</a></li>
-            &lt;!&ndash;<li><a href="http://collaboratory.airforce.com" target="_blank">Collaboratory</a></li>&ndash;&gt;
-        </ul>-->
-
-      <!--ko block:{"optional":false,"definition":"share"} -->
       <div class="share-wrapper footer-social-nav text-inverted share-view-all">
-        <!-- ko if: controller.options.showAll -->
         <ul class="share">
           <li>
-            <a
-              href="https://web.facebook.com/hqnigerianairforce/?_rdc=1&_rdr"
-              target="_blank"
-            >
+            <a href="#" target="_blank">
               <span class="button-icon undefined is-inverted">
-                <!-- ko template: { name: '_circle-svg', data: { elementClassName: 'button-icon-outline' } } --><svg
+                <svg
                   class="circle-svg button-icon-outline"
                   width="100px"
                   height="100px"
@@ -836,8 +619,8 @@
                     stroke="#fff"
                     stroke-width="1.2"
                     vector-effect="non-scaling-stroke"
-                  ></circle></svg
-                ><!-- /ko -->
+                  ></circle>
+                </svg>
                 <span class="icon icon-facebook" style="background-image: none;"
                   ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path
@@ -846,14 +629,13 @@
                     ></path></svg
                 ></span>
               </span>
-              <!-- /ko -->
             </a>
           </li>
 
           <li>
-            <a href="https://twitter.com/nigairforce" target="_blank">
+            <a href="#" target="_blank">
               <span class="button-icon undefined is-inverted">
-                <!-- ko template: { name: '_circle-svg', data: { elementClassName: 'button-icon-outline' } } --><svg
+                <svg
                   class="circle-svg button-icon-outline"
                   width="100px"
                   height="100px"
@@ -868,8 +650,8 @@
                     stroke="#fff"
                     stroke-width="1.2"
                     vector-effect="non-scaling-stroke"
-                  ></circle></svg
-                ><!-- /ko -->
+                  ></circle>
+                </svg>
                 <span class="icon icon-twitter" style="background-image: none;"
                   ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path
@@ -878,14 +660,13 @@
                     ></path></svg
                 ></span>
               </span>
-              <!-- /ko -->
             </a>
           </li>
 
           <li>
             <a href="#" target="_blank">
               <span class="button-icon undefined is-inverted">
-                <!-- ko template: { name: '_circle-svg', data: { elementClassName: 'button-icon-outline' } } --><svg
+                <svg
                   class="circle-svg button-icon-outline"
                   width="100px"
                   height="100px"
@@ -900,8 +681,8 @@
                     stroke="#fff"
                     stroke-width="1.2"
                     vector-effect="non-scaling-stroke"
-                  ></circle></svg
-                ><!-- /ko -->
+                  ></circle>
+                </svg>
                 <span
                   class="icon icon-instagram"
                   style="background-image: none;"
@@ -916,14 +697,13 @@
                     ></path></svg
                 ></span>
               </span>
-              <!-- /ko -->
             </a>
           </li>
 
           <li>
             <a href="#" target="_blank">
               <span class="button-icon undefined is-inverted">
-                <!-- ko template: { name: '_circle-svg', data: { elementClassName: 'button-icon-outline' } } --><svg
+                <svg
                   class="circle-svg button-icon-outline"
                   width="100px"
                   height="100px"
@@ -938,8 +718,8 @@
                     stroke="#fff"
                     stroke-width="1.2"
                     vector-effect="non-scaling-stroke"
-                  ></circle></svg
-                ><!-- /ko -->
+                  ></circle>
+                </svg>
                 <span class="icon icon-youtube" style="background-image: none;"
                   ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path
@@ -948,14 +728,13 @@
                     ></path></svg
                 ></span>
               </span>
-              <!-- /ko -->
             </a>
           </li>
 
           <li>
             <a href="#" target="_blank">
               <span class="button-icon undefined is-inverted">
-                <!-- ko template: { name: '_circle-svg', data: { elementClassName: 'button-icon-outline' } } --><svg
+                <svg
                   class="circle-svg button-icon-outline"
                   width="100px"
                   height="100px"
@@ -970,8 +749,8 @@
                     stroke="#fff"
                     stroke-width="1.2"
                     vector-effect="non-scaling-stroke"
-                  ></circle></svg
-                ><!-- /ko -->
+                  ></circle>
+                </svg>
                 <span class="icon icon-flickr" style="background-image: none;"
                   ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path
@@ -982,15 +761,10 @@
                     ></path></svg
                 ></span>
               </span>
-              <!-- /ko -->
             </a>
           </li>
         </ul>
-        <!-- /ko -->
-
-        <!-- ko ifnot: controller.options.showAll || !controller.options.shareData --><!-- /ko -->
       </div>
-      <!--/ko-->
 
       <h6
         class="footer-site-logo icon-logo-airforce"
@@ -1000,23 +774,11 @@
       <a href="#" style="display : none;">Career index</a>
     </footer>
 
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script
-      src="js/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
-    <script src="js/scrollreveal.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="js/wp-embed.min-ver=4.9.10.js"></script>
     <script src="js/isInViewport.jquery.js"></script>
     <script src="js/anime.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/custom.js"></script>
     <script type="text/javascript" src="js/scripts-ver=5.0.5.js"></script>
     <script src="js/fixes.js"></script>
     <script
@@ -1025,19 +787,10 @@
       defer
     ></script>
     <script src="js/aos.js"></script>
-    <script src="js/jquery.matchHeight.js"></script>
     <script>
       AOS.init({
         easing: "ease-out-back",
         duration: 1000
-      });
-      $(function() {
-        $(".card.no-overflow").matchHeight({
-          byRow: true,
-          property: "height",
-          target: null,
-          remove: false
-        });
       });
     </script>
   </body>

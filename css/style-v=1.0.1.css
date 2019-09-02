@@ -2425,7 +2425,6 @@ section#home .social .item p {
 
 .apply-now-label:hover a {
   color: #ffffff;
-  filter: brightness(60%);
 }
 
 #choose .background-image-cover {
@@ -2564,7 +2563,7 @@ div.site-header
 }
 
 .heading-block {
-  margin: 0 auto 4rem !important;
+  margin: 0 auto 2rem !important;
 }
 
 .text-light {
@@ -2581,14 +2580,14 @@ div.site-header
 }
 
 .mt-70px {
-  margin-top: 70px !important;
+  margin-top: 40px !important;
 }
 
 .full-image-ratio {
   filter: brightness(50%);
 }
 
-.text-anime > span {
+.text-anime > span > span {
   opacity: 0;
 }
 
