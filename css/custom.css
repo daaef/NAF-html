@@ -21794,3 +21794,44 @@ html.is-mobile .chat-live-contact-options .boxed-option-item.active .button-cont
 .noframe iframe{
     display: none;
 }
+
+.my-gallery {
+    width: 100%;
+    float: left;
+}
+.my-gallery img {
+    width: 100%;
+    height: auto;
+}
+.my-gallery figure {
+    display: block;
+    float: left;
+    margin: 0 5px 5px 0;
+    width: 150px;
+}
+.my-gallery figcaption {
+    display: none;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+.marginx{
+    margin: 0 10px;
+}
+
+.img-contain img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain!important;
+    object-position: center;
+}
+.downloads .card-title{
+    color: #f15642!important;
+}
+
+.organogram img{
+    width: 100%;
+}
