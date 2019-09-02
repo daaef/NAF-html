@@ -21617,22 +21617,22 @@ html.is-mobile .chat-live-contact-options .boxed-option-item.active .button-cont
     .main-navigation-list-wrapper.main-bg {
         flex-basis: 35%;
     }
-
     .aboutBG {
-        background: #000;
+        background: #172039;
     }
 
     .newsBG {
-        background: #323232;
+        background: #1a2440;
     }
 
     .mediaBG {
-        background: #181818;
+        background: #1e2a4d;
     }
 
     .howBG {
-        background: #494949;
+        background: #202d55;
     }
+
 
     .main-navigation-image {
         left: 65%;
@@ -22133,4 +22133,14 @@ margin-left: 0;
 
 .footer-2-column.two a{
     color: #5f80a2
+}
+
+p{
+    text-align: justify;
+}
+
+section header {
+    display: block;
+    width: 100%;
+    height: 80vh;
 }
