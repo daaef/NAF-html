@@ -21410,6 +21410,7 @@ html.is-mobile .chat-live-contact-options .boxed-option-item.active .button-cont
 
 .logo-title {
     text-shadow: none;
+    font-family: StratumBlack, Arial, sans-serif;
 }
 
 .news-detail .copy-body-01 {
@@ -21419,13 +21420,6 @@ html.is-mobile .chat-live-contact-options .boxed-option-item.active .button-cont
 
 .news-detail .hero-image {
     position: relative;
-}
-
-.news-detail .hero-image:before {
-    background: url(../img/news-1.jpg) center no-repeat;
-    background-size: cover;
-    filter: brightness(65%);
-    z-index: 0
 }
 
 .story-intro-image-caption {
